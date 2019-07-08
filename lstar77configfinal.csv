@@ -1,0 +1,176 @@
+﻿//================================================================================,,,,,,,,,,,,,,
+// LSTAR Number            =77,,,,,,,,,,,,,,
+// max_trunk               =1,,,,,,,,,,,,,,
+// gateway_ip_instance     =22,,,,,,,,,,,,,,
+// server_ip_base_nodeID   =1000,,,,,,,,,,,,,,
+// mstp_required           =0,,,,,,,,,,,,,,
+// gateway_mstp_mac        =770201,,,,,,,,,,,,,,
+// server_mstp_base_nodeID =20,,,,,,,,,,,,,,
+// network_number          =7702,,,,,,,,,,,,,,
+// virtual_nodes           =0,,,,,,,,,,,,,,
+//================================================================================,,,,,,,,,,,,,,
+//,,,,,,,,,,,,,,
+Bridge,,,,,,,,,,,,,,
+Title                     ,System_Node_Id ,,,,,,,,,,,,,
+IP Lstar77    (1-22-1000-7702-0)      ,770201,,,,,,,,,,,,,
+//,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+//================================================================================,,,,,,,,,,,,,,
+//,,,,,,,,,,,,,,
+//    Data Arrays,,,,,,,,,,,,,,
+//,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+Data_Arrays,,,,,,,,,,,,,,
+Data_Array_Name , Data_Format , Data_Array_Length , Data_Array_Function,,,,,,,,,,,
+Comm_Status     , Bit         ,256, Node_Status,,,,,,,,,,,
+Data_Arrays,,,,,,,,,,,,,,
+Data_Array_Name ,Data_Format ,Data_Array_Length,,,,,,,,,,,,
+AUTO_CONFIGURE  ,UINT32      ,1000,,,,,,,,,,,,
+Lstar-stats     ,UINT16      ,1000,,,,,,,,,,,,
+DATA_M00        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M19        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M20        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M21        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M22        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M23        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M25        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M27        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M28        ,UINT16      ,100,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+//================================================================================,,,,,,,,,,,,,,
+//,,,,,,,,,,,,,,
+//    Connections,,,,,,,,,,,,,,
+//,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+Connections,,,,,,,,,,,,,,
+Port ,Baud ,Data_Bits ,Stop_Bits ,Parity ,Protocol    ,Poll_delay , LstarID ,timeout,,,,,,
+R2   ,9600,8,1,None   ,lstarA      ,0.1s       ,77,0.8s,,,,,,
+,,,,,,,,,,,,,,
+Adapters,,,,,,,,,,,,,,
+Adapter ,Protocol  ,,,,,,,,,,,,,
+N1      ,BACnet_IP ,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+//================================================================================,,,,,,,,,,,,,,
+//,,,,,,,,,,,,,,
+//    Client Side Nodes,,,,,,,,,,,,,,
+//,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+Nodes,,,,,,,,,,,,,,
+Node_Name  ,Node_ID ,Protocol ,Port ,Recovery_interval ,Retry_interval ,Timeout,,,,,,,,
+M00         ,0,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M19         ,19,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M20         ,20,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M21         ,21,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M22         ,22,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M23         ,23,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M28         ,28,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+,,,,,,,,,,,,,,
+//================================================================================,,,,,,,,,,,,,,
+//,,,,,,,,,,,,,,
+//    Server Side Nodes,,,,,,,,,,,,,,
+//,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+Nodes,,,,,,,,,,,,,,
+Node_Name    ,Node_ID ,Protocol   ,,,,,,,,,,,,
+vLstarTrunk  ,770201,BACnet_IP  ,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+//================================================================================,,,,,,,,,,,,,,
+//,,,,,,,,,,,,,,
+//    Client Side Map Descriptors,,,,,,,,,,,,,,
+//,,,,,,,,,,,,,,
+//,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+Map_Descriptors,,,,,,,,,,,,,,
+Map_Descriptor_Name ,Scan_Interval ,Data_Array_Name      ,Data_Array_Offset ,Function ,Node_Name  ,Lstar_Point_Type , Address ,Length,,,,,,
+readM00 Di1,120.0s          ,DATA_M00          ,0,Rdbc     ,M00     ,Di,1,1,,,,,,
+readM00 Do1,120.0s          ,DATA_M00   ,1,Rdbc     ,M00     ,Do,1,1,,,,,,
+readM19 Ai0       ,60.0s          ,DATA_M19          ,0,Rdbc     ,M19     ,Ai     ,0,1,,,,,,
+readM19 Ao0       ,60.0s          ,DATA_M19          ,4,Rdbc     ,M19     ,Ao     ,0,1,,,,,,
+readM19 Ai1       ,60.0s          ,DATA_M19          ,1,Rdbc     ,M19     ,Ai     ,1,1,,,,,,
+readM19 Ao1       ,60.0s          ,DATA_M19          ,5,Rdbc     ,M19     ,Ao     ,1,1,,,,,,
+readM19 Ai2       ,60.0s          ,DATA_M19          ,2,Rdbc     ,M19     ,Ai     ,2,1,,,,,,
+readM19 Ao2       ,60.0s          ,DATA_M19          ,6,Rdbc     ,M19     ,Ao     ,2,1,,,,,,
+readM19 Ai3       ,60.0s          ,DATA_M19          ,3,Rdbc     ,M19     ,Ai     ,3,1,,,,,,
+readM19 Ao3       ,60.0s          ,DATA_M19          ,7,Rdbc     ,M19     ,Ao     ,3,1,,,,,,
+readM19 SP0,600.0s    ,DATA_M19          ,8,Rdbc     ,M19     ,SP,0,1,,,,,,
+readM19 SP1,600.0s    ,DATA_M19          ,9,Rdbc     ,M19     ,SP,1,1,,,,,,
+readM19 SP3,600.0s    ,DATA_M19          ,10,Rdbc     ,M19     ,SP,3,1,,,,,,
+readM19 SP4,600.0s    ,DATA_M19          ,11,Rdbc     ,M19     ,SP,4,1,,,,,,
+readm19 SP5,600.0s    ,DATA_M19          ,12,Rdbc     ,M19     ,SP,2,1,,,,,,
+readM20 Ai0       ,60.0s          ,DATA_M20          ,0,Rdbc     ,M20     ,Ai     ,0,1,,,,,,
+readM20 Ao0       ,60.0s          ,DATA_M20          ,4,Rdbc     ,M20     ,Ao     ,0,1,,,,,,
+readM20 Ai1       ,60.0s          ,DATA_M20          ,1,Rdbc     ,M20     ,Ai     ,1,1,,,,,,
+readM20 Ao1       ,60.0s          ,DATA_M20          ,5,Rdbc     ,M20     ,Ao     ,1,1,,,,,,
+readM20 Ao2       ,60.0s          ,DATA_M20          ,6,Rdbc     ,M20     ,Ao     ,2,1,,,,,,
+readM20 SP3       ,600.0s    ,DATA_M20          ,9,Rdbc     ,M20     ,SP,3,1,,,,,,
+readM21 Ai0       ,60.0s          ,DATA_M21          ,0,Rdbc     ,M21     ,Ai     ,0,1,,,,,,
+readM21 Ao0       ,60.0s          ,DATA_M21          ,4,Rdbc     ,M21     ,Ao     ,0,1,,,,,,
+readM21 Ai1       ,60.0s          ,DATA_M21          ,1,Rdbc     ,M21     ,Ai     ,1,1,,,,,,
+readM22 Ai0       ,60.0s          ,DATA_M22          ,0,Rdbc     ,M22     ,Ai     ,0,1,,,,,,
+readM22 Ai1       ,60.0s          ,DATA_M22          ,1,Rdbc     ,M22     ,Ai     ,1,1,,,,,,
+readM22 Ai2       ,60.0s          ,DATA_M22          ,2,Rdbc     ,M22     ,Ai     ,2,1,,,,,,
+readM22 Ai3       ,60.0s          ,DATA_M22          ,3,Rdbc     ,M22     ,Ai     ,3,1,,,,,,
+readM23 Ai0       ,60.0s          ,DATA_M23          ,0,Rdbc     ,M23     ,Ai     ,0,1,,,,,,
+readM23 Ai1       ,60.0s          ,DATA_M23          ,1,Rdbc     ,M23     ,Ai     ,1,1,,,,,,
+readM23 SP2       ,600.0s    ,DATA_M23          ,2,Rdbc     ,M23     ,SP,0,1,,,,,,
+readM23 SP3       ,600.0s    ,DATA_M23          ,3,Rdbc     ,M23     ,SP,2,1,,,,,,
+readM23 Ao1      ,120.0s          ,DATA_M23          ,4,Rdbc     ,M23     ,Ao     ,0,1,,,,,,
+readM23 Do1       ,120.0s          ,DATA_M23          ,5,Rdbc     ,M23     ,Do,4,1,,,,,,
+readM28 Ai0       ,60.0s          ,DATA_M28          ,0,Rdbc     ,M28     ,Ai     ,0,1,,,,,,
+readM28 Ai1       ,60.0s          ,DATA_M28          ,1,Rdbc     ,M28     ,Ai     ,1,1,,,,,,
+readM28 Ai2       ,60.0s          ,DATA_M28          ,2,Rdbc     ,M28     ,Ai     ,2,1,,,,,,
+readM28 Ai3       ,60.0s          ,DATA_M28          ,3,Rdbc     ,M28     ,Ai     ,3,1,,,,,,
+//================================================================================,,,,,,,,,,,,,,
+//,,,,,,,,,,,,,,
+//    Server Side Map Descriptors,,,,,,,,,,,,,,
+//,,,,,,,,,,,,,,
+//,,,,,,,,,,,,,,
+//,,,,,,,,,,,,,,
+Map_Descriptors,,,,,,,,,,,,,,
+Map_Descriptor_Name ,Data_type ,Object_Id ,Data_Array_Name      ,Data_Array_Offset ,Function ,Node_Name  ,Relinquish_Default ,Length,Description,Data_Array_Low_Scale,Data_Array_High_Scale,Node_Low_Scale,Node_High_Scale,Units
+77 AHU21 STS,Bi,1908,DATA_M00      ,0,Server    ,vLstarTrunk  ,0,1,B77 AHU-21 STATUS,0,1,OFF,ON,No_Units
+77 AHU21 S/S,Bo,1913,DATA_M00      ,1,Server    ,vLstarTrunk  ,0,1,B77 AHU-21 START/STOP [RM244+],0,1,OFF,ON,No_Units
+//,,,,,,,,,,,,,,
+77 R244 ZAT,Ai            ,1900,DATA_M19      ,0,Server    ,vLstarTrunk  ,-           ,1,MAIN AIR ZONE AIR TEMP [AHU21],0,4095,0,409.5,DEG_F
+77 R244C ZAT,Ai            ,1901,DATA_M19      ,1,Server    ,vLstarTrunk  ,-           ,1,EQUIPMENT ROOM ZONE TEMP [AHU21],0,4095,0,409.5,DEG_F
+77 R244D ZAT,Ai            ,1902,DATA_M19      ,2,Server    ,vLstarTrunk  ,-           ,1,CONFERENCE AREA ZONE TEMP AHU21,0,4095,0,409.5,DEG_F
+77 R244E ZAT,Ai            ,1903,DATA_M19      ,3,Server    ,vLstarTrunk  ,-           ,1,CERAMIC SHOP ZONE TEMP (AHU21],0,4095,0,409.5,DEG_F
+77 R244 RHV,Ao            ,1904,DATA_M19      ,4,Server    ,vLstarTrunk  ,0,1,B77 RM244 REHEAT VALVE [AHU21],0,255,100,-71.43,Percent
+77 R244C RHV,Ao            ,1905,DATA_M19      ,5,Server    ,vLstarTrunk  ,0,1,B77 RM244C REHEAT VALVE [AHU21],0,255,100,-71.43,Percent
+77 R244D RHV,Ao            ,1906,DATA_M19      ,6,Server    ,vLstarTrunk  ,0,1,B77 RM244D REHEAT VALVE [AHU21],0,255,100,-71.43,Percent
+77 R244E RHV,Ao            ,1907,DATA_M19      ,7,Server    ,vLstarTrunk  ,0,1,R244E CERAMIC SHOP REHEAT VALVE,0,255,100,-71.43,Percent
+77 R244 ZSP,Av,1909,DATA_M19      ,8,Server    ,vLstarTrunk  ,0,1,B77 RM244 ZONE SET POINT,0,4095,0,409.5,DEG_F
+77 R244C ZSP,Av,1910,DATA_M19      ,9,Server    ,vLstarTrunk  ,0,1,B77 RM244C ZONE SET POINT,0,4095,0,409.5,DEG_F
+77 R244D ZSP,Av,1911,DATA_M19      ,10,Server    ,vLstarTrunk  ,0,1,B77 RM244D ZONE TEMP. SETPOINT,0,4095,0,409.5,DEG_F
+77 R244E ZSP,Av,1912,DATA_M19      ,11,Server    ,vLstarTrunk  ,0,1,R244E CERAMIC SHOP ZONE TEMP S/P,0,4095,0,409.5,DEG_F
+77 R244 SAT SP,Av,1914,DATA_M19      ,12,Server    ,vLstarTrunk  ,0,1,B77 RM244 SAT SET POINT,0,4095,0,409.5,DEG_F
+//,,,,,,,,,,,,,,
+77 AHU21 SAT,Ai            ,2000,DATA_M20      ,0,Server    ,vLstarTrunk  ,-           ,1,B77 AHU-21 SUPPLY AIR TEMP.,0,4095,0,409.5,DEG_F
+77 AHU21 CHWDP,Ai            ,2001,DATA_M20      ,1,Server    ,vLstarTrunk  ,-           ,1,B77 AHU-21 CHW DIFF. PRESSURE,0,4095,-15,70.313,PSI
+77 AHU21 CWV,Ao            ,2004,DATA_M20      ,4,Server    ,vLstarTrunk  ,0,1,B77 AHU-21 CHILLED H2O VALVE,0,255,0,150,Percent
+77 AHU21 HWV,Ao            ,2005,DATA_M20      ,5,Server    ,vLstarTrunk  ,0,1,B77 AHU-21 HEATING HW VALVE,0,255,100,-50,Percent
+77 AHU21 H/C,Ao            ,2006,DATA_M20      ,6,Server    ,vLstarTrunk  ,0,1,B77 AHU-21 VIRTUAL H/C VALVE,0,255,0,100,Percent
+77 AHU21 SATSP,AV,2003,DATA_M20      ,9,Server    ,vLstarTrunk  ,-,1,B77 AHU-21 SUPPLY AIR TEMP. S/P,0,4095,0,409.5,DEG_F
+//,,,,,,,,,,,,,,
+77 R220 ZAT,Ai            ,2100,DATA_M21      ,0,Server    ,vLstarTrunk  ,-           ,1,B77 RM220 ZONE AIR TEMP [AHU16],0,4095,0,409.5,DEG_F
+77 R220 SAT,Ai            ,2101,DATA_M21      ,1,Server    ,vLstarTrunk  ,-           ,1,B77 RM220 SUPPLY AIR TEMP[AHU16],0,4095,0,409.5,DEG_F
+77 R220 HWV,Ao            ,2104,DATA_M21      ,4,Server    ,vLstarTrunk  ,0,1,R220 HHW VALVE 3-8# N.O. [AHU16],0,255,0,20,PSI
+//,,,,,,,,,,,,,,
+77 R141 W ZAT,Ai            ,2200,DATA_M22      ,0,Server    ,vLstarTrunk  ,-           ,1,B77 RM141 WEST ZONE TMP. [AHU18],0,4095,0,409.5,DEG_F
+77 R141 W SAT,Ai            ,2201,DATA_M22      ,1,Server    ,vLstarTrunk  ,-           ,1,B77 R141 W SUPP.AIR TEMP [AHU18],0,4095,0,409.5,DEG_F
+77 R141 E ZAT,Ai            ,2202,DATA_M22      ,2,Server    ,vLstarTrunk  ,-           ,1,B77 RM141 EAST ZONE TEMP [AHU19],0,4095,0,409.5,DEG_F
+77 R141 E SAT,Ai            ,2203,DATA_M22      ,3,Server    ,vLstarTrunk  ,-           ,1,B77 R141 E SUPP. AIR TMP [AHU19],0,4095,0,409.5,DEG_F
+//,,,,,,,,,,,,,,
+77 R141A ZAT,Ai            ,2300,DATA_M23      ,0,Server    ,vLstarTrunk  ,-           ,1,B77 RM141A ZONE AIR TEMP [AHU22],0,4095,0,409.5,DEG_F
+77 R141A SAT,Ai            ,2301,DATA_M23      ,1,Server    ,vLstarTrunk  ,-           ,1,B77 RM141A SUPPLY AIR TMP[AHU22],0,4095,0,409.5,DEG_F
+77 R141A ZSP,AV,2302,DATA_M23      ,2,Server    ,vLstarTrunk  ,-,1,B77 RM141A ZONE SET POINT [AHU-22],0,4095,0,409.5,DEG_F
+77 R141A SATSP,AV,2303,DATA_M23      ,3,Server    ,vLstarTrunk  ,-,1,B77 RM141A SAT SET POINT [AHU-22],0,4095,0,409.5,DEG_F
+77 R141A HV/CV,Ao            ,2304,DATA_M23      ,4,Server    ,vLstarTrunk  ,0,1,B77 R141A HEAT/COOL VALVES [AHU-22],0,255,3,15,Psi
+77 AHU22 ALARM,Do,2305,DATA_M23      ,5,Server    ,vLstarTrunk  ,0,1,B77 RM141A ALARM [AHU-22],0,1,Normal,Alarm,No_Units
+//,,,,,,,,,,,,,,
+77 R244 SAT,Ai            ,2800,DATA_M28      ,0,Server    ,vLstarTrunk  ,-           ,1,B77 RM244 SUPPLY AIR TEMP[AHU21],0,4095,0,409.5,DEG_F
+77 R244C SAT,Ai            ,2801,DATA_M28      ,1,Server    ,vLstarTrunk  ,-           ,1,B77 RM244C SUPPLY AIR TMP[AHU21],0,4095,0,409.5,DEG_F
+77 R244D SAT,Ai            ,2802,DATA_M28      ,2,Server    ,vLstarTrunk  ,-           ,1,B77 RM244D S.A. TEMP. [AHU21],0,4095,0,409.5,DEG_F
+77 R244E SAT,Ai            ,2803,DATA_M28      ,3,Server    ,vLstarTrunk  ,-           ,1,B77 RM244E S.A.TEMP. [AHU21],0,4095,0,409.5,DEG_F
+//,,,,,,,,,,,,,,

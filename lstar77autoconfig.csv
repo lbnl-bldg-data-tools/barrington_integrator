@@ -1,0 +1,1134 @@
+﻿//================================================================================,,,,,,,,
+// LSTAR Number            =77,,,,,,,,
+// max_trunk               =1,,,,,,,,
+// gateway_ip_instance     =22,,,,,,,,
+// server_ip_base_nodeID   =1000,,,,,,,,
+// mstp_required           =0,,,,,,,,
+// gateway_mstp_mac        =770201,,,,,,,,
+// server_mstp_base_nodeID =20,,,,,,,,
+// network_number          =7702,,,,,,,,
+// virtual_nodes           =0,,,,,,,,
+//================================================================================,,,,,,,,
+//,,,,,,,,
+Bridge,,,,,,,,
+Title                     ,System_Node_Id ,,,,,,,
+IP Lstar77    (1-22-1000-7702-0)      ,770201,,,,,,,
+//,,,,,,,,
+,,,,,,,,
+//================================================================================,,,,,,,,
+//,,,,,,,,
+//    Data Arrays,,,,,,,,
+//,,,,,,,,
+,,,,,,,,
+Data_Arrays,,,,,,,,
+Data_Array_Name , Data_Format , Data_Array_Length , Data_Array_Function,,,,,
+Comm_Status     , Bit         ,256, Node_Status,,,,,
+,,,,,,,,
+Data_Arrays,,,,,,,,
+Data_Array_Name ,Data_Format ,Data_Array_Length,,,,,,
+AUTO_CONFIGURE  ,UINT32      ,1000,,,,,,
+Lstar-stats     ,UINT16      ,1000,,,,,,
+DATA_M00        ,UINT16      ,100,,,,,,
+DATA_M01        ,UINT16      ,100,,,,,,
+DATA_M02        ,UINT16      ,100,,,,,,
+DATA_M04        ,UINT16      ,100,,,,,,
+DATA_M05        ,UINT16      ,100,,,,,,
+DATA_M07        ,UINT16      ,100,,,,,,
+DATA_M08        ,UINT16      ,100,,,,,,
+DATA_M09        ,UINT16      ,100,,,,,,
+DATA_M10        ,UINT16      ,100,,,,,,
+DATA_M11        ,UINT16      ,100,,,,,,
+DATA_M12        ,UINT16      ,100,,,,,,
+DATA_M14        ,UINT16      ,100,,,,,,
+DATA_M15        ,UINT16      ,100,,,,,,
+DATA_M16        ,UINT16      ,100,,,,,,
+DATA_M19        ,UINT16      ,100,,,,,,
+DATA_M20        ,UINT16      ,100,,,,,,
+DATA_M21        ,UINT16      ,100,,,,,,
+DATA_M22        ,UINT16      ,100,,,,,,
+DATA_M23        ,UINT16      ,100,,,,,,
+DATA_M25        ,UINT16      ,100,,,,,,
+DATA_M27        ,UINT16      ,100,,,,,,
+DATA_M28        ,UINT16      ,100,,,,,,
+DATA_M30        ,UINT16      ,100,,,,,,
+DATA_M31        ,UINT16      ,100,,,,,,
+,,,,,,,,
+//================================================================================,,,,,,,,
+//,,,,,,,,
+//    Connections,,,,,,,,
+//,,,,,,,,
+,,,,,,,,
+Connections,,,,,,,,
+Port ,Baud ,Data_Bits ,Stop_Bits ,Parity ,Protocol    ,Poll_delay , LstarID ,timeout
+R2   ,9600,8,1,None   ,lstarA      ,0.1s       ,77,0.8s
+,,,,,,,,
+Adapters,,,,,,,,
+Adapter ,Protocol  ,,,,,,,
+N1      ,BACnet_IP ,,,,,,,
+,,,,,,,,
+,,,,,,,,
+//================================================================================,,,,,,,,
+//,,,,,,,,
+//    Client Side Nodes,,,,,,,,
+//,,,,,,,,
+,,,,,,,,
+Nodes,,,,,,,,
+Node_Name  ,Node_ID ,Protocol ,Port ,Recovery_interval ,Retry_interval ,Timeout,,
+M00         ,0,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,
+M01         ,1,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,
+M02         ,2,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,
+M04         ,4,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,
+M05         ,5,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,
+M07         ,7,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,
+M08         ,8,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,
+M09         ,9,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,
+M10         ,10,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,
+M11         ,11,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,
+M12         ,12,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,
+M14         ,14,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,
+M15         ,15,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,
+M16         ,16,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,
+M19         ,19,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,
+M20         ,20,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,
+M21         ,21,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,
+M22         ,22,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,
+M23         ,23,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,
+M25         ,25,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,
+M27         ,27,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,
+M28         ,28,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,
+M30         ,30,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,
+M31         ,31,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,
+,,,,,,,,
+//================================================================================,,,,,,,,
+//,,,,,,,,
+//    Server Side Nodes,,,,,,,,
+//,,,,,,,,
+,,,,,,,,
+Nodes,,,,,,,,
+Node_Name    ,Node_ID ,Protocol   ,,,,,,
+vLstarTrunk  ,770201,BACnet_IP  ,,,,,,
+,,,,,,,,
+//================================================================================,,,,,,,,
+//,,,,,,,,
+//    Client Side Map Descriptors,,,,,,,,
+//,,,,,,,,
+//,,,,,,,,
+,,,,,,,,
+Map_Descriptors,,,,,,,,
+Map_Descriptor_Name ,Scan_Interval ,Data_Array_Name      ,Data_Array_Offset ,Function ,Node_Name  ,Lstar_Point_Type , Address ,Length
+readM00 Ai0       ,0.0s          ,DATA_M00          ,0,Rdbc     ,M00     ,Ai     ,0,1
+readM00 Ao0       ,0.0s          ,DATA_M00          ,4,Rdbc     ,M00     ,Ao     ,0,1
+readM00 Co0       ,0.0s          ,DATA_M00          ,8,Rdbc     ,M00     ,Co     ,0,1
+readM00 Bi0       ,0.0s          ,DATA_M00          ,12,Rdbc     ,M00     ,Bi     ,0,1
+readM00 Bo0       ,0.0s          ,DATA_M00          ,16,Rdbc     ,M00     ,Bo     ,0,1
+readM00 Ai1       ,0.0s          ,DATA_M00          ,1,Rdbc     ,M00     ,Ai     ,1,1
+readM00 Ao1       ,0.0s          ,DATA_M00          ,5,Rdbc     ,M00     ,Ao     ,1,1
+readM00 Co1       ,0.0s          ,DATA_M00          ,9,Rdbc     ,M00     ,Co     ,1,1
+readM00 Bi1       ,0.0s          ,DATA_M00          ,13,Rdbc     ,M00     ,Bi     ,1,1
+readM00 Bo1       ,0.0s          ,DATA_M00          ,17,Rdbc     ,M00     ,Bo     ,1,1
+readM00 Ai2       ,0.0s          ,DATA_M00          ,2,Rdbc     ,M00     ,Ai     ,2,1
+readM00 Ao2       ,0.0s          ,DATA_M00          ,6,Rdbc     ,M00     ,Ao     ,2,1
+readM00 Co2       ,0.0s          ,DATA_M00          ,10,Rdbc     ,M00     ,Co     ,2,1
+readM00 Bi2       ,0.0s          ,DATA_M00          ,14,Rdbc     ,M00     ,Bi     ,2,1
+readM00 Bo2       ,0.0s          ,DATA_M00          ,18,Rdbc     ,M00     ,Bo     ,2,1
+readM00 Ai3       ,0.0s          ,DATA_M00          ,3,Rdbc     ,M00     ,Ai     ,3,1
+readM00 Ao3       ,0.0s          ,DATA_M00          ,7,Rdbc     ,M00     ,Ao     ,3,1
+readM00 Co3       ,0.0s          ,DATA_M00          ,11,Rdbc     ,M00     ,Co     ,3,1
+readM00 Bi3       ,0.0s          ,DATA_M00          ,15,Rdbc     ,M00     ,Bi     ,3,1
+readM00 Bo3       ,0.0s          ,DATA_M00          ,19,Rdbc     ,M00     ,Bo     ,3,1
+readM01 Ai0       ,0.0s          ,DATA_M01          ,0,Rdbc     ,M01     ,Ai     ,0,1
+readM01 Ao0       ,0.0s          ,DATA_M01          ,4,Rdbc     ,M01     ,Ao     ,0,1
+readM01 Co0       ,0.0s          ,DATA_M01          ,8,Rdbc     ,M01     ,Co     ,0,1
+readM01 Bi0       ,0.0s          ,DATA_M01          ,12,Rdbc     ,M01     ,Bi     ,0,1
+readM01 Bo0       ,0.0s          ,DATA_M01          ,16,Rdbc     ,M01     ,Bo     ,0,1
+readM01 Ai1       ,0.0s          ,DATA_M01          ,1,Rdbc     ,M01     ,Ai     ,1,1
+readM01 Ao1       ,0.0s          ,DATA_M01          ,5,Rdbc     ,M01     ,Ao     ,1,1
+readM01 Co1       ,0.0s          ,DATA_M01          ,9,Rdbc     ,M01     ,Co     ,1,1
+readM01 Bi1       ,0.0s          ,DATA_M01          ,13,Rdbc     ,M01     ,Bi     ,1,1
+readM01 Bo1       ,0.0s          ,DATA_M01          ,17,Rdbc     ,M01     ,Bo     ,1,1
+readM01 Ai2       ,0.0s          ,DATA_M01          ,2,Rdbc     ,M01     ,Ai     ,2,1
+readM01 Ao2       ,0.0s          ,DATA_M01          ,6,Rdbc     ,M01     ,Ao     ,2,1
+readM01 Co2       ,0.0s          ,DATA_M01          ,10,Rdbc     ,M01     ,Co     ,2,1
+readM01 Bi2       ,0.0s          ,DATA_M01          ,14,Rdbc     ,M01     ,Bi     ,2,1
+readM01 Bo2       ,0.0s          ,DATA_M01          ,18,Rdbc     ,M01     ,Bo     ,2,1
+readM01 Ai3       ,0.0s          ,DATA_M01          ,3,Rdbc     ,M01     ,Ai     ,3,1
+readM01 Ao3       ,0.0s          ,DATA_M01          ,7,Rdbc     ,M01     ,Ao     ,3,1
+readM01 Co3       ,0.0s          ,DATA_M01          ,11,Rdbc     ,M01     ,Co     ,3,1
+readM01 Bi3       ,0.0s          ,DATA_M01          ,15,Rdbc     ,M01     ,Bi     ,3,1
+readM01 Bo3       ,0.0s          ,DATA_M01          ,19,Rdbc     ,M01     ,Bo     ,3,1
+readM02 Ai0       ,0.0s          ,DATA_M02          ,0,Rdbc     ,M02     ,Ai     ,0,1
+readM02 Ao0       ,0.0s          ,DATA_M02          ,4,Rdbc     ,M02     ,Ao     ,0,1
+readM02 Co0       ,0.0s          ,DATA_M02          ,8,Rdbc     ,M02     ,Co     ,0,1
+readM02 Bi0       ,0.0s          ,DATA_M02          ,12,Rdbc     ,M02     ,Bi     ,0,1
+readM02 Bo0       ,0.0s          ,DATA_M02          ,16,Rdbc     ,M02     ,Bo     ,0,1
+readM02 Ai1       ,0.0s          ,DATA_M02          ,1,Rdbc     ,M02     ,Ai     ,1,1
+readM02 Ao1       ,0.0s          ,DATA_M02          ,5,Rdbc     ,M02     ,Ao     ,1,1
+readM02 Co1       ,0.0s          ,DATA_M02          ,9,Rdbc     ,M02     ,Co     ,1,1
+readM02 Bi1       ,0.0s          ,DATA_M02          ,13,Rdbc     ,M02     ,Bi     ,1,1
+readM02 Bo1       ,0.0s          ,DATA_M02          ,17,Rdbc     ,M02     ,Bo     ,1,1
+readM02 Ai2       ,0.0s          ,DATA_M02          ,2,Rdbc     ,M02     ,Ai     ,2,1
+readM02 Ao2       ,0.0s          ,DATA_M02          ,6,Rdbc     ,M02     ,Ao     ,2,1
+readM02 Co2       ,0.0s          ,DATA_M02          ,10,Rdbc     ,M02     ,Co     ,2,1
+readM02 Bi2       ,0.0s          ,DATA_M02          ,14,Rdbc     ,M02     ,Bi     ,2,1
+readM02 Bo2       ,0.0s          ,DATA_M02          ,18,Rdbc     ,M02     ,Bo     ,2,1
+readM02 Ai3       ,0.0s          ,DATA_M02          ,3,Rdbc     ,M02     ,Ai     ,3,1
+readM02 Ao3       ,0.0s          ,DATA_M02          ,7,Rdbc     ,M02     ,Ao     ,3,1
+readM02 Co3       ,0.0s          ,DATA_M02          ,11,Rdbc     ,M02     ,Co     ,3,1
+readM02 Bi3       ,0.0s          ,DATA_M02          ,15,Rdbc     ,M02     ,Bi     ,3,1
+readM02 Bo3       ,0.0s          ,DATA_M02          ,19,Rdbc     ,M02     ,Bo     ,3,1
+readM04 Ai0       ,0.0s          ,DATA_M04          ,0,Rdbc     ,M04     ,Ai     ,0,1
+readM04 Ao0       ,0.0s          ,DATA_M04          ,4,Rdbc     ,M04     ,Ao     ,0,1
+readM04 Co0       ,0.0s          ,DATA_M04          ,8,Rdbc     ,M04     ,Co     ,0,1
+readM04 Bi0       ,0.0s          ,DATA_M04          ,12,Rdbc     ,M04     ,Bi     ,0,1
+readM04 Bo0       ,0.0s          ,DATA_M04          ,16,Rdbc     ,M04     ,Bo     ,0,1
+readM04 Ai1       ,0.0s          ,DATA_M04          ,1,Rdbc     ,M04     ,Ai     ,1,1
+readM04 Ao1       ,0.0s          ,DATA_M04          ,5,Rdbc     ,M04     ,Ao     ,1,1
+readM04 Co1       ,0.0s          ,DATA_M04          ,9,Rdbc     ,M04     ,Co     ,1,1
+readM04 Bi1       ,0.0s          ,DATA_M04          ,13,Rdbc     ,M04     ,Bi     ,1,1
+readM04 Bo1       ,0.0s          ,DATA_M04          ,17,Rdbc     ,M04     ,Bo     ,1,1
+readM04 Ai2       ,0.0s          ,DATA_M04          ,2,Rdbc     ,M04     ,Ai     ,2,1
+readM04 Ao2       ,0.0s          ,DATA_M04          ,6,Rdbc     ,M04     ,Ao     ,2,1
+readM04 Co2       ,0.0s          ,DATA_M04          ,10,Rdbc     ,M04     ,Co     ,2,1
+readM04 Bi2       ,0.0s          ,DATA_M04          ,14,Rdbc     ,M04     ,Bi     ,2,1
+readM04 Bo2       ,0.0s          ,DATA_M04          ,18,Rdbc     ,M04     ,Bo     ,2,1
+readM04 Ai3       ,0.0s          ,DATA_M04          ,3,Rdbc     ,M04     ,Ai     ,3,1
+readM04 Ao3       ,0.0s          ,DATA_M04          ,7,Rdbc     ,M04     ,Ao     ,3,1
+readM04 Co3       ,0.0s          ,DATA_M04          ,11,Rdbc     ,M04     ,Co     ,3,1
+readM04 Bi3       ,0.0s          ,DATA_M04          ,15,Rdbc     ,M04     ,Bi     ,3,1
+readM04 Bo3       ,0.0s          ,DATA_M04          ,19,Rdbc     ,M04     ,Bo     ,3,1
+readM05 Ai0       ,0.0s          ,DATA_M05          ,0,Rdbc     ,M05     ,Ai     ,0,1
+readM05 Ao0       ,0.0s          ,DATA_M05          ,4,Rdbc     ,M05     ,Ao     ,0,1
+readM05 Co0       ,0.0s          ,DATA_M05          ,8,Rdbc     ,M05     ,Co     ,0,1
+readM05 Bi0       ,0.0s          ,DATA_M05          ,12,Rdbc     ,M05     ,Bi     ,0,1
+readM05 Bo0       ,0.0s          ,DATA_M05          ,16,Rdbc     ,M05     ,Bo     ,0,1
+readM05 Ai1       ,0.0s          ,DATA_M05          ,1,Rdbc     ,M05     ,Ai     ,1,1
+readM05 Ao1       ,0.0s          ,DATA_M05          ,5,Rdbc     ,M05     ,Ao     ,1,1
+readM05 Co1       ,0.0s          ,DATA_M05          ,9,Rdbc     ,M05     ,Co     ,1,1
+readM05 Bi1       ,0.0s          ,DATA_M05          ,13,Rdbc     ,M05     ,Bi     ,1,1
+readM05 Bo1       ,0.0s          ,DATA_M05          ,17,Rdbc     ,M05     ,Bo     ,1,1
+readM05 Ai2       ,0.0s          ,DATA_M05          ,2,Rdbc     ,M05     ,Ai     ,2,1
+readM05 Ao2       ,0.0s          ,DATA_M05          ,6,Rdbc     ,M05     ,Ao     ,2,1
+readM05 Co2       ,0.0s          ,DATA_M05          ,10,Rdbc     ,M05     ,Co     ,2,1
+readM05 Bi2       ,0.0s          ,DATA_M05          ,14,Rdbc     ,M05     ,Bi     ,2,1
+readM05 Bo2       ,0.0s          ,DATA_M05          ,18,Rdbc     ,M05     ,Bo     ,2,1
+readM05 Ai3       ,0.0s          ,DATA_M05          ,3,Rdbc     ,M05     ,Ai     ,3,1
+readM05 Ao3       ,0.0s          ,DATA_M05          ,7,Rdbc     ,M05     ,Ao     ,3,1
+readM05 Co3       ,0.0s          ,DATA_M05          ,11,Rdbc     ,M05     ,Co     ,3,1
+readM05 Bi3       ,0.0s          ,DATA_M05          ,15,Rdbc     ,M05     ,Bi     ,3,1
+readM05 Bo3       ,0.0s          ,DATA_M05          ,19,Rdbc     ,M05     ,Bo     ,3,1
+readM07 Ai0       ,0.0s          ,DATA_M07          ,0,Rdbc     ,M07     ,Ai     ,0,1
+readM07 Ao0       ,0.0s          ,DATA_M07          ,4,Rdbc     ,M07     ,Ao     ,0,1
+readM07 Co0       ,0.0s          ,DATA_M07          ,8,Rdbc     ,M07     ,Co     ,0,1
+readM07 Bi0       ,0.0s          ,DATA_M07          ,12,Rdbc     ,M07     ,Bi     ,0,1
+readM07 Bo0       ,0.0s          ,DATA_M07          ,16,Rdbc     ,M07     ,Bo     ,0,1
+readM07 Ai1       ,0.0s          ,DATA_M07          ,1,Rdbc     ,M07     ,Ai     ,1,1
+readM07 Ao1       ,0.0s          ,DATA_M07          ,5,Rdbc     ,M07     ,Ao     ,1,1
+readM07 Co1       ,0.0s          ,DATA_M07          ,9,Rdbc     ,M07     ,Co     ,1,1
+readM07 Bi1       ,0.0s          ,DATA_M07          ,13,Rdbc     ,M07     ,Bi     ,1,1
+readM07 Bo1       ,0.0s          ,DATA_M07          ,17,Rdbc     ,M07     ,Bo     ,1,1
+readM07 Ai2       ,0.0s          ,DATA_M07          ,2,Rdbc     ,M07     ,Ai     ,2,1
+readM07 Ao2       ,0.0s          ,DATA_M07          ,6,Rdbc     ,M07     ,Ao     ,2,1
+readM07 Co2       ,0.0s          ,DATA_M07          ,10,Rdbc     ,M07     ,Co     ,2,1
+readM07 Bi2       ,0.0s          ,DATA_M07          ,14,Rdbc     ,M07     ,Bi     ,2,1
+readM07 Bo2       ,0.0s          ,DATA_M07          ,18,Rdbc     ,M07     ,Bo     ,2,1
+readM07 Ai3       ,0.0s          ,DATA_M07          ,3,Rdbc     ,M07     ,Ai     ,3,1
+readM07 Ao3       ,0.0s          ,DATA_M07          ,7,Rdbc     ,M07     ,Ao     ,3,1
+readM07 Co3       ,0.0s          ,DATA_M07          ,11,Rdbc     ,M07     ,Co     ,3,1
+readM07 Bi3       ,0.0s          ,DATA_M07          ,15,Rdbc     ,M07     ,Bi     ,3,1
+readM07 Bo3       ,0.0s          ,DATA_M07          ,19,Rdbc     ,M07     ,Bo     ,3,1
+readM08 Ai0       ,0.0s          ,DATA_M08          ,0,Rdbc     ,M08     ,Ai     ,0,1
+readM08 Ao0       ,0.0s          ,DATA_M08          ,4,Rdbc     ,M08     ,Ao     ,0,1
+readM08 Co0       ,0.0s          ,DATA_M08          ,8,Rdbc     ,M08     ,Co     ,0,1
+readM08 Bi0       ,0.0s          ,DATA_M08          ,12,Rdbc     ,M08     ,Bi     ,0,1
+readM08 Bo0       ,0.0s          ,DATA_M08          ,16,Rdbc     ,M08     ,Bo     ,0,1
+readM08 Ai1       ,0.0s          ,DATA_M08          ,1,Rdbc     ,M08     ,Ai     ,1,1
+readM08 Ao1       ,0.0s          ,DATA_M08          ,5,Rdbc     ,M08     ,Ao     ,1,1
+readM08 Co1       ,0.0s          ,DATA_M08          ,9,Rdbc     ,M08     ,Co     ,1,1
+readM08 Bi1       ,0.0s          ,DATA_M08          ,13,Rdbc     ,M08     ,Bi     ,1,1
+readM08 Bo1       ,0.0s          ,DATA_M08          ,17,Rdbc     ,M08     ,Bo     ,1,1
+readM08 Ai2       ,0.0s          ,DATA_M08          ,2,Rdbc     ,M08     ,Ai     ,2,1
+readM08 Ao2       ,0.0s          ,DATA_M08          ,6,Rdbc     ,M08     ,Ao     ,2,1
+readM08 Co2       ,0.0s          ,DATA_M08          ,10,Rdbc     ,M08     ,Co     ,2,1
+readM08 Bi2       ,0.0s          ,DATA_M08          ,14,Rdbc     ,M08     ,Bi     ,2,1
+readM08 Bo2       ,0.0s          ,DATA_M08          ,18,Rdbc     ,M08     ,Bo     ,2,1
+readM08 Ai3       ,0.0s          ,DATA_M08          ,3,Rdbc     ,M08     ,Ai     ,3,1
+readM08 Ao3       ,0.0s          ,DATA_M08          ,7,Rdbc     ,M08     ,Ao     ,3,1
+readM08 Co3       ,0.0s          ,DATA_M08          ,11,Rdbc     ,M08     ,Co     ,3,1
+readM08 Bi3       ,0.0s          ,DATA_M08          ,15,Rdbc     ,M08     ,Bi     ,3,1
+readM08 Bo3       ,0.0s          ,DATA_M08          ,19,Rdbc     ,M08     ,Bo     ,3,1
+readM09 Ai0       ,0.0s          ,DATA_M09          ,0,Rdbc     ,M09     ,Ai     ,0,1
+readM09 Ao0       ,0.0s          ,DATA_M09          ,4,Rdbc     ,M09     ,Ao     ,0,1
+readM09 Co0       ,0.0s          ,DATA_M09          ,8,Rdbc     ,M09     ,Co     ,0,1
+readM09 Bi0       ,0.0s          ,DATA_M09          ,12,Rdbc     ,M09     ,Bi     ,0,1
+readM09 Bo0       ,0.0s          ,DATA_M09          ,16,Rdbc     ,M09     ,Bo     ,0,1
+readM09 Ai1       ,0.0s          ,DATA_M09          ,1,Rdbc     ,M09     ,Ai     ,1,1
+readM09 Ao1       ,0.0s          ,DATA_M09          ,5,Rdbc     ,M09     ,Ao     ,1,1
+readM09 Co1       ,0.0s          ,DATA_M09          ,9,Rdbc     ,M09     ,Co     ,1,1
+readM09 Bi1       ,0.0s          ,DATA_M09          ,13,Rdbc     ,M09     ,Bi     ,1,1
+readM09 Bo1       ,0.0s          ,DATA_M09          ,17,Rdbc     ,M09     ,Bo     ,1,1
+readM09 Ai2       ,0.0s          ,DATA_M09          ,2,Rdbc     ,M09     ,Ai     ,2,1
+readM09 Ao2       ,0.0s          ,DATA_M09          ,6,Rdbc     ,M09     ,Ao     ,2,1
+readM09 Co2       ,0.0s          ,DATA_M09          ,10,Rdbc     ,M09     ,Co     ,2,1
+readM09 Bi2       ,0.0s          ,DATA_M09          ,14,Rdbc     ,M09     ,Bi     ,2,1
+readM09 Bo2       ,0.0s          ,DATA_M09          ,18,Rdbc     ,M09     ,Bo     ,2,1
+readM09 Ai3       ,0.0s          ,DATA_M09          ,3,Rdbc     ,M09     ,Ai     ,3,1
+readM09 Ao3       ,0.0s          ,DATA_M09          ,7,Rdbc     ,M09     ,Ao     ,3,1
+readM09 Co3       ,0.0s          ,DATA_M09          ,11,Rdbc     ,M09     ,Co     ,3,1
+readM09 Bi3       ,0.0s          ,DATA_M09          ,15,Rdbc     ,M09     ,Bi     ,3,1
+readM09 Bo3       ,0.0s          ,DATA_M09          ,19,Rdbc     ,M09     ,Bo     ,3,1
+readM10 Ai0       ,0.0s          ,DATA_M10          ,0,Rdbc     ,M10     ,Ai     ,0,1
+readM10 Ao0       ,0.0s          ,DATA_M10          ,4,Rdbc     ,M10     ,Ao     ,0,1
+readM10 Co0       ,0.0s          ,DATA_M10          ,8,Rdbc     ,M10     ,Co     ,0,1
+readM10 Bi0       ,0.0s          ,DATA_M10          ,12,Rdbc     ,M10     ,Bi     ,0,1
+readM10 Bo0       ,0.0s          ,DATA_M10          ,16,Rdbc     ,M10     ,Bo     ,0,1
+readM10 Ai1       ,0.0s          ,DATA_M10          ,1,Rdbc     ,M10     ,Ai     ,1,1
+readM10 Ao1       ,0.0s          ,DATA_M10          ,5,Rdbc     ,M10     ,Ao     ,1,1
+readM10 Co1       ,0.0s          ,DATA_M10          ,9,Rdbc     ,M10     ,Co     ,1,1
+readM10 Bi1       ,0.0s          ,DATA_M10          ,13,Rdbc     ,M10     ,Bi     ,1,1
+readM10 Bo1       ,0.0s          ,DATA_M10          ,17,Rdbc     ,M10     ,Bo     ,1,1
+readM10 Ai2       ,0.0s          ,DATA_M10          ,2,Rdbc     ,M10     ,Ai     ,2,1
+readM10 Ao2       ,0.0s          ,DATA_M10          ,6,Rdbc     ,M10     ,Ao     ,2,1
+readM10 Co2       ,0.0s          ,DATA_M10          ,10,Rdbc     ,M10     ,Co     ,2,1
+readM10 Bi2       ,0.0s          ,DATA_M10          ,14,Rdbc     ,M10     ,Bi     ,2,1
+readM10 Bo2       ,0.0s          ,DATA_M10          ,18,Rdbc     ,M10     ,Bo     ,2,1
+readM10 Ai3       ,0.0s          ,DATA_M10          ,3,Rdbc     ,M10     ,Ai     ,3,1
+readM10 Ao3       ,0.0s          ,DATA_M10          ,7,Rdbc     ,M10     ,Ao     ,3,1
+readM10 Co3       ,0.0s          ,DATA_M10          ,11,Rdbc     ,M10     ,Co     ,3,1
+readM10 Bi3       ,0.0s          ,DATA_M10          ,15,Rdbc     ,M10     ,Bi     ,3,1
+readM10 Bo3       ,0.0s          ,DATA_M10          ,19,Rdbc     ,M10     ,Bo     ,3,1
+readM11 Ai0       ,0.0s          ,DATA_M11          ,0,Rdbc     ,M11     ,Ai     ,0,1
+readM11 Ao0       ,0.0s          ,DATA_M11          ,4,Rdbc     ,M11     ,Ao     ,0,1
+readM11 Co0       ,0.0s          ,DATA_M11          ,8,Rdbc     ,M11     ,Co     ,0,1
+readM11 Bi0       ,0.0s          ,DATA_M11          ,12,Rdbc     ,M11     ,Bi     ,0,1
+readM11 Bo0       ,0.0s          ,DATA_M11          ,16,Rdbc     ,M11     ,Bo     ,0,1
+readM11 Ai1       ,0.0s          ,DATA_M11          ,1,Rdbc     ,M11     ,Ai     ,1,1
+readM11 Ao1       ,0.0s          ,DATA_M11          ,5,Rdbc     ,M11     ,Ao     ,1,1
+readM11 Co1       ,0.0s          ,DATA_M11          ,9,Rdbc     ,M11     ,Co     ,1,1
+readM11 Bi1       ,0.0s          ,DATA_M11          ,13,Rdbc     ,M11     ,Bi     ,1,1
+readM11 Bo1       ,0.0s          ,DATA_M11          ,17,Rdbc     ,M11     ,Bo     ,1,1
+readM11 Ai2       ,0.0s          ,DATA_M11          ,2,Rdbc     ,M11     ,Ai     ,2,1
+readM11 Ao2       ,0.0s          ,DATA_M11          ,6,Rdbc     ,M11     ,Ao     ,2,1
+readM11 Co2       ,0.0s          ,DATA_M11          ,10,Rdbc     ,M11     ,Co     ,2,1
+readM11 Bi2       ,0.0s          ,DATA_M11          ,14,Rdbc     ,M11     ,Bi     ,2,1
+readM11 Bo2       ,0.0s          ,DATA_M11          ,18,Rdbc     ,M11     ,Bo     ,2,1
+readM11 Ai3       ,0.0s          ,DATA_M11          ,3,Rdbc     ,M11     ,Ai     ,3,1
+readM11 Ao3       ,0.0s          ,DATA_M11          ,7,Rdbc     ,M11     ,Ao     ,3,1
+readM11 Co3       ,0.0s          ,DATA_M11          ,11,Rdbc     ,M11     ,Co     ,3,1
+readM11 Bi3       ,0.0s          ,DATA_M11          ,15,Rdbc     ,M11     ,Bi     ,3,1
+readM11 Bo3       ,0.0s          ,DATA_M11          ,19,Rdbc     ,M11     ,Bo     ,3,1
+readM12 Ai0       ,0.0s          ,DATA_M12          ,0,Rdbc     ,M12     ,Ai     ,0,1
+readM12 Ao0       ,0.0s          ,DATA_M12          ,4,Rdbc     ,M12     ,Ao     ,0,1
+readM12 Co0       ,0.0s          ,DATA_M12          ,8,Rdbc     ,M12     ,Co     ,0,1
+readM12 Bi0       ,0.0s          ,DATA_M12          ,12,Rdbc     ,M12     ,Bi     ,0,1
+readM12 Bo0       ,0.0s          ,DATA_M12          ,16,Rdbc     ,M12     ,Bo     ,0,1
+readM12 Ai1       ,0.0s          ,DATA_M12          ,1,Rdbc     ,M12     ,Ai     ,1,1
+readM12 Ao1       ,0.0s          ,DATA_M12          ,5,Rdbc     ,M12     ,Ao     ,1,1
+readM12 Co1       ,0.0s          ,DATA_M12          ,9,Rdbc     ,M12     ,Co     ,1,1
+readM12 Bi1       ,0.0s          ,DATA_M12          ,13,Rdbc     ,M12     ,Bi     ,1,1
+readM12 Bo1       ,0.0s          ,DATA_M12          ,17,Rdbc     ,M12     ,Bo     ,1,1
+readM12 Ai2       ,0.0s          ,DATA_M12          ,2,Rdbc     ,M12     ,Ai     ,2,1
+readM12 Ao2       ,0.0s          ,DATA_M12          ,6,Rdbc     ,M12     ,Ao     ,2,1
+readM12 Co2       ,0.0s          ,DATA_M12          ,10,Rdbc     ,M12     ,Co     ,2,1
+readM12 Bi2       ,0.0s          ,DATA_M12          ,14,Rdbc     ,M12     ,Bi     ,2,1
+readM12 Bo2       ,0.0s          ,DATA_M12          ,18,Rdbc     ,M12     ,Bo     ,2,1
+readM12 Ai3       ,0.0s          ,DATA_M12          ,3,Rdbc     ,M12     ,Ai     ,3,1
+readM12 Ao3       ,0.0s          ,DATA_M12          ,7,Rdbc     ,M12     ,Ao     ,3,1
+readM12 Co3       ,0.0s          ,DATA_M12          ,11,Rdbc     ,M12     ,Co     ,3,1
+readM12 Bi3       ,0.0s          ,DATA_M12          ,15,Rdbc     ,M12     ,Bi     ,3,1
+readM12 Bo3       ,0.0s          ,DATA_M12          ,19,Rdbc     ,M12     ,Bo     ,3,1
+readM14 Ai0       ,0.0s          ,DATA_M14          ,0,Rdbc     ,M14     ,Ai     ,0,1
+readM14 Ao0       ,0.0s          ,DATA_M14          ,4,Rdbc     ,M14     ,Ao     ,0,1
+readM14 Co0       ,0.0s          ,DATA_M14          ,8,Rdbc     ,M14     ,Co     ,0,1
+readM14 Bi0       ,0.0s          ,DATA_M14          ,12,Rdbc     ,M14     ,Bi     ,0,1
+readM14 Bo0       ,0.0s          ,DATA_M14          ,16,Rdbc     ,M14     ,Bo     ,0,1
+readM14 Ai1       ,0.0s          ,DATA_M14          ,1,Rdbc     ,M14     ,Ai     ,1,1
+readM14 Ao1       ,0.0s          ,DATA_M14          ,5,Rdbc     ,M14     ,Ao     ,1,1
+readM14 Co1       ,0.0s          ,DATA_M14          ,9,Rdbc     ,M14     ,Co     ,1,1
+readM14 Bi1       ,0.0s          ,DATA_M14          ,13,Rdbc     ,M14     ,Bi     ,1,1
+readM14 Bo1       ,0.0s          ,DATA_M14          ,17,Rdbc     ,M14     ,Bo     ,1,1
+readM14 Ai2       ,0.0s          ,DATA_M14          ,2,Rdbc     ,M14     ,Ai     ,2,1
+readM14 Ao2       ,0.0s          ,DATA_M14          ,6,Rdbc     ,M14     ,Ao     ,2,1
+readM14 Co2       ,0.0s          ,DATA_M14          ,10,Rdbc     ,M14     ,Co     ,2,1
+readM14 Bi2       ,0.0s          ,DATA_M14          ,14,Rdbc     ,M14     ,Bi     ,2,1
+readM14 Bo2       ,0.0s          ,DATA_M14          ,18,Rdbc     ,M14     ,Bo     ,2,1
+readM14 Ai3       ,0.0s          ,DATA_M14          ,3,Rdbc     ,M14     ,Ai     ,3,1
+readM14 Ao3       ,0.0s          ,DATA_M14          ,7,Rdbc     ,M14     ,Ao     ,3,1
+readM14 Co3       ,0.0s          ,DATA_M14          ,11,Rdbc     ,M14     ,Co     ,3,1
+readM14 Bi3       ,0.0s          ,DATA_M14          ,15,Rdbc     ,M14     ,Bi     ,3,1
+readM14 Bo3       ,0.0s          ,DATA_M14          ,19,Rdbc     ,M14     ,Bo     ,3,1
+readM15 Ai0       ,0.0s          ,DATA_M15          ,0,Rdbc     ,M15     ,Ai     ,0,1
+readM15 Ao0       ,0.0s          ,DATA_M15          ,4,Rdbc     ,M15     ,Ao     ,0,1
+readM15 Co0       ,0.0s          ,DATA_M15          ,8,Rdbc     ,M15     ,Co     ,0,1
+readM15 Bi0       ,0.0s          ,DATA_M15          ,12,Rdbc     ,M15     ,Bi     ,0,1
+readM15 Bo0       ,0.0s          ,DATA_M15          ,16,Rdbc     ,M15     ,Bo     ,0,1
+readM15 Ai1       ,0.0s          ,DATA_M15          ,1,Rdbc     ,M15     ,Ai     ,1,1
+readM15 Ao1       ,0.0s          ,DATA_M15          ,5,Rdbc     ,M15     ,Ao     ,1,1
+readM15 Co1       ,0.0s          ,DATA_M15          ,9,Rdbc     ,M15     ,Co     ,1,1
+readM15 Bi1       ,0.0s          ,DATA_M15          ,13,Rdbc     ,M15     ,Bi     ,1,1
+readM15 Bo1       ,0.0s          ,DATA_M15          ,17,Rdbc     ,M15     ,Bo     ,1,1
+readM15 Ai2       ,0.0s          ,DATA_M15          ,2,Rdbc     ,M15     ,Ai     ,2,1
+readM15 Ao2       ,0.0s          ,DATA_M15          ,6,Rdbc     ,M15     ,Ao     ,2,1
+readM15 Co2       ,0.0s          ,DATA_M15          ,10,Rdbc     ,M15     ,Co     ,2,1
+readM15 Bi2       ,0.0s          ,DATA_M15          ,14,Rdbc     ,M15     ,Bi     ,2,1
+readM15 Bo2       ,0.0s          ,DATA_M15          ,18,Rdbc     ,M15     ,Bo     ,2,1
+readM15 Ai3       ,0.0s          ,DATA_M15          ,3,Rdbc     ,M15     ,Ai     ,3,1
+readM15 Ao3       ,0.0s          ,DATA_M15          ,7,Rdbc     ,M15     ,Ao     ,3,1
+readM15 Co3       ,0.0s          ,DATA_M15          ,11,Rdbc     ,M15     ,Co     ,3,1
+readM15 Bi3       ,0.0s          ,DATA_M15          ,15,Rdbc     ,M15     ,Bi     ,3,1
+readM15 Bo3       ,0.0s          ,DATA_M15          ,19,Rdbc     ,M15     ,Bo     ,3,1
+readM16 Ai0       ,0.0s          ,DATA_M16          ,0,Rdbc     ,M16     ,Ai     ,0,1
+readM16 Ao0       ,0.0s          ,DATA_M16          ,4,Rdbc     ,M16     ,Ao     ,0,1
+readM16 Co0       ,0.0s          ,DATA_M16          ,8,Rdbc     ,M16     ,Co     ,0,1
+readM16 Bi0       ,0.0s          ,DATA_M16          ,12,Rdbc     ,M16     ,Bi     ,0,1
+readM16 Bo0       ,0.0s          ,DATA_M16          ,16,Rdbc     ,M16     ,Bo     ,0,1
+readM16 Ai1       ,0.0s          ,DATA_M16          ,1,Rdbc     ,M16     ,Ai     ,1,1
+readM16 Ao1       ,0.0s          ,DATA_M16          ,5,Rdbc     ,M16     ,Ao     ,1,1
+readM16 Co1       ,0.0s          ,DATA_M16          ,9,Rdbc     ,M16     ,Co     ,1,1
+readM16 Bi1       ,0.0s          ,DATA_M16          ,13,Rdbc     ,M16     ,Bi     ,1,1
+readM16 Bo1       ,0.0s          ,DATA_M16          ,17,Rdbc     ,M16     ,Bo     ,1,1
+readM16 Ai2       ,0.0s          ,DATA_M16          ,2,Rdbc     ,M16     ,Ai     ,2,1
+readM16 Ao2       ,0.0s          ,DATA_M16          ,6,Rdbc     ,M16     ,Ao     ,2,1
+readM16 Co2       ,0.0s          ,DATA_M16          ,10,Rdbc     ,M16     ,Co     ,2,1
+readM16 Bi2       ,0.0s          ,DATA_M16          ,14,Rdbc     ,M16     ,Bi     ,2,1
+readM16 Bo2       ,0.0s          ,DATA_M16          ,18,Rdbc     ,M16     ,Bo     ,2,1
+readM16 Ai3       ,0.0s          ,DATA_M16          ,3,Rdbc     ,M16     ,Ai     ,3,1
+readM16 Ao3       ,0.0s          ,DATA_M16          ,7,Rdbc     ,M16     ,Ao     ,3,1
+readM16 Co3       ,0.0s          ,DATA_M16          ,11,Rdbc     ,M16     ,Co     ,3,1
+readM16 Bi3       ,0.0s          ,DATA_M16          ,15,Rdbc     ,M16     ,Bi     ,3,1
+readM16 Bo3       ,0.0s          ,DATA_M16          ,19,Rdbc     ,M16     ,Bo     ,3,1
+readM19 Ai0       ,0.0s          ,DATA_M19          ,0,Rdbc     ,M19     ,Ai     ,0,1
+readM19 Ao0       ,0.0s          ,DATA_M19          ,4,Rdbc     ,M19     ,Ao     ,0,1
+readM19 Co0       ,0.0s          ,DATA_M19          ,8,Rdbc     ,M19     ,Co     ,0,1
+readM19 Bi0       ,0.0s          ,DATA_M19          ,12,Rdbc     ,M19     ,Bi     ,0,1
+readM19 Bo0       ,0.0s          ,DATA_M19          ,16,Rdbc     ,M19     ,Bo     ,0,1
+readM19 Ai1       ,0.0s          ,DATA_M19          ,1,Rdbc     ,M19     ,Ai     ,1,1
+readM19 Ao1       ,0.0s          ,DATA_M19          ,5,Rdbc     ,M19     ,Ao     ,1,1
+readM19 Co1       ,0.0s          ,DATA_M19          ,9,Rdbc     ,M19     ,Co     ,1,1
+readM19 Bi1       ,0.0s          ,DATA_M19          ,13,Rdbc     ,M19     ,Bi     ,1,1
+readM19 Bo1       ,0.0s          ,DATA_M19          ,17,Rdbc     ,M19     ,Bo     ,1,1
+readM19 Ai2       ,0.0s          ,DATA_M19          ,2,Rdbc     ,M19     ,Ai     ,2,1
+readM19 Ao2       ,0.0s          ,DATA_M19          ,6,Rdbc     ,M19     ,Ao     ,2,1
+readM19 Co2       ,0.0s          ,DATA_M19          ,10,Rdbc     ,M19     ,Co     ,2,1
+readM19 Bi2       ,0.0s          ,DATA_M19          ,14,Rdbc     ,M19     ,Bi     ,2,1
+readM19 Bo2       ,0.0s          ,DATA_M19          ,18,Rdbc     ,M19     ,Bo     ,2,1
+readM19 Ai3       ,0.0s          ,DATA_M19          ,3,Rdbc     ,M19     ,Ai     ,3,1
+readM19 Ao3       ,0.0s          ,DATA_M19          ,7,Rdbc     ,M19     ,Ao     ,3,1
+readM19 Co3       ,0.0s          ,DATA_M19          ,11,Rdbc     ,M19     ,Co     ,3,1
+readM19 Bi3       ,0.0s          ,DATA_M19          ,15,Rdbc     ,M19     ,Bi     ,3,1
+readM19 Bo3       ,0.0s          ,DATA_M19          ,19,Rdbc     ,M19     ,Bo     ,3,1
+readM20 Ai0       ,0.0s          ,DATA_M20          ,0,Rdbc     ,M20     ,Ai     ,0,1
+readM20 Ao0       ,0.0s          ,DATA_M20          ,4,Rdbc     ,M20     ,Ao     ,0,1
+readM20 Co0       ,0.0s          ,DATA_M20          ,8,Rdbc     ,M20     ,Co     ,0,1
+readM20 Bi0       ,0.0s          ,DATA_M20          ,12,Rdbc     ,M20     ,Bi     ,0,1
+readM20 Bo0       ,0.0s          ,DATA_M20          ,16,Rdbc     ,M20     ,Bo     ,0,1
+readM20 Ai1       ,0.0s          ,DATA_M20          ,1,Rdbc     ,M20     ,Ai     ,1,1
+readM20 Ao1       ,0.0s          ,DATA_M20          ,5,Rdbc     ,M20     ,Ao     ,1,1
+readM20 Co1       ,0.0s          ,DATA_M20          ,9,Rdbc     ,M20     ,Co     ,1,1
+readM20 Bi1       ,0.0s          ,DATA_M20          ,13,Rdbc     ,M20     ,Bi     ,1,1
+readM20 Bo1       ,0.0s          ,DATA_M20          ,17,Rdbc     ,M20     ,Bo     ,1,1
+readM20 Ai2       ,0.0s          ,DATA_M20          ,2,Rdbc     ,M20     ,Ai     ,2,1
+readM20 Ao2       ,0.0s          ,DATA_M20          ,6,Rdbc     ,M20     ,Ao     ,2,1
+readM20 Co2       ,0.0s          ,DATA_M20          ,10,Rdbc     ,M20     ,Co     ,2,1
+readM20 Bi2       ,0.0s          ,DATA_M20          ,14,Rdbc     ,M20     ,Bi     ,2,1
+readM20 Bo2       ,0.0s          ,DATA_M20          ,18,Rdbc     ,M20     ,Bo     ,2,1
+readM20 Ai3       ,0.0s          ,DATA_M20          ,3,Rdbc     ,M20     ,Ai     ,3,1
+readM20 Ao3       ,0.0s          ,DATA_M20          ,7,Rdbc     ,M20     ,Ao     ,3,1
+readM20 Co3       ,0.0s          ,DATA_M20          ,11,Rdbc     ,M20     ,Co     ,3,1
+readM20 Bi3       ,0.0s          ,DATA_M20          ,15,Rdbc     ,M20     ,Bi     ,3,1
+readM20 Bo3       ,0.0s          ,DATA_M20          ,19,Rdbc     ,M20     ,Bo     ,3,1
+readM21 Ai0       ,0.0s          ,DATA_M21          ,0,Rdbc     ,M21     ,Ai     ,0,1
+readM21 Ao0       ,0.0s          ,DATA_M21          ,4,Rdbc     ,M21     ,Ao     ,0,1
+readM21 Co0       ,0.0s          ,DATA_M21          ,8,Rdbc     ,M21     ,Co     ,0,1
+readM21 Bi0       ,0.0s          ,DATA_M21          ,12,Rdbc     ,M21     ,Bi     ,0,1
+readM21 Bo0       ,0.0s          ,DATA_M21          ,16,Rdbc     ,M21     ,Bo     ,0,1
+readM21 Ai1       ,0.0s          ,DATA_M21          ,1,Rdbc     ,M21     ,Ai     ,1,1
+readM21 Ao1       ,0.0s          ,DATA_M21          ,5,Rdbc     ,M21     ,Ao     ,1,1
+readM21 Co1       ,0.0s          ,DATA_M21          ,9,Rdbc     ,M21     ,Co     ,1,1
+readM21 Bi1       ,0.0s          ,DATA_M21          ,13,Rdbc     ,M21     ,Bi     ,1,1
+readM21 Bo1       ,0.0s          ,DATA_M21          ,17,Rdbc     ,M21     ,Bo     ,1,1
+readM21 Ai2       ,0.0s          ,DATA_M21          ,2,Rdbc     ,M21     ,Ai     ,2,1
+readM21 Ao2       ,0.0s          ,DATA_M21          ,6,Rdbc     ,M21     ,Ao     ,2,1
+readM21 Co2       ,0.0s          ,DATA_M21          ,10,Rdbc     ,M21     ,Co     ,2,1
+readM21 Bi2       ,0.0s          ,DATA_M21          ,14,Rdbc     ,M21     ,Bi     ,2,1
+readM21 Bo2       ,0.0s          ,DATA_M21          ,18,Rdbc     ,M21     ,Bo     ,2,1
+readM21 Ai3       ,0.0s          ,DATA_M21          ,3,Rdbc     ,M21     ,Ai     ,3,1
+readM21 Ao3       ,0.0s          ,DATA_M21          ,7,Rdbc     ,M21     ,Ao     ,3,1
+readM21 Co3       ,0.0s          ,DATA_M21          ,11,Rdbc     ,M21     ,Co     ,3,1
+readM21 Bi3       ,0.0s          ,DATA_M21          ,15,Rdbc     ,M21     ,Bi     ,3,1
+readM21 Bo3       ,0.0s          ,DATA_M21          ,19,Rdbc     ,M21     ,Bo     ,3,1
+readM22 Ai0       ,0.0s          ,DATA_M22          ,0,Rdbc     ,M22     ,Ai     ,0,1
+readM22 Ao0       ,0.0s          ,DATA_M22          ,4,Rdbc     ,M22     ,Ao     ,0,1
+readM22 Co0       ,0.0s          ,DATA_M22          ,8,Rdbc     ,M22     ,Co     ,0,1
+readM22 Bi0       ,0.0s          ,DATA_M22          ,12,Rdbc     ,M22     ,Bi     ,0,1
+readM22 Bo0       ,0.0s          ,DATA_M22          ,16,Rdbc     ,M22     ,Bo     ,0,1
+readM22 Ai1       ,0.0s          ,DATA_M22          ,1,Rdbc     ,M22     ,Ai     ,1,1
+readM22 Ao1       ,0.0s          ,DATA_M22          ,5,Rdbc     ,M22     ,Ao     ,1,1
+readM22 Co1       ,0.0s          ,DATA_M22          ,9,Rdbc     ,M22     ,Co     ,1,1
+readM22 Bi1       ,0.0s          ,DATA_M22          ,13,Rdbc     ,M22     ,Bi     ,1,1
+readM22 Bo1       ,0.0s          ,DATA_M22          ,17,Rdbc     ,M22     ,Bo     ,1,1
+readM22 Ai2       ,0.0s          ,DATA_M22          ,2,Rdbc     ,M22     ,Ai     ,2,1
+readM22 Ao2       ,0.0s          ,DATA_M22          ,6,Rdbc     ,M22     ,Ao     ,2,1
+readM22 Co2       ,0.0s          ,DATA_M22          ,10,Rdbc     ,M22     ,Co     ,2,1
+readM22 Bi2       ,0.0s          ,DATA_M22          ,14,Rdbc     ,M22     ,Bi     ,2,1
+readM22 Bo2       ,0.0s          ,DATA_M22          ,18,Rdbc     ,M22     ,Bo     ,2,1
+readM22 Ai3       ,0.0s          ,DATA_M22          ,3,Rdbc     ,M22     ,Ai     ,3,1
+readM22 Ao3       ,0.0s          ,DATA_M22          ,7,Rdbc     ,M22     ,Ao     ,3,1
+readM22 Co3       ,0.0s          ,DATA_M22          ,11,Rdbc     ,M22     ,Co     ,3,1
+readM22 Bi3       ,0.0s          ,DATA_M22          ,15,Rdbc     ,M22     ,Bi     ,3,1
+readM22 Bo3       ,0.0s          ,DATA_M22          ,19,Rdbc     ,M22     ,Bo     ,3,1
+readM23 Ai0       ,0.0s          ,DATA_M23          ,0,Rdbc     ,M23     ,Ai     ,0,1
+readM23 Ao0       ,0.0s          ,DATA_M23          ,4,Rdbc     ,M23     ,Ao     ,0,1
+readM23 Co0       ,0.0s          ,DATA_M23          ,8,Rdbc     ,M23     ,Co     ,0,1
+readM23 Bi0       ,0.0s          ,DATA_M23          ,12,Rdbc     ,M23     ,Bi     ,0,1
+readM23 Bo0       ,0.0s          ,DATA_M23          ,16,Rdbc     ,M23     ,Bo     ,0,1
+readM23 Ai1       ,0.0s          ,DATA_M23          ,1,Rdbc     ,M23     ,Ai     ,1,1
+readM23 Ao1       ,0.0s          ,DATA_M23          ,5,Rdbc     ,M23     ,Ao     ,1,1
+readM23 Co1       ,0.0s          ,DATA_M23          ,9,Rdbc     ,M23     ,Co     ,1,1
+readM23 Bi1       ,0.0s          ,DATA_M23          ,13,Rdbc     ,M23     ,Bi     ,1,1
+readM23 Bo1       ,0.0s          ,DATA_M23          ,17,Rdbc     ,M23     ,Bo     ,1,1
+readM23 Ai2       ,0.0s          ,DATA_M23          ,2,Rdbc     ,M23     ,Ai     ,2,1
+readM23 Ao2       ,0.0s          ,DATA_M23          ,6,Rdbc     ,M23     ,Ao     ,2,1
+readM23 Co2       ,0.0s          ,DATA_M23          ,10,Rdbc     ,M23     ,Co     ,2,1
+readM23 Bi2       ,0.0s          ,DATA_M23          ,14,Rdbc     ,M23     ,Bi     ,2,1
+readM23 Bo2       ,0.0s          ,DATA_M23          ,18,Rdbc     ,M23     ,Bo     ,2,1
+readM23 Ai3       ,0.0s          ,DATA_M23          ,3,Rdbc     ,M23     ,Ai     ,3,1
+readM23 Ao3       ,0.0s          ,DATA_M23          ,7,Rdbc     ,M23     ,Ao     ,3,1
+readM23 Co3       ,0.0s          ,DATA_M23          ,11,Rdbc     ,M23     ,Co     ,3,1
+readM23 Bi3       ,0.0s          ,DATA_M23          ,15,Rdbc     ,M23     ,Bi     ,3,1
+readM23 Bo3       ,0.0s          ,DATA_M23          ,19,Rdbc     ,M23     ,Bo     ,3,1
+readM25 Ai0       ,0.0s          ,DATA_M25          ,0,Rdbc     ,M25     ,Ai     ,0,1
+readM25 Ao0       ,0.0s          ,DATA_M25          ,4,Rdbc     ,M25     ,Ao     ,0,1
+readM25 Co0       ,0.0s          ,DATA_M25          ,8,Rdbc     ,M25     ,Co     ,0,1
+readM25 Bi0       ,0.0s          ,DATA_M25          ,12,Rdbc     ,M25     ,Bi     ,0,1
+readM25 Bo0       ,0.0s          ,DATA_M25          ,16,Rdbc     ,M25     ,Bo     ,0,1
+readM25 Ai1       ,0.0s          ,DATA_M25          ,1,Rdbc     ,M25     ,Ai     ,1,1
+readM25 Ao1       ,0.0s          ,DATA_M25          ,5,Rdbc     ,M25     ,Ao     ,1,1
+readM25 Co1       ,0.0s          ,DATA_M25          ,9,Rdbc     ,M25     ,Co     ,1,1
+readM25 Bi1       ,0.0s          ,DATA_M25          ,13,Rdbc     ,M25     ,Bi     ,1,1
+readM25 Bo1       ,0.0s          ,DATA_M25          ,17,Rdbc     ,M25     ,Bo     ,1,1
+readM25 Ai2       ,0.0s          ,DATA_M25          ,2,Rdbc     ,M25     ,Ai     ,2,1
+readM25 Ao2       ,0.0s          ,DATA_M25          ,6,Rdbc     ,M25     ,Ao     ,2,1
+readM25 Co2       ,0.0s          ,DATA_M25          ,10,Rdbc     ,M25     ,Co     ,2,1
+readM25 Bi2       ,0.0s          ,DATA_M25          ,14,Rdbc     ,M25     ,Bi     ,2,1
+readM25 Bo2       ,0.0s          ,DATA_M25          ,18,Rdbc     ,M25     ,Bo     ,2,1
+readM25 Ai3       ,0.0s          ,DATA_M25          ,3,Rdbc     ,M25     ,Ai     ,3,1
+readM25 Ao3       ,0.0s          ,DATA_M25          ,7,Rdbc     ,M25     ,Ao     ,3,1
+readM25 Co3       ,0.0s          ,DATA_M25          ,11,Rdbc     ,M25     ,Co     ,3,1
+readM25 Bi3       ,0.0s          ,DATA_M25          ,15,Rdbc     ,M25     ,Bi     ,3,1
+readM25 Bo3       ,0.0s          ,DATA_M25          ,19,Rdbc     ,M25     ,Bo     ,3,1
+readM27 Ai0       ,0.0s          ,DATA_M27          ,0,Rdbc     ,M27     ,Ai     ,0,1
+readM27 Ao0       ,0.0s          ,DATA_M27          ,4,Rdbc     ,M27     ,Ao     ,0,1
+readM27 Co0       ,0.0s          ,DATA_M27          ,8,Rdbc     ,M27     ,Co     ,0,1
+readM27 Bi0       ,0.0s          ,DATA_M27          ,12,Rdbc     ,M27     ,Bi     ,0,1
+readM27 Bo0       ,0.0s          ,DATA_M27          ,16,Rdbc     ,M27     ,Bo     ,0,1
+readM27 Ai1       ,0.0s          ,DATA_M27          ,1,Rdbc     ,M27     ,Ai     ,1,1
+readM27 Ao1       ,0.0s          ,DATA_M27          ,5,Rdbc     ,M27     ,Ao     ,1,1
+readM27 Co1       ,0.0s          ,DATA_M27          ,9,Rdbc     ,M27     ,Co     ,1,1
+readM27 Bi1       ,0.0s          ,DATA_M27          ,13,Rdbc     ,M27     ,Bi     ,1,1
+readM27 Bo1       ,0.0s          ,DATA_M27          ,17,Rdbc     ,M27     ,Bo     ,1,1
+readM27 Ai2       ,0.0s          ,DATA_M27          ,2,Rdbc     ,M27     ,Ai     ,2,1
+readM27 Ao2       ,0.0s          ,DATA_M27          ,6,Rdbc     ,M27     ,Ao     ,2,1
+readM27 Co2       ,0.0s          ,DATA_M27          ,10,Rdbc     ,M27     ,Co     ,2,1
+readM27 Bi2       ,0.0s          ,DATA_M27          ,14,Rdbc     ,M27     ,Bi     ,2,1
+readM27 Bo2       ,0.0s          ,DATA_M27          ,18,Rdbc     ,M27     ,Bo     ,2,1
+readM27 Ai3       ,0.0s          ,DATA_M27          ,3,Rdbc     ,M27     ,Ai     ,3,1
+readM27 Ao3       ,0.0s          ,DATA_M27          ,7,Rdbc     ,M27     ,Ao     ,3,1
+readM27 Co3       ,0.0s          ,DATA_M27          ,11,Rdbc     ,M27     ,Co     ,3,1
+readM27 Bi3       ,0.0s          ,DATA_M27          ,15,Rdbc     ,M27     ,Bi     ,3,1
+readM27 Bo3       ,0.0s          ,DATA_M27          ,19,Rdbc     ,M27     ,Bo     ,3,1
+readM28 Ai0       ,0.0s          ,DATA_M28          ,0,Rdbc     ,M28     ,Ai     ,0,1
+readM28 Ao0       ,0.0s          ,DATA_M28          ,4,Rdbc     ,M28     ,Ao     ,0,1
+readM28 Co0       ,0.0s          ,DATA_M28          ,8,Rdbc     ,M28     ,Co     ,0,1
+readM28 Bi0       ,0.0s          ,DATA_M28          ,12,Rdbc     ,M28     ,Bi     ,0,1
+readM28 Bo0       ,0.0s          ,DATA_M28          ,16,Rdbc     ,M28     ,Bo     ,0,1
+readM28 Ai1       ,0.0s          ,DATA_M28          ,1,Rdbc     ,M28     ,Ai     ,1,1
+readM28 Ao1       ,0.0s          ,DATA_M28          ,5,Rdbc     ,M28     ,Ao     ,1,1
+readM28 Co1       ,0.0s          ,DATA_M28          ,9,Rdbc     ,M28     ,Co     ,1,1
+readM28 Bi1       ,0.0s          ,DATA_M28          ,13,Rdbc     ,M28     ,Bi     ,1,1
+readM28 Bo1       ,0.0s          ,DATA_M28          ,17,Rdbc     ,M28     ,Bo     ,1,1
+readM28 Ai2       ,0.0s          ,DATA_M28          ,2,Rdbc     ,M28     ,Ai     ,2,1
+readM28 Ao2       ,0.0s          ,DATA_M28          ,6,Rdbc     ,M28     ,Ao     ,2,1
+readM28 Co2       ,0.0s          ,DATA_M28          ,10,Rdbc     ,M28     ,Co     ,2,1
+readM28 Bi2       ,0.0s          ,DATA_M28          ,14,Rdbc     ,M28     ,Bi     ,2,1
+readM28 Bo2       ,0.0s          ,DATA_M28          ,18,Rdbc     ,M28     ,Bo     ,2,1
+readM28 Ai3       ,0.0s          ,DATA_M28          ,3,Rdbc     ,M28     ,Ai     ,3,1
+readM28 Ao3       ,0.0s          ,DATA_M28          ,7,Rdbc     ,M28     ,Ao     ,3,1
+readM28 Co3       ,0.0s          ,DATA_M28          ,11,Rdbc     ,M28     ,Co     ,3,1
+readM28 Bi3       ,0.0s          ,DATA_M28          ,15,Rdbc     ,M28     ,Bi     ,3,1
+readM28 Bo3       ,0.0s          ,DATA_M28          ,19,Rdbc     ,M28     ,Bo     ,3,1
+readM30 Ai0       ,0.0s          ,DATA_M30          ,0,Rdbc     ,M30     ,Ai     ,0,1
+readM30 Ao0       ,0.0s          ,DATA_M30          ,4,Rdbc     ,M30     ,Ao     ,0,1
+readM30 Co0       ,0.0s          ,DATA_M30          ,8,Rdbc     ,M30     ,Co     ,0,1
+readM30 Bi0       ,0.0s          ,DATA_M30          ,12,Rdbc     ,M30     ,Bi     ,0,1
+readM30 Bo0       ,0.0s          ,DATA_M30          ,16,Rdbc     ,M30     ,Bo     ,0,1
+readM30 Ai1       ,0.0s          ,DATA_M30          ,1,Rdbc     ,M30     ,Ai     ,1,1
+readM30 Ao1       ,0.0s          ,DATA_M30          ,5,Rdbc     ,M30     ,Ao     ,1,1
+readM30 Co1       ,0.0s          ,DATA_M30          ,9,Rdbc     ,M30     ,Co     ,1,1
+readM30 Bi1       ,0.0s          ,DATA_M30          ,13,Rdbc     ,M30     ,Bi     ,1,1
+readM30 Bo1       ,0.0s          ,DATA_M30          ,17,Rdbc     ,M30     ,Bo     ,1,1
+readM30 Ai2       ,0.0s          ,DATA_M30          ,2,Rdbc     ,M30     ,Ai     ,2,1
+readM30 Ao2       ,0.0s          ,DATA_M30          ,6,Rdbc     ,M30     ,Ao     ,2,1
+readM30 Co2       ,0.0s          ,DATA_M30          ,10,Rdbc     ,M30     ,Co     ,2,1
+readM30 Bi2       ,0.0s          ,DATA_M30          ,14,Rdbc     ,M30     ,Bi     ,2,1
+readM30 Bo2       ,0.0s          ,DATA_M30          ,18,Rdbc     ,M30     ,Bo     ,2,1
+readM30 Ai3       ,0.0s          ,DATA_M30          ,3,Rdbc     ,M30     ,Ai     ,3,1
+readM30 Ao3       ,0.0s          ,DATA_M30          ,7,Rdbc     ,M30     ,Ao     ,3,1
+readM30 Co3       ,0.0s          ,DATA_M30          ,11,Rdbc     ,M30     ,Co     ,3,1
+readM30 Bi3       ,0.0s          ,DATA_M30          ,15,Rdbc     ,M30     ,Bi     ,3,1
+readM30 Bo3       ,0.0s          ,DATA_M30          ,19,Rdbc     ,M30     ,Bo     ,3,1
+readM31 Ai0       ,0.0s          ,DATA_M31          ,0,Rdbc     ,M31     ,Ai     ,0,1
+readM31 Ao0       ,0.0s          ,DATA_M31          ,4,Rdbc     ,M31     ,Ao     ,0,1
+readM31 Co0       ,0.0s          ,DATA_M31          ,8,Rdbc     ,M31     ,Co     ,0,1
+readM31 Bi0       ,0.0s          ,DATA_M31          ,12,Rdbc     ,M31     ,Bi     ,0,1
+readM31 Bo0       ,0.0s          ,DATA_M31          ,16,Rdbc     ,M31     ,Bo     ,0,1
+readM31 Ai1       ,0.0s          ,DATA_M31          ,1,Rdbc     ,M31     ,Ai     ,1,1
+readM31 Ao1       ,0.0s          ,DATA_M31          ,5,Rdbc     ,M31     ,Ao     ,1,1
+readM31 Co1       ,0.0s          ,DATA_M31          ,9,Rdbc     ,M31     ,Co     ,1,1
+readM31 Bi1       ,0.0s          ,DATA_M31          ,13,Rdbc     ,M31     ,Bi     ,1,1
+readM31 Bo1       ,0.0s          ,DATA_M31          ,17,Rdbc     ,M31     ,Bo     ,1,1
+readM31 Ai2       ,0.0s          ,DATA_M31          ,2,Rdbc     ,M31     ,Ai     ,2,1
+readM31 Ao2       ,0.0s          ,DATA_M31          ,6,Rdbc     ,M31     ,Ao     ,2,1
+readM31 Co2       ,0.0s          ,DATA_M31          ,10,Rdbc     ,M31     ,Co     ,2,1
+readM31 Bi2       ,0.0s          ,DATA_M31          ,14,Rdbc     ,M31     ,Bi     ,2,1
+readM31 Bo2       ,0.0s          ,DATA_M31          ,18,Rdbc     ,M31     ,Bo     ,2,1
+readM31 Ai3       ,0.0s          ,DATA_M31          ,3,Rdbc     ,M31     ,Ai     ,3,1
+readM31 Ao3       ,0.0s          ,DATA_M31          ,7,Rdbc     ,M31     ,Ao     ,3,1
+readM31 Co3       ,0.0s          ,DATA_M31          ,11,Rdbc     ,M31     ,Co     ,3,1
+readM31 Bi3       ,0.0s          ,DATA_M31          ,15,Rdbc     ,M31     ,Bi     ,3,1
+readM31 Bo3       ,0.0s          ,DATA_M31          ,19,Rdbc     ,M31     ,Bo     ,3,1
+//================================================================================,,,,,,,,
+//,,,,,,,,
+//    Server Side Map Descriptors,,,,,,,,
+//,,,,,,,,
+//,,,,,,,,
+//,,,,,,,,
+Map_Descriptors,,,,,,,,
+Map_Descriptor_Name ,Data_type ,Object_Id ,Data_Array_Name      ,Data_Array_Offset ,Function ,Node_Name  ,Relinquish_Default ,Length
+M00_Ai0         ,Ai            ,0,DATA_M00      ,0,Server    ,vLstarTrunk  ,-           ,1
+M00_Ai1         ,Ai            ,1,DATA_M00      ,1,Server    ,vLstarTrunk  ,-           ,1
+M00_Ai2         ,Ai            ,2,DATA_M00      ,2,Server    ,vLstarTrunk  ,-           ,1
+M00_Ai3         ,Ai            ,3,DATA_M00      ,3,Server    ,vLstarTrunk  ,-           ,1
+M00_Ao0         ,Ao            ,0,DATA_M00      ,0,Server    ,vLstarTrunk  ,0,1
+M00_Ao1         ,Ao            ,1,DATA_M00      ,1,Server    ,vLstarTrunk  ,0,1
+M00_Ao2         ,Ao            ,2,DATA_M00      ,2,Server    ,vLstarTrunk  ,0,1
+M00_Ao3         ,Ao            ,3,DATA_M00      ,3,Server    ,vLstarTrunk  ,0,1
+M00_Co0         ,Av            ,0,DATA_M00      ,0,Server    ,vLstarTrunk  ,-           ,1
+M00_Co1         ,Av            ,1,DATA_M00      ,1,Server    ,vLstarTrunk  ,-           ,1
+M00_Co2         ,Av            ,2,DATA_M00      ,2,Server    ,vLstarTrunk  ,-           ,1
+M00_Co3         ,Av            ,3,DATA_M00      ,3,Server    ,vLstarTrunk  ,-           ,1
+M00_Bi0         ,Bi            ,0,DATA_M00      ,0,Server    ,vLstarTrunk  ,-           ,1
+M00_Bi1         ,Bi            ,1,DATA_M00      ,1,Server    ,vLstarTrunk  ,-           ,1
+M00_Bi2         ,Bi            ,2,DATA_M00      ,2,Server    ,vLstarTrunk  ,-           ,1
+M00_Bi3         ,Bi            ,3,DATA_M00      ,3,Server    ,vLstarTrunk  ,-           ,1
+M00_Bo0         ,Bo            ,0,DATA_M00      ,0,Server    ,vLstarTrunk  ,0,1
+M00_Bo1         ,Bo            ,1,DATA_M00      ,1,Server    ,vLstarTrunk  ,0,1
+M00_Bo2         ,Bo            ,2,DATA_M00      ,2,Server    ,vLstarTrunk  ,0,1
+M00_Bo3         ,Bo            ,3,DATA_M00      ,3,Server    ,vLstarTrunk  ,0,1
+NodeOnline         ,Bi            ,10000,Comm_Status      ,0,Server    ,vLstarTrunk  ,0,1
+//,,,,,,,,
+M01_Ai0         ,Ai            ,100,DATA_M01      ,0,Server    ,vLstarTrunk  ,-           ,1
+M01_Ai1         ,Ai            ,101,DATA_M01      ,1,Server    ,vLstarTrunk  ,-           ,1
+M01_Ai2         ,Ai            ,102,DATA_M01      ,2,Server    ,vLstarTrunk  ,-           ,1
+M01_Ai3         ,Ai            ,103,DATA_M01      ,3,Server    ,vLstarTrunk  ,-           ,1
+M01_Ao0         ,Ao            ,100,DATA_M01      ,0,Server    ,vLstarTrunk  ,0,1
+M01_Ao1         ,Ao            ,101,DATA_M01      ,1,Server    ,vLstarTrunk  ,0,1
+M01_Ao2         ,Ao            ,102,DATA_M01      ,2,Server    ,vLstarTrunk  ,0,1
+M01_Ao3         ,Ao            ,103,DATA_M01      ,3,Server    ,vLstarTrunk  ,0,1
+M01_Co0         ,Av            ,100,DATA_M01      ,0,Server    ,vLstarTrunk  ,-           ,1
+M01_Co1         ,Av            ,101,DATA_M01      ,1,Server    ,vLstarTrunk  ,-           ,1
+M01_Co2         ,Av            ,102,DATA_M01      ,2,Server    ,vLstarTrunk  ,-           ,1
+M01_Co3         ,Av            ,103,DATA_M01      ,3,Server    ,vLstarTrunk  ,-           ,1
+M01_Bi0         ,Bi            ,100,DATA_M01      ,0,Server    ,vLstarTrunk  ,-           ,1
+M01_Bi1         ,Bi            ,101,DATA_M01      ,1,Server    ,vLstarTrunk  ,-           ,1
+M01_Bi2         ,Bi            ,102,DATA_M01      ,2,Server    ,vLstarTrunk  ,-           ,1
+M01_Bi3         ,Bi            ,103,DATA_M01      ,3,Server    ,vLstarTrunk  ,-           ,1
+M01_Bo0         ,Bo            ,100,DATA_M01      ,0,Server    ,vLstarTrunk  ,0,1
+M01_Bo1         ,Bo            ,101,DATA_M01      ,1,Server    ,vLstarTrunk  ,0,1
+M01_Bo2         ,Bo            ,102,DATA_M01      ,2,Server    ,vLstarTrunk  ,0,1
+M01_Bo3         ,Bo            ,103,DATA_M01      ,3,Server    ,vLstarTrunk  ,0,1
+NodeOnline         ,Bi            ,10001,Comm_Status      ,1,Server    ,vLstarTrunk  ,0,1
+//,,,,,,,,
+M02_Ai0         ,Ai            ,200,DATA_M02      ,0,Server    ,vLstarTrunk  ,-           ,1
+M02_Ai1         ,Ai            ,201,DATA_M02      ,1,Server    ,vLstarTrunk  ,-           ,1
+M02_Ai2         ,Ai            ,202,DATA_M02      ,2,Server    ,vLstarTrunk  ,-           ,1
+M02_Ai3         ,Ai            ,203,DATA_M02      ,3,Server    ,vLstarTrunk  ,-           ,1
+M02_Ao0         ,Ao            ,200,DATA_M02      ,0,Server    ,vLstarTrunk  ,0,1
+M02_Ao1         ,Ao            ,201,DATA_M02      ,1,Server    ,vLstarTrunk  ,0,1
+M02_Ao2         ,Ao            ,202,DATA_M02      ,2,Server    ,vLstarTrunk  ,0,1
+M02_Ao3         ,Ao            ,203,DATA_M02      ,3,Server    ,vLstarTrunk  ,0,1
+M02_Co0         ,Av            ,200,DATA_M02      ,0,Server    ,vLstarTrunk  ,-           ,1
+M02_Co1         ,Av            ,201,DATA_M02      ,1,Server    ,vLstarTrunk  ,-           ,1
+M02_Co2         ,Av            ,202,DATA_M02      ,2,Server    ,vLstarTrunk  ,-           ,1
+M02_Co3         ,Av            ,203,DATA_M02      ,3,Server    ,vLstarTrunk  ,-           ,1
+M02_Bi0         ,Bi            ,200,DATA_M02      ,0,Server    ,vLstarTrunk  ,-           ,1
+M02_Bi1         ,Bi            ,201,DATA_M02      ,1,Server    ,vLstarTrunk  ,-           ,1
+M02_Bi2         ,Bi            ,202,DATA_M02      ,2,Server    ,vLstarTrunk  ,-           ,1
+M02_Bi3         ,Bi            ,203,DATA_M02      ,3,Server    ,vLstarTrunk  ,-           ,1
+M02_Bo0         ,Bo            ,200,DATA_M02      ,0,Server    ,vLstarTrunk  ,0,1
+M02_Bo1         ,Bo            ,201,DATA_M02      ,1,Server    ,vLstarTrunk  ,0,1
+M02_Bo2         ,Bo            ,202,DATA_M02      ,2,Server    ,vLstarTrunk  ,0,1
+M02_Bo3         ,Bo            ,203,DATA_M02      ,3,Server    ,vLstarTrunk  ,0,1
+NodeOnline         ,Bi            ,10002,Comm_Status      ,2,Server    ,vLstarTrunk  ,0,1
+//,,,,,,,,
+M04_Ai0         ,Ai            ,400,DATA_M04      ,0,Server    ,vLstarTrunk  ,-           ,1
+M04_Ai1         ,Ai            ,401,DATA_M04      ,1,Server    ,vLstarTrunk  ,-           ,1
+M04_Ai2         ,Ai            ,402,DATA_M04      ,2,Server    ,vLstarTrunk  ,-           ,1
+M04_Ai3         ,Ai            ,403,DATA_M04      ,3,Server    ,vLstarTrunk  ,-           ,1
+M04_Ao0         ,Ao            ,400,DATA_M04      ,0,Server    ,vLstarTrunk  ,0,1
+M04_Ao1         ,Ao            ,401,DATA_M04      ,1,Server    ,vLstarTrunk  ,0,1
+M04_Ao2         ,Ao            ,402,DATA_M04      ,2,Server    ,vLstarTrunk  ,0,1
+M04_Ao3         ,Ao            ,403,DATA_M04      ,3,Server    ,vLstarTrunk  ,0,1
+M04_Co0         ,Av            ,400,DATA_M04      ,0,Server    ,vLstarTrunk  ,-           ,1
+M04_Co1         ,Av            ,401,DATA_M04      ,1,Server    ,vLstarTrunk  ,-           ,1
+M04_Co2         ,Av            ,402,DATA_M04      ,2,Server    ,vLstarTrunk  ,-           ,1
+M04_Co3         ,Av            ,403,DATA_M04      ,3,Server    ,vLstarTrunk  ,-           ,1
+M04_Bi0         ,Bi            ,400,DATA_M04      ,0,Server    ,vLstarTrunk  ,-           ,1
+M04_Bi1         ,Bi            ,401,DATA_M04      ,1,Server    ,vLstarTrunk  ,-           ,1
+M04_Bi2         ,Bi            ,402,DATA_M04      ,2,Server    ,vLstarTrunk  ,-           ,1
+M04_Bi3         ,Bi            ,403,DATA_M04      ,3,Server    ,vLstarTrunk  ,-           ,1
+M04_Bo0         ,Bo            ,400,DATA_M04      ,0,Server    ,vLstarTrunk  ,0,1
+M04_Bo1         ,Bo            ,401,DATA_M04      ,1,Server    ,vLstarTrunk  ,0,1
+M04_Bo2         ,Bo            ,402,DATA_M04      ,2,Server    ,vLstarTrunk  ,0,1
+M04_Bo3         ,Bo            ,403,DATA_M04      ,3,Server    ,vLstarTrunk  ,0,1
+NodeOnline         ,Bi            ,10004,Comm_Status      ,4,Server    ,vLstarTrunk  ,0,1
+//,,,,,,,,
+M05_Ai0         ,Ai            ,500,DATA_M05      ,0,Server    ,vLstarTrunk  ,-           ,1
+M05_Ai1         ,Ai            ,501,DATA_M05      ,1,Server    ,vLstarTrunk  ,-           ,1
+M05_Ai2         ,Ai            ,502,DATA_M05      ,2,Server    ,vLstarTrunk  ,-           ,1
+M05_Ai3         ,Ai            ,503,DATA_M05      ,3,Server    ,vLstarTrunk  ,-           ,1
+M05_Ao0         ,Ao            ,500,DATA_M05      ,0,Server    ,vLstarTrunk  ,0,1
+M05_Ao1         ,Ao            ,501,DATA_M05      ,1,Server    ,vLstarTrunk  ,0,1
+M05_Ao2         ,Ao            ,502,DATA_M05      ,2,Server    ,vLstarTrunk  ,0,1
+M05_Ao3         ,Ao            ,503,DATA_M05      ,3,Server    ,vLstarTrunk  ,0,1
+M05_Co0         ,Av            ,500,DATA_M05      ,0,Server    ,vLstarTrunk  ,-           ,1
+M05_Co1         ,Av            ,501,DATA_M05      ,1,Server    ,vLstarTrunk  ,-           ,1
+M05_Co2         ,Av            ,502,DATA_M05      ,2,Server    ,vLstarTrunk  ,-           ,1
+M05_Co3         ,Av            ,503,DATA_M05      ,3,Server    ,vLstarTrunk  ,-           ,1
+M05_Bi0         ,Bi            ,500,DATA_M05      ,0,Server    ,vLstarTrunk  ,-           ,1
+M05_Bi1         ,Bi            ,501,DATA_M05      ,1,Server    ,vLstarTrunk  ,-           ,1
+M05_Bi2         ,Bi            ,502,DATA_M05      ,2,Server    ,vLstarTrunk  ,-           ,1
+M05_Bi3         ,Bi            ,503,DATA_M05      ,3,Server    ,vLstarTrunk  ,-           ,1
+M05_Bo0         ,Bo            ,500,DATA_M05      ,0,Server    ,vLstarTrunk  ,0,1
+M05_Bo1         ,Bo            ,501,DATA_M05      ,1,Server    ,vLstarTrunk  ,0,1
+M05_Bo2         ,Bo            ,502,DATA_M05      ,2,Server    ,vLstarTrunk  ,0,1
+M05_Bo3         ,Bo            ,503,DATA_M05      ,3,Server    ,vLstarTrunk  ,0,1
+NodeOnline         ,Bi            ,10005,Comm_Status      ,5,Server    ,vLstarTrunk  ,0,1
+//,,,,,,,,
+M07_Ai0         ,Ai            ,700,DATA_M07      ,0,Server    ,vLstarTrunk  ,-           ,1
+M07_Ai1         ,Ai            ,701,DATA_M07      ,1,Server    ,vLstarTrunk  ,-           ,1
+M07_Ai2         ,Ai            ,702,DATA_M07      ,2,Server    ,vLstarTrunk  ,-           ,1
+M07_Ai3         ,Ai            ,703,DATA_M07      ,3,Server    ,vLstarTrunk  ,-           ,1
+M07_Ao0         ,Ao            ,700,DATA_M07      ,0,Server    ,vLstarTrunk  ,0,1
+M07_Ao1         ,Ao            ,701,DATA_M07      ,1,Server    ,vLstarTrunk  ,0,1
+M07_Ao2         ,Ao            ,702,DATA_M07      ,2,Server    ,vLstarTrunk  ,0,1
+M07_Ao3         ,Ao            ,703,DATA_M07      ,3,Server    ,vLstarTrunk  ,0,1
+M07_Co0         ,Av            ,700,DATA_M07      ,0,Server    ,vLstarTrunk  ,-           ,1
+M07_Co1         ,Av            ,701,DATA_M07      ,1,Server    ,vLstarTrunk  ,-           ,1
+M07_Co2         ,Av            ,702,DATA_M07      ,2,Server    ,vLstarTrunk  ,-           ,1
+M07_Co3         ,Av            ,703,DATA_M07      ,3,Server    ,vLstarTrunk  ,-           ,1
+M07_Bi0         ,Bi            ,700,DATA_M07      ,0,Server    ,vLstarTrunk  ,-           ,1
+M07_Bi1         ,Bi            ,701,DATA_M07      ,1,Server    ,vLstarTrunk  ,-           ,1
+M07_Bi2         ,Bi            ,702,DATA_M07      ,2,Server    ,vLstarTrunk  ,-           ,1
+M07_Bi3         ,Bi            ,703,DATA_M07      ,3,Server    ,vLstarTrunk  ,-           ,1
+M07_Bo0         ,Bo            ,700,DATA_M07      ,0,Server    ,vLstarTrunk  ,0,1
+M07_Bo1         ,Bo            ,701,DATA_M07      ,1,Server    ,vLstarTrunk  ,0,1
+M07_Bo2         ,Bo            ,702,DATA_M07      ,2,Server    ,vLstarTrunk  ,0,1
+M07_Bo3         ,Bo            ,703,DATA_M07      ,3,Server    ,vLstarTrunk  ,0,1
+NodeOnline         ,Bi            ,10007,Comm_Status      ,7,Server    ,vLstarTrunk  ,0,1
+//,,,,,,,,
+M08_Ai0         ,Ai            ,800,DATA_M08      ,0,Server    ,vLstarTrunk  ,-           ,1
+M08_Ai1         ,Ai            ,801,DATA_M08      ,1,Server    ,vLstarTrunk  ,-           ,1
+M08_Ai2         ,Ai            ,802,DATA_M08      ,2,Server    ,vLstarTrunk  ,-           ,1
+M08_Ai3         ,Ai            ,803,DATA_M08      ,3,Server    ,vLstarTrunk  ,-           ,1
+M08_Ao0         ,Ao            ,800,DATA_M08      ,0,Server    ,vLstarTrunk  ,0,1
+M08_Ao1         ,Ao            ,801,DATA_M08      ,1,Server    ,vLstarTrunk  ,0,1
+M08_Ao2         ,Ao            ,802,DATA_M08      ,2,Server    ,vLstarTrunk  ,0,1
+M08_Ao3         ,Ao            ,803,DATA_M08      ,3,Server    ,vLstarTrunk  ,0,1
+M08_Co0         ,Av            ,800,DATA_M08      ,0,Server    ,vLstarTrunk  ,-           ,1
+M08_Co1         ,Av            ,801,DATA_M08      ,1,Server    ,vLstarTrunk  ,-           ,1
+M08_Co2         ,Av            ,802,DATA_M08      ,2,Server    ,vLstarTrunk  ,-           ,1
+M08_Co3         ,Av            ,803,DATA_M08      ,3,Server    ,vLstarTrunk  ,-           ,1
+M08_Bi0         ,Bi            ,800,DATA_M08      ,0,Server    ,vLstarTrunk  ,-           ,1
+M08_Bi1         ,Bi            ,801,DATA_M08      ,1,Server    ,vLstarTrunk  ,-           ,1
+M08_Bi2         ,Bi            ,802,DATA_M08      ,2,Server    ,vLstarTrunk  ,-           ,1
+M08_Bi3         ,Bi            ,803,DATA_M08      ,3,Server    ,vLstarTrunk  ,-           ,1
+M08_Bo0         ,Bo            ,800,DATA_M08      ,0,Server    ,vLstarTrunk  ,0,1
+M08_Bo1         ,Bo            ,801,DATA_M08      ,1,Server    ,vLstarTrunk  ,0,1
+M08_Bo2         ,Bo            ,802,DATA_M08      ,2,Server    ,vLstarTrunk  ,0,1
+M08_Bo3         ,Bo            ,803,DATA_M08      ,3,Server    ,vLstarTrunk  ,0,1
+NodeOnline         ,Bi            ,10008,Comm_Status      ,8,Server    ,vLstarTrunk  ,0,1
+//,,,,,,,,
+M09_Ai0         ,Ai            ,900,DATA_M09      ,0,Server    ,vLstarTrunk  ,-           ,1
+M09_Ai1         ,Ai            ,901,DATA_M09      ,1,Server    ,vLstarTrunk  ,-           ,1
+M09_Ai2         ,Ai            ,902,DATA_M09      ,2,Server    ,vLstarTrunk  ,-           ,1
+M09_Ai3         ,Ai            ,903,DATA_M09      ,3,Server    ,vLstarTrunk  ,-           ,1
+M09_Ao0         ,Ao            ,900,DATA_M09      ,0,Server    ,vLstarTrunk  ,0,1
+M09_Ao1         ,Ao            ,901,DATA_M09      ,1,Server    ,vLstarTrunk  ,0,1
+M09_Ao2         ,Ao            ,902,DATA_M09      ,2,Server    ,vLstarTrunk  ,0,1
+M09_Ao3         ,Ao            ,903,DATA_M09      ,3,Server    ,vLstarTrunk  ,0,1
+M09_Co0         ,Av            ,900,DATA_M09      ,0,Server    ,vLstarTrunk  ,-           ,1
+M09_Co1         ,Av            ,901,DATA_M09      ,1,Server    ,vLstarTrunk  ,-           ,1
+M09_Co2         ,Av            ,902,DATA_M09      ,2,Server    ,vLstarTrunk  ,-           ,1
+M09_Co3         ,Av            ,903,DATA_M09      ,3,Server    ,vLstarTrunk  ,-           ,1
+M09_Bi0         ,Bi            ,900,DATA_M09      ,0,Server    ,vLstarTrunk  ,-           ,1
+M09_Bi1         ,Bi            ,901,DATA_M09      ,1,Server    ,vLstarTrunk  ,-           ,1
+M09_Bi2         ,Bi            ,902,DATA_M09      ,2,Server    ,vLstarTrunk  ,-           ,1
+M09_Bi3         ,Bi            ,903,DATA_M09      ,3,Server    ,vLstarTrunk  ,-           ,1
+M09_Bo0         ,Bo            ,900,DATA_M09      ,0,Server    ,vLstarTrunk  ,0,1
+M09_Bo1         ,Bo            ,901,DATA_M09      ,1,Server    ,vLstarTrunk  ,0,1
+M09_Bo2         ,Bo            ,902,DATA_M09      ,2,Server    ,vLstarTrunk  ,0,1
+M09_Bo3         ,Bo            ,903,DATA_M09      ,3,Server    ,vLstarTrunk  ,0,1
+NodeOnline         ,Bi            ,10009,Comm_Status      ,9,Server    ,vLstarTrunk  ,0,1
+//,,,,,,,,
+M10_Ai0         ,Ai            ,1000,DATA_M10      ,0,Server    ,vLstarTrunk  ,-           ,1
+M10_Ai1         ,Ai            ,1001,DATA_M10      ,1,Server    ,vLstarTrunk  ,-           ,1
+M10_Ai2         ,Ai            ,1002,DATA_M10      ,2,Server    ,vLstarTrunk  ,-           ,1
+M10_Ai3         ,Ai            ,1003,DATA_M10      ,3,Server    ,vLstarTrunk  ,-           ,1
+M10_Ao0         ,Ao            ,1000,DATA_M10      ,0,Server    ,vLstarTrunk  ,0,1
+M10_Ao1         ,Ao            ,1001,DATA_M10      ,1,Server    ,vLstarTrunk  ,0,1
+M10_Ao2         ,Ao            ,1002,DATA_M10      ,2,Server    ,vLstarTrunk  ,0,1
+M10_Ao3         ,Ao            ,1003,DATA_M10      ,3,Server    ,vLstarTrunk  ,0,1
+M10_Co0         ,Av            ,1000,DATA_M10      ,0,Server    ,vLstarTrunk  ,-           ,1
+M10_Co1         ,Av            ,1001,DATA_M10      ,1,Server    ,vLstarTrunk  ,-           ,1
+M10_Co2         ,Av            ,1002,DATA_M10      ,2,Server    ,vLstarTrunk  ,-           ,1
+M10_Co3         ,Av            ,1003,DATA_M10      ,3,Server    ,vLstarTrunk  ,-           ,1
+M10_Bi0         ,Bi            ,1000,DATA_M10      ,0,Server    ,vLstarTrunk  ,-           ,1
+M10_Bi1         ,Bi            ,1001,DATA_M10      ,1,Server    ,vLstarTrunk  ,-           ,1
+M10_Bi2         ,Bi            ,1002,DATA_M10      ,2,Server    ,vLstarTrunk  ,-           ,1
+M10_Bi3         ,Bi            ,1003,DATA_M10      ,3,Server    ,vLstarTrunk  ,-           ,1
+M10_Bo0         ,Bo            ,1000,DATA_M10      ,0,Server    ,vLstarTrunk  ,0,1
+M10_Bo1         ,Bo            ,1001,DATA_M10      ,1,Server    ,vLstarTrunk  ,0,1
+M10_Bo2         ,Bo            ,1002,DATA_M10      ,2,Server    ,vLstarTrunk  ,0,1
+M10_Bo3         ,Bo            ,1003,DATA_M10      ,3,Server    ,vLstarTrunk  ,0,1
+NodeOnline         ,Bi            ,10010,Comm_Status      ,10,Server    ,vLstarTrunk  ,0,1
+//,,,,,,,,
+M11_Ai0         ,Ai            ,1100,DATA_M11      ,0,Server    ,vLstarTrunk  ,-           ,1
+M11_Ai1         ,Ai            ,1101,DATA_M11      ,1,Server    ,vLstarTrunk  ,-           ,1
+M11_Ai2         ,Ai            ,1102,DATA_M11      ,2,Server    ,vLstarTrunk  ,-           ,1
+M11_Ai3         ,Ai            ,1103,DATA_M11      ,3,Server    ,vLstarTrunk  ,-           ,1
+M11_Ao0         ,Ao            ,1100,DATA_M11      ,0,Server    ,vLstarTrunk  ,0,1
+M11_Ao1         ,Ao            ,1101,DATA_M11      ,1,Server    ,vLstarTrunk  ,0,1
+M11_Ao2         ,Ao            ,1102,DATA_M11      ,2,Server    ,vLstarTrunk  ,0,1
+M11_Ao3         ,Ao            ,1103,DATA_M11      ,3,Server    ,vLstarTrunk  ,0,1
+M11_Co0         ,Av            ,1100,DATA_M11      ,0,Server    ,vLstarTrunk  ,-           ,1
+M11_Co1         ,Av            ,1101,DATA_M11      ,1,Server    ,vLstarTrunk  ,-           ,1
+M11_Co2         ,Av            ,1102,DATA_M11      ,2,Server    ,vLstarTrunk  ,-           ,1
+M11_Co3         ,Av            ,1103,DATA_M11      ,3,Server    ,vLstarTrunk  ,-           ,1
+M11_Bi0         ,Bi            ,1100,DATA_M11      ,0,Server    ,vLstarTrunk  ,-           ,1
+M11_Bi1         ,Bi            ,1101,DATA_M11      ,1,Server    ,vLstarTrunk  ,-           ,1
+M11_Bi2         ,Bi            ,1102,DATA_M11      ,2,Server    ,vLstarTrunk  ,-           ,1
+M11_Bi3         ,Bi            ,1103,DATA_M11      ,3,Server    ,vLstarTrunk  ,-           ,1
+M11_Bo0         ,Bo            ,1100,DATA_M11      ,0,Server    ,vLstarTrunk  ,0,1
+M11_Bo1         ,Bo            ,1101,DATA_M11      ,1,Server    ,vLstarTrunk  ,0,1
+M11_Bo2         ,Bo            ,1102,DATA_M11      ,2,Server    ,vLstarTrunk  ,0,1
+M11_Bo3         ,Bo            ,1103,DATA_M11      ,3,Server    ,vLstarTrunk  ,0,1
+NodeOnline         ,Bi            ,10011,Comm_Status      ,11,Server    ,vLstarTrunk  ,0,1
+//,,,,,,,,
+M12_Ai0         ,Ai            ,1200,DATA_M12      ,0,Server    ,vLstarTrunk  ,-           ,1
+M12_Ai1         ,Ai            ,1201,DATA_M12      ,1,Server    ,vLstarTrunk  ,-           ,1
+M12_Ai2         ,Ai            ,1202,DATA_M12      ,2,Server    ,vLstarTrunk  ,-           ,1
+M12_Ai3         ,Ai            ,1203,DATA_M12      ,3,Server    ,vLstarTrunk  ,-           ,1
+M12_Ao0         ,Ao            ,1200,DATA_M12      ,0,Server    ,vLstarTrunk  ,0,1
+M12_Ao1         ,Ao            ,1201,DATA_M12      ,1,Server    ,vLstarTrunk  ,0,1
+M12_Ao2         ,Ao            ,1202,DATA_M12      ,2,Server    ,vLstarTrunk  ,0,1
+M12_Ao3         ,Ao            ,1203,DATA_M12      ,3,Server    ,vLstarTrunk  ,0,1
+M12_Co0         ,Av            ,1200,DATA_M12      ,0,Server    ,vLstarTrunk  ,-           ,1
+M12_Co1         ,Av            ,1201,DATA_M12      ,1,Server    ,vLstarTrunk  ,-           ,1
+M12_Co2         ,Av            ,1202,DATA_M12      ,2,Server    ,vLstarTrunk  ,-           ,1
+M12_Co3         ,Av            ,1203,DATA_M12      ,3,Server    ,vLstarTrunk  ,-           ,1
+M12_Bi0         ,Bi            ,1200,DATA_M12      ,0,Server    ,vLstarTrunk  ,-           ,1
+M12_Bi1         ,Bi            ,1201,DATA_M12      ,1,Server    ,vLstarTrunk  ,-           ,1
+M12_Bi2         ,Bi            ,1202,DATA_M12      ,2,Server    ,vLstarTrunk  ,-           ,1
+M12_Bi3         ,Bi            ,1203,DATA_M12      ,3,Server    ,vLstarTrunk  ,-           ,1
+M12_Bo0         ,Bo            ,1200,DATA_M12      ,0,Server    ,vLstarTrunk  ,0,1
+M12_Bo1         ,Bo            ,1201,DATA_M12      ,1,Server    ,vLstarTrunk  ,0,1
+M12_Bo2         ,Bo            ,1202,DATA_M12      ,2,Server    ,vLstarTrunk  ,0,1
+M12_Bo3         ,Bo            ,1203,DATA_M12      ,3,Server    ,vLstarTrunk  ,0,1
+NodeOnline         ,Bi            ,10012,Comm_Status      ,12,Server    ,vLstarTrunk  ,0,1
+//,,,,,,,,
+M14_Ai0         ,Ai            ,1400,DATA_M14      ,0,Server    ,vLstarTrunk  ,-           ,1
+M14_Ai1         ,Ai            ,1401,DATA_M14      ,1,Server    ,vLstarTrunk  ,-           ,1
+M14_Ai2         ,Ai            ,1402,DATA_M14      ,2,Server    ,vLstarTrunk  ,-           ,1
+M14_Ai3         ,Ai            ,1403,DATA_M14      ,3,Server    ,vLstarTrunk  ,-           ,1
+M14_Ao0         ,Ao            ,1400,DATA_M14      ,0,Server    ,vLstarTrunk  ,0,1
+M14_Ao1         ,Ao            ,1401,DATA_M14      ,1,Server    ,vLstarTrunk  ,0,1
+M14_Ao2         ,Ao            ,1402,DATA_M14      ,2,Server    ,vLstarTrunk  ,0,1
+M14_Ao3         ,Ao            ,1403,DATA_M14      ,3,Server    ,vLstarTrunk  ,0,1
+M14_Co0         ,Av            ,1400,DATA_M14      ,0,Server    ,vLstarTrunk  ,-           ,1
+M14_Co1         ,Av            ,1401,DATA_M14      ,1,Server    ,vLstarTrunk  ,-           ,1
+M14_Co2         ,Av            ,1402,DATA_M14      ,2,Server    ,vLstarTrunk  ,-           ,1
+M14_Co3         ,Av            ,1403,DATA_M14      ,3,Server    ,vLstarTrunk  ,-           ,1
+M14_Bi0         ,Bi            ,1400,DATA_M14      ,0,Server    ,vLstarTrunk  ,-           ,1
+M14_Bi1         ,Bi            ,1401,DATA_M14      ,1,Server    ,vLstarTrunk  ,-           ,1
+M14_Bi2         ,Bi            ,1402,DATA_M14      ,2,Server    ,vLstarTrunk  ,-           ,1
+M14_Bi3         ,Bi            ,1403,DATA_M14      ,3,Server    ,vLstarTrunk  ,-           ,1
+M14_Bo0         ,Bo            ,1400,DATA_M14      ,0,Server    ,vLstarTrunk  ,0,1
+M14_Bo1         ,Bo            ,1401,DATA_M14      ,1,Server    ,vLstarTrunk  ,0,1
+M14_Bo2         ,Bo            ,1402,DATA_M14      ,2,Server    ,vLstarTrunk  ,0,1
+M14_Bo3         ,Bo            ,1403,DATA_M14      ,3,Server    ,vLstarTrunk  ,0,1
+NodeOnline         ,Bi            ,10014,Comm_Status      ,14,Server    ,vLstarTrunk  ,0,1
+//,,,,,,,,
+M15_Ai0         ,Ai            ,1500,DATA_M15      ,0,Server    ,vLstarTrunk  ,-           ,1
+M15_Ai1         ,Ai            ,1501,DATA_M15      ,1,Server    ,vLstarTrunk  ,-           ,1
+M15_Ai2         ,Ai            ,1502,DATA_M15      ,2,Server    ,vLstarTrunk  ,-           ,1
+M15_Ai3         ,Ai            ,1503,DATA_M15      ,3,Server    ,vLstarTrunk  ,-           ,1
+M15_Ao0         ,Ao            ,1500,DATA_M15      ,0,Server    ,vLstarTrunk  ,0,1
+M15_Ao1         ,Ao            ,1501,DATA_M15      ,1,Server    ,vLstarTrunk  ,0,1
+M15_Ao2         ,Ao            ,1502,DATA_M15      ,2,Server    ,vLstarTrunk  ,0,1
+M15_Ao3         ,Ao            ,1503,DATA_M15      ,3,Server    ,vLstarTrunk  ,0,1
+M15_Co0         ,Av            ,1500,DATA_M15      ,0,Server    ,vLstarTrunk  ,-           ,1
+M15_Co1         ,Av            ,1501,DATA_M15      ,1,Server    ,vLstarTrunk  ,-           ,1
+M15_Co2         ,Av            ,1502,DATA_M15      ,2,Server    ,vLstarTrunk  ,-           ,1
+M15_Co3         ,Av            ,1503,DATA_M15      ,3,Server    ,vLstarTrunk  ,-           ,1
+M15_Bi0         ,Bi            ,1500,DATA_M15      ,0,Server    ,vLstarTrunk  ,-           ,1
+M15_Bi1         ,Bi            ,1501,DATA_M15      ,1,Server    ,vLstarTrunk  ,-           ,1
+M15_Bi2         ,Bi            ,1502,DATA_M15      ,2,Server    ,vLstarTrunk  ,-           ,1
+M15_Bi3         ,Bi            ,1503,DATA_M15      ,3,Server    ,vLstarTrunk  ,-           ,1
+M15_Bo0         ,Bo            ,1500,DATA_M15      ,0,Server    ,vLstarTrunk  ,0,1
+M15_Bo1         ,Bo            ,1501,DATA_M15      ,1,Server    ,vLstarTrunk  ,0,1
+M15_Bo2         ,Bo            ,1502,DATA_M15      ,2,Server    ,vLstarTrunk  ,0,1
+M15_Bo3         ,Bo            ,1503,DATA_M15      ,3,Server    ,vLstarTrunk  ,0,1
+NodeOnline         ,Bi            ,10015,Comm_Status      ,15,Server    ,vLstarTrunk  ,0,1
+//,,,,,,,,
+M16_Ai0         ,Ai            ,1600,DATA_M16      ,0,Server    ,vLstarTrunk  ,-           ,1
+M16_Ai1         ,Ai            ,1601,DATA_M16      ,1,Server    ,vLstarTrunk  ,-           ,1
+M16_Ai2         ,Ai            ,1602,DATA_M16      ,2,Server    ,vLstarTrunk  ,-           ,1
+M16_Ai3         ,Ai            ,1603,DATA_M16      ,3,Server    ,vLstarTrunk  ,-           ,1
+M16_Ao0         ,Ao            ,1600,DATA_M16      ,0,Server    ,vLstarTrunk  ,0,1
+M16_Ao1         ,Ao            ,1601,DATA_M16      ,1,Server    ,vLstarTrunk  ,0,1
+M16_Ao2         ,Ao            ,1602,DATA_M16      ,2,Server    ,vLstarTrunk  ,0,1
+M16_Ao3         ,Ao            ,1603,DATA_M16      ,3,Server    ,vLstarTrunk  ,0,1
+M16_Co0         ,Av            ,1600,DATA_M16      ,0,Server    ,vLstarTrunk  ,-           ,1
+M16_Co1         ,Av            ,1601,DATA_M16      ,1,Server    ,vLstarTrunk  ,-           ,1
+M16_Co2         ,Av            ,1602,DATA_M16      ,2,Server    ,vLstarTrunk  ,-           ,1
+M16_Co3         ,Av            ,1603,DATA_M16      ,3,Server    ,vLstarTrunk  ,-           ,1
+M16_Bi0         ,Bi            ,1600,DATA_M16      ,0,Server    ,vLstarTrunk  ,-           ,1
+M16_Bi1         ,Bi            ,1601,DATA_M16      ,1,Server    ,vLstarTrunk  ,-           ,1
+M16_Bi2         ,Bi            ,1602,DATA_M16      ,2,Server    ,vLstarTrunk  ,-           ,1
+M16_Bi3         ,Bi            ,1603,DATA_M16      ,3,Server    ,vLstarTrunk  ,-           ,1
+M16_Bo0         ,Bo            ,1600,DATA_M16      ,0,Server    ,vLstarTrunk  ,0,1
+M16_Bo1         ,Bo            ,1601,DATA_M16      ,1,Server    ,vLstarTrunk  ,0,1
+M16_Bo2         ,Bo            ,1602,DATA_M16      ,2,Server    ,vLstarTrunk  ,0,1
+M16_Bo3         ,Bo            ,1603,DATA_M16      ,3,Server    ,vLstarTrunk  ,0,1
+NodeOnline         ,Bi            ,10016,Comm_Status      ,16,Server    ,vLstarTrunk  ,0,1
+//,,,,,,,,
+M19_Ai0         ,Ai            ,1900,DATA_M19      ,0,Server    ,vLstarTrunk  ,-           ,1
+M19_Ai1         ,Ai            ,1901,DATA_M19      ,1,Server    ,vLstarTrunk  ,-           ,1
+M19_Ai2         ,Ai            ,1902,DATA_M19      ,2,Server    ,vLstarTrunk  ,-           ,1
+M19_Ai3         ,Ai            ,1903,DATA_M19      ,3,Server    ,vLstarTrunk  ,-           ,1
+M19_Ao0         ,Ao            ,1900,DATA_M19      ,0,Server    ,vLstarTrunk  ,0,1
+M19_Ao1         ,Ao            ,1901,DATA_M19      ,1,Server    ,vLstarTrunk  ,0,1
+M19_Ao2         ,Ao            ,1902,DATA_M19      ,2,Server    ,vLstarTrunk  ,0,1
+M19_Ao3         ,Ao            ,1903,DATA_M19      ,3,Server    ,vLstarTrunk  ,0,1
+M19_Co0         ,Av            ,1900,DATA_M19      ,0,Server    ,vLstarTrunk  ,-           ,1
+M19_Co1         ,Av            ,1901,DATA_M19      ,1,Server    ,vLstarTrunk  ,-           ,1
+M19_Co2         ,Av            ,1902,DATA_M19      ,2,Server    ,vLstarTrunk  ,-           ,1
+M19_Co3         ,Av            ,1903,DATA_M19      ,3,Server    ,vLstarTrunk  ,-           ,1
+M19_Bi0         ,Bi            ,1900,DATA_M19      ,0,Server    ,vLstarTrunk  ,-           ,1
+M19_Bi1         ,Bi            ,1901,DATA_M19      ,1,Server    ,vLstarTrunk  ,-           ,1
+M19_Bi2         ,Bi            ,1902,DATA_M19      ,2,Server    ,vLstarTrunk  ,-           ,1
+M19_Bi3         ,Bi            ,1903,DATA_M19      ,3,Server    ,vLstarTrunk  ,-           ,1
+M19_Bo0         ,Bo            ,1900,DATA_M19      ,0,Server    ,vLstarTrunk  ,0,1
+M19_Bo1         ,Bo            ,1901,DATA_M19      ,1,Server    ,vLstarTrunk  ,0,1
+M19_Bo2         ,Bo            ,1902,DATA_M19      ,2,Server    ,vLstarTrunk  ,0,1
+M19_Bo3         ,Bo            ,1903,DATA_M19      ,3,Server    ,vLstarTrunk  ,0,1
+NodeOnline         ,Bi            ,10019,Comm_Status      ,19,Server    ,vLstarTrunk  ,0,1
+//,,,,,,,,
+M20_Ai0         ,Ai            ,2000,DATA_M20      ,0,Server    ,vLstarTrunk  ,-           ,1
+M20_Ai1         ,Ai            ,2001,DATA_M20      ,1,Server    ,vLstarTrunk  ,-           ,1
+M20_Ai2         ,Ai            ,2002,DATA_M20      ,2,Server    ,vLstarTrunk  ,-           ,1
+M20_Ai3         ,Ai            ,2003,DATA_M20      ,3,Server    ,vLstarTrunk  ,-           ,1
+M20_Ao0         ,Ao            ,2000,DATA_M20      ,0,Server    ,vLstarTrunk  ,0,1
+M20_Ao1         ,Ao            ,2001,DATA_M20      ,1,Server    ,vLstarTrunk  ,0,1
+M20_Ao2         ,Ao            ,2002,DATA_M20      ,2,Server    ,vLstarTrunk  ,0,1
+M20_Ao3         ,Ao            ,2003,DATA_M20      ,3,Server    ,vLstarTrunk  ,0,1
+M20_Co0         ,Av            ,2000,DATA_M20      ,0,Server    ,vLstarTrunk  ,-           ,1
+M20_Co1         ,Av            ,2001,DATA_M20      ,1,Server    ,vLstarTrunk  ,-           ,1
+M20_Co2         ,Av            ,2002,DATA_M20      ,2,Server    ,vLstarTrunk  ,-           ,1
+M20_Co3         ,Av            ,2003,DATA_M20      ,3,Server    ,vLstarTrunk  ,-           ,1
+M20_Bi0         ,Bi            ,2000,DATA_M20      ,0,Server    ,vLstarTrunk  ,-           ,1
+M20_Bi1         ,Bi            ,2001,DATA_M20      ,1,Server    ,vLstarTrunk  ,-           ,1
+M20_Bi2         ,Bi            ,2002,DATA_M20      ,2,Server    ,vLstarTrunk  ,-           ,1
+M20_Bi3         ,Bi            ,2003,DATA_M20      ,3,Server    ,vLstarTrunk  ,-           ,1
+M20_Bo0         ,Bo            ,2000,DATA_M20      ,0,Server    ,vLstarTrunk  ,0,1
+M20_Bo1         ,Bo            ,2001,DATA_M20      ,1,Server    ,vLstarTrunk  ,0,1
+M20_Bo2         ,Bo            ,2002,DATA_M20      ,2,Server    ,vLstarTrunk  ,0,1
+M20_Bo3         ,Bo            ,2003,DATA_M20      ,3,Server    ,vLstarTrunk  ,0,1
+NodeOnline         ,Bi            ,10020,Comm_Status      ,20,Server    ,vLstarTrunk  ,0,1
+//,,,,,,,,
+M21_Ai0         ,Ai            ,2100,DATA_M21      ,0,Server    ,vLstarTrunk  ,-           ,1
+M21_Ai1         ,Ai            ,2101,DATA_M21      ,1,Server    ,vLstarTrunk  ,-           ,1
+M21_Ai2         ,Ai            ,2102,DATA_M21      ,2,Server    ,vLstarTrunk  ,-           ,1
+M21_Ai3         ,Ai            ,2103,DATA_M21      ,3,Server    ,vLstarTrunk  ,-           ,1
+M21_Ao0         ,Ao            ,2100,DATA_M21      ,0,Server    ,vLstarTrunk  ,0,1
+M21_Ao1         ,Ao            ,2101,DATA_M21      ,1,Server    ,vLstarTrunk  ,0,1
+M21_Ao2         ,Ao            ,2102,DATA_M21      ,2,Server    ,vLstarTrunk  ,0,1
+M21_Ao3         ,Ao            ,2103,DATA_M21      ,3,Server    ,vLstarTrunk  ,0,1
+M21_Co0         ,Av            ,2100,DATA_M21      ,0,Server    ,vLstarTrunk  ,-           ,1
+M21_Co1         ,Av            ,2101,DATA_M21      ,1,Server    ,vLstarTrunk  ,-           ,1
+M21_Co2         ,Av            ,2102,DATA_M21      ,2,Server    ,vLstarTrunk  ,-           ,1
+M21_Co3         ,Av            ,2103,DATA_M21      ,3,Server    ,vLstarTrunk  ,-           ,1
+M21_Bi0         ,Bi            ,2100,DATA_M21      ,0,Server    ,vLstarTrunk  ,-           ,1
+M21_Bi1         ,Bi            ,2101,DATA_M21      ,1,Server    ,vLstarTrunk  ,-           ,1
+M21_Bi2         ,Bi            ,2102,DATA_M21      ,2,Server    ,vLstarTrunk  ,-           ,1
+M21_Bi3         ,Bi            ,2103,DATA_M21      ,3,Server    ,vLstarTrunk  ,-           ,1
+M21_Bo0         ,Bo            ,2100,DATA_M21      ,0,Server    ,vLstarTrunk  ,0,1
+M21_Bo1         ,Bo            ,2101,DATA_M21      ,1,Server    ,vLstarTrunk  ,0,1
+M21_Bo2         ,Bo            ,2102,DATA_M21      ,2,Server    ,vLstarTrunk  ,0,1
+M21_Bo3         ,Bo            ,2103,DATA_M21      ,3,Server    ,vLstarTrunk  ,0,1
+NodeOnline         ,Bi            ,10021,Comm_Status      ,21,Server    ,vLstarTrunk  ,0,1
+//,,,,,,,,
+M22_Ai0         ,Ai            ,2200,DATA_M22      ,0,Server    ,vLstarTrunk  ,-           ,1
+M22_Ai1         ,Ai            ,2201,DATA_M22      ,1,Server    ,vLstarTrunk  ,-           ,1
+M22_Ai2         ,Ai            ,2202,DATA_M22      ,2,Server    ,vLstarTrunk  ,-           ,1
+M22_Ai3         ,Ai            ,2203,DATA_M22      ,3,Server    ,vLstarTrunk  ,-           ,1
+M22_Ao0         ,Ao            ,2200,DATA_M22      ,0,Server    ,vLstarTrunk  ,0,1
+M22_Ao1         ,Ao            ,2201,DATA_M22      ,1,Server    ,vLstarTrunk  ,0,1
+M22_Ao2         ,Ao            ,2202,DATA_M22      ,2,Server    ,vLstarTrunk  ,0,1
+M22_Ao3         ,Ao            ,2203,DATA_M22      ,3,Server    ,vLstarTrunk  ,0,1
+M22_Co0         ,Av            ,2200,DATA_M22      ,0,Server    ,vLstarTrunk  ,-           ,1
+M22_Co1         ,Av            ,2201,DATA_M22      ,1,Server    ,vLstarTrunk  ,-           ,1
+M22_Co2         ,Av            ,2202,DATA_M22      ,2,Server    ,vLstarTrunk  ,-           ,1
+M22_Co3         ,Av            ,2203,DATA_M22      ,3,Server    ,vLstarTrunk  ,-           ,1
+M22_Bi0         ,Bi            ,2200,DATA_M22      ,0,Server    ,vLstarTrunk  ,-           ,1
+M22_Bi1         ,Bi            ,2201,DATA_M22      ,1,Server    ,vLstarTrunk  ,-           ,1
+M22_Bi2         ,Bi            ,2202,DATA_M22      ,2,Server    ,vLstarTrunk  ,-           ,1
+M22_Bi3         ,Bi            ,2203,DATA_M22      ,3,Server    ,vLstarTrunk  ,-           ,1
+M22_Bo0         ,Bo            ,2200,DATA_M22      ,0,Server    ,vLstarTrunk  ,0,1
+M22_Bo1         ,Bo            ,2201,DATA_M22      ,1,Server    ,vLstarTrunk  ,0,1
+M22_Bo2         ,Bo            ,2202,DATA_M22      ,2,Server    ,vLstarTrunk  ,0,1
+M22_Bo3         ,Bo            ,2203,DATA_M22      ,3,Server    ,vLstarTrunk  ,0,1
+NodeOnline         ,Bi            ,10022,Comm_Status      ,22,Server    ,vLstarTrunk  ,0,1
+//,,,,,,,,
+M23_Ai0         ,Ai            ,2300,DATA_M23      ,0,Server    ,vLstarTrunk  ,-           ,1
+M23_Ai1         ,Ai            ,2301,DATA_M23      ,1,Server    ,vLstarTrunk  ,-           ,1
+M23_Ai2         ,Ai            ,2302,DATA_M23      ,2,Server    ,vLstarTrunk  ,-           ,1
+M23_Ai3         ,Ai            ,2303,DATA_M23      ,3,Server    ,vLstarTrunk  ,-           ,1
+M23_Ao0         ,Ao            ,2300,DATA_M23      ,0,Server    ,vLstarTrunk  ,0,1
+M23_Ao1         ,Ao            ,2301,DATA_M23      ,1,Server    ,vLstarTrunk  ,0,1
+M23_Ao2         ,Ao            ,2302,DATA_M23      ,2,Server    ,vLstarTrunk  ,0,1
+M23_Ao3         ,Ao            ,2303,DATA_M23      ,3,Server    ,vLstarTrunk  ,0,1
+M23_Co0         ,Av            ,2300,DATA_M23      ,0,Server    ,vLstarTrunk  ,-           ,1
+M23_Co1         ,Av            ,2301,DATA_M23      ,1,Server    ,vLstarTrunk  ,-           ,1
+M23_Co2         ,Av            ,2302,DATA_M23      ,2,Server    ,vLstarTrunk  ,-           ,1
+M23_Co3         ,Av            ,2303,DATA_M23      ,3,Server    ,vLstarTrunk  ,-           ,1
+M23_Bi0         ,Bi            ,2300,DATA_M23      ,0,Server    ,vLstarTrunk  ,-           ,1
+M23_Bi1         ,Bi            ,2301,DATA_M23      ,1,Server    ,vLstarTrunk  ,-           ,1
+M23_Bi2         ,Bi            ,2302,DATA_M23      ,2,Server    ,vLstarTrunk  ,-           ,1
+M23_Bi3         ,Bi            ,2303,DATA_M23      ,3,Server    ,vLstarTrunk  ,-           ,1
+M23_Bo0         ,Bo            ,2300,DATA_M23      ,0,Server    ,vLstarTrunk  ,0,1
+M23_Bo1         ,Bo            ,2301,DATA_M23      ,1,Server    ,vLstarTrunk  ,0,1
+M23_Bo2         ,Bo            ,2302,DATA_M23      ,2,Server    ,vLstarTrunk  ,0,1
+M23_Bo3         ,Bo            ,2303,DATA_M23      ,3,Server    ,vLstarTrunk  ,0,1
+NodeOnline         ,Bi            ,10023,Comm_Status      ,23,Server    ,vLstarTrunk  ,0,1
+//,,,,,,,,
+M25_Ai0         ,Ai            ,2500,DATA_M25      ,0,Server    ,vLstarTrunk  ,-           ,1
+M25_Ai1         ,Ai            ,2501,DATA_M25      ,1,Server    ,vLstarTrunk  ,-           ,1
+M25_Ai2         ,Ai            ,2502,DATA_M25      ,2,Server    ,vLstarTrunk  ,-           ,1
+M25_Ai3         ,Ai            ,2503,DATA_M25      ,3,Server    ,vLstarTrunk  ,-           ,1
+M25_Ao0         ,Ao            ,2500,DATA_M25      ,0,Server    ,vLstarTrunk  ,0,1
+M25_Ao1         ,Ao            ,2501,DATA_M25      ,1,Server    ,vLstarTrunk  ,0,1
+M25_Ao2         ,Ao            ,2502,DATA_M25      ,2,Server    ,vLstarTrunk  ,0,1
+M25_Ao3         ,Ao            ,2503,DATA_M25      ,3,Server    ,vLstarTrunk  ,0,1
+M25_Co0         ,Av            ,2500,DATA_M25      ,0,Server    ,vLstarTrunk  ,-           ,1
+M25_Co1         ,Av            ,2501,DATA_M25      ,1,Server    ,vLstarTrunk  ,-           ,1
+M25_Co2         ,Av            ,2502,DATA_M25      ,2,Server    ,vLstarTrunk  ,-           ,1
+M25_Co3         ,Av            ,2503,DATA_M25      ,3,Server    ,vLstarTrunk  ,-           ,1
+M25_Bi0         ,Bi            ,2500,DATA_M25      ,0,Server    ,vLstarTrunk  ,-           ,1
+M25_Bi1         ,Bi            ,2501,DATA_M25      ,1,Server    ,vLstarTrunk  ,-           ,1
+M25_Bi2         ,Bi            ,2502,DATA_M25      ,2,Server    ,vLstarTrunk  ,-           ,1
+M25_Bi3         ,Bi            ,2503,DATA_M25      ,3,Server    ,vLstarTrunk  ,-           ,1
+M25_Bo0         ,Bo            ,2500,DATA_M25      ,0,Server    ,vLstarTrunk  ,0,1
+M25_Bo1         ,Bo            ,2501,DATA_M25      ,1,Server    ,vLstarTrunk  ,0,1
+M25_Bo2         ,Bo            ,2502,DATA_M25      ,2,Server    ,vLstarTrunk  ,0,1
+M25_Bo3         ,Bo            ,2503,DATA_M25      ,3,Server    ,vLstarTrunk  ,0,1
+NodeOnline         ,Bi            ,10025,Comm_Status      ,25,Server    ,vLstarTrunk  ,0,1
+//,,,,,,,,
+M27_Ai0         ,Ai            ,2700,DATA_M27      ,0,Server    ,vLstarTrunk  ,-           ,1
+M27_Ai1         ,Ai            ,2701,DATA_M27      ,1,Server    ,vLstarTrunk  ,-           ,1
+M27_Ai2         ,Ai            ,2702,DATA_M27      ,2,Server    ,vLstarTrunk  ,-           ,1
+M27_Ai3         ,Ai            ,2703,DATA_M27      ,3,Server    ,vLstarTrunk  ,-           ,1
+M27_Ao0         ,Ao            ,2700,DATA_M27      ,0,Server    ,vLstarTrunk  ,0,1
+M27_Ao1         ,Ao            ,2701,DATA_M27      ,1,Server    ,vLstarTrunk  ,0,1
+M27_Ao2         ,Ao            ,2702,DATA_M27      ,2,Server    ,vLstarTrunk  ,0,1
+M27_Ao3         ,Ao            ,2703,DATA_M27      ,3,Server    ,vLstarTrunk  ,0,1
+M27_Co0         ,Av            ,2700,DATA_M27      ,0,Server    ,vLstarTrunk  ,-           ,1
+M27_Co1         ,Av            ,2701,DATA_M27      ,1,Server    ,vLstarTrunk  ,-           ,1
+M27_Co2         ,Av            ,2702,DATA_M27      ,2,Server    ,vLstarTrunk  ,-           ,1
+M27_Co3         ,Av            ,2703,DATA_M27      ,3,Server    ,vLstarTrunk  ,-           ,1
+M27_Bi0         ,Bi            ,2700,DATA_M27      ,0,Server    ,vLstarTrunk  ,-           ,1
+M27_Bi1         ,Bi            ,2701,DATA_M27      ,1,Server    ,vLstarTrunk  ,-           ,1
+M27_Bi2         ,Bi            ,2702,DATA_M27      ,2,Server    ,vLstarTrunk  ,-           ,1
+M27_Bi3         ,Bi            ,2703,DATA_M27      ,3,Server    ,vLstarTrunk  ,-           ,1
+M27_Bo0         ,Bo            ,2700,DATA_M27      ,0,Server    ,vLstarTrunk  ,0,1
+M27_Bo1         ,Bo            ,2701,DATA_M27      ,1,Server    ,vLstarTrunk  ,0,1
+M27_Bo2         ,Bo            ,2702,DATA_M27      ,2,Server    ,vLstarTrunk  ,0,1
+M27_Bo3         ,Bo            ,2703,DATA_M27      ,3,Server    ,vLstarTrunk  ,0,1
+NodeOnline         ,Bi            ,10027,Comm_Status      ,27,Server    ,vLstarTrunk  ,0,1
+//,,,,,,,,
+M28_Ai0         ,Ai            ,2800,DATA_M28      ,0,Server    ,vLstarTrunk  ,-           ,1
+M28_Ai1         ,Ai            ,2801,DATA_M28      ,1,Server    ,vLstarTrunk  ,-           ,1
+M28_Ai2         ,Ai            ,2802,DATA_M28      ,2,Server    ,vLstarTrunk  ,-           ,1
+M28_Ai3         ,Ai            ,2803,DATA_M28      ,3,Server    ,vLstarTrunk  ,-           ,1
+M28_Ao0         ,Ao            ,2800,DATA_M28      ,0,Server    ,vLstarTrunk  ,0,1
+M28_Ao1         ,Ao            ,2801,DATA_M28      ,1,Server    ,vLstarTrunk  ,0,1
+M28_Ao2         ,Ao            ,2802,DATA_M28      ,2,Server    ,vLstarTrunk  ,0,1
+M28_Ao3         ,Ao            ,2803,DATA_M28      ,3,Server    ,vLstarTrunk  ,0,1
+M28_Co0         ,Av            ,2800,DATA_M28      ,0,Server    ,vLstarTrunk  ,-           ,1
+M28_Co1         ,Av            ,2801,DATA_M28      ,1,Server    ,vLstarTrunk  ,-           ,1
+M28_Co2         ,Av            ,2802,DATA_M28      ,2,Server    ,vLstarTrunk  ,-           ,1
+M28_Co3         ,Av            ,2803,DATA_M28      ,3,Server    ,vLstarTrunk  ,-           ,1
+M28_Bi0         ,Bi            ,2800,DATA_M28      ,0,Server    ,vLstarTrunk  ,-           ,1
+M28_Bi1         ,Bi            ,2801,DATA_M28      ,1,Server    ,vLstarTrunk  ,-           ,1
+M28_Bi2         ,Bi            ,2802,DATA_M28      ,2,Server    ,vLstarTrunk  ,-           ,1
+M28_Bi3         ,Bi            ,2803,DATA_M28      ,3,Server    ,vLstarTrunk  ,-           ,1
+M28_Bo0         ,Bo            ,2800,DATA_M28      ,0,Server    ,vLstarTrunk  ,0,1
+M28_Bo1         ,Bo            ,2801,DATA_M28      ,1,Server    ,vLstarTrunk  ,0,1
+M28_Bo2         ,Bo            ,2802,DATA_M28      ,2,Server    ,vLstarTrunk  ,0,1
+M28_Bo3         ,Bo            ,2803,DATA_M28      ,3,Server    ,vLstarTrunk  ,0,1
+NodeOnline         ,Bi            ,10028,Comm_Status      ,28,Server    ,vLstarTrunk  ,0,1
+//,,,,,,,,
+M30_Ai0         ,Ai            ,3000,DATA_M30      ,0,Server    ,vLstarTrunk  ,-           ,1
+M30_Ai1         ,Ai            ,3001,DATA_M30      ,1,Server    ,vLstarTrunk  ,-           ,1
+M30_Ai2         ,Ai            ,3002,DATA_M30      ,2,Server    ,vLstarTrunk  ,-           ,1
+M30_Ai3         ,Ai            ,3003,DATA_M30      ,3,Server    ,vLstarTrunk  ,-           ,1
+M30_Ao0         ,Ao            ,3000,DATA_M30      ,0,Server    ,vLstarTrunk  ,0,1
+M30_Ao1         ,Ao            ,3001,DATA_M30      ,1,Server    ,vLstarTrunk  ,0,1
+M30_Ao2         ,Ao            ,3002,DATA_M30      ,2,Server    ,vLstarTrunk  ,0,1
+M30_Ao3         ,Ao            ,3003,DATA_M30      ,3,Server    ,vLstarTrunk  ,0,1
+M30_Co0         ,Av            ,3000,DATA_M30      ,0,Server    ,vLstarTrunk  ,-           ,1
+M30_Co1         ,Av            ,3001,DATA_M30      ,1,Server    ,vLstarTrunk  ,-           ,1
+M30_Co2         ,Av            ,3002,DATA_M30      ,2,Server    ,vLstarTrunk  ,-           ,1
+M30_Co3         ,Av            ,3003,DATA_M30      ,3,Server    ,vLstarTrunk  ,-           ,1
+M30_Bi0         ,Bi            ,3000,DATA_M30      ,0,Server    ,vLstarTrunk  ,-           ,1
+M30_Bi1         ,Bi            ,3001,DATA_M30      ,1,Server    ,vLstarTrunk  ,-           ,1
+M30_Bi2         ,Bi            ,3002,DATA_M30      ,2,Server    ,vLstarTrunk  ,-           ,1
+M30_Bi3         ,Bi            ,3003,DATA_M30      ,3,Server    ,vLstarTrunk  ,-           ,1
+M30_Bo0         ,Bo            ,3000,DATA_M30      ,0,Server    ,vLstarTrunk  ,0,1
+M30_Bo1         ,Bo            ,3001,DATA_M30      ,1,Server    ,vLstarTrunk  ,0,1
+M30_Bo2         ,Bo            ,3002,DATA_M30      ,2,Server    ,vLstarTrunk  ,0,1
+M30_Bo3         ,Bo            ,3003,DATA_M30      ,3,Server    ,vLstarTrunk  ,0,1
+NodeOnline         ,Bi            ,10030,Comm_Status      ,30,Server    ,vLstarTrunk  ,0,1
+//,,,,,,,,
+M31_Ai0         ,Ai            ,3100,DATA_M31      ,0,Server    ,vLstarTrunk  ,-           ,1
+M31_Ai1         ,Ai            ,3101,DATA_M31      ,1,Server    ,vLstarTrunk  ,-           ,1
+M31_Ai2         ,Ai            ,3102,DATA_M31      ,2,Server    ,vLstarTrunk  ,-           ,1
+M31_Ai3         ,Ai            ,3103,DATA_M31      ,3,Server    ,vLstarTrunk  ,-           ,1
+M31_Ao0         ,Ao            ,3100,DATA_M31      ,0,Server    ,vLstarTrunk  ,0,1
+M31_Ao1         ,Ao            ,3101,DATA_M31      ,1,Server    ,vLstarTrunk  ,0,1
+M31_Ao2         ,Ao            ,3102,DATA_M31      ,2,Server    ,vLstarTrunk  ,0,1
+M31_Ao3         ,Ao            ,3103,DATA_M31      ,3,Server    ,vLstarTrunk  ,0,1
+M31_Co0         ,Av            ,3100,DATA_M31      ,0,Server    ,vLstarTrunk  ,-           ,1
+M31_Co1         ,Av            ,3101,DATA_M31      ,1,Server    ,vLstarTrunk  ,-           ,1
+M31_Co2         ,Av            ,3102,DATA_M31      ,2,Server    ,vLstarTrunk  ,-           ,1
+M31_Co3         ,Av            ,3103,DATA_M31      ,3,Server    ,vLstarTrunk  ,-           ,1
+M31_Bi0         ,Bi            ,3100,DATA_M31      ,0,Server    ,vLstarTrunk  ,-           ,1
+M31_Bi1         ,Bi            ,3101,DATA_M31      ,1,Server    ,vLstarTrunk  ,-           ,1
+M31_Bi2         ,Bi            ,3102,DATA_M31      ,2,Server    ,vLstarTrunk  ,-           ,1
+M31_Bi3         ,Bi            ,3103,DATA_M31      ,3,Server    ,vLstarTrunk  ,-           ,1
+M31_Bo0         ,Bo            ,3100,DATA_M31      ,0,Server    ,vLstarTrunk  ,0,1
+M31_Bo1         ,Bo            ,3101,DATA_M31      ,1,Server    ,vLstarTrunk  ,0,1
+M31_Bo2         ,Bo            ,3102,DATA_M31      ,2,Server    ,vLstarTrunk  ,0,1
+M31_Bo3         ,Bo            ,3103,DATA_M31      ,3,Server    ,vLstarTrunk  ,0,1
+NodeOnline         ,Bi            ,10031,Comm_Status      ,31,Server    ,vLstarTrunk  ,0,1
+//,,,,,,,,
