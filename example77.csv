@@ -1,0 +1,751 @@
+Bridge,,,,,,,,,,,,,,
+Title                     ,System_Node_Id ,,,,,,,,,,,,,
+IP Lstar77    (1-22-1000-7702-0)      ,770201,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+Data_Arrays,,,,,,,,,,,,,,
+Data_Array_Name , Data_Format , Data_Array_Length , Data_Array_Function,,,,,,,,,,,
+Comm_Status     , Bit         ,256, Node_Status,,,,,,,,,,,
+,,,,,,,,,,,,,,
+Data_Arrays,,,,,,,,,,,,,,
+Data_Array_Name ,Data_Format ,Data_Array_Length,,,,,,,,,,,,
+AUTO_CONFIGURE  ,UINT32      ,1000,,,,,,,,,,,,
+Lstar-stats     ,UINT16      ,1000,,,,,,,,,,,,
+DATA_M00        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M01        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M02        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M04        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M05        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M07        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M08        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M09        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M10        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M11        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M12        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M14        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M15        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M16        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M19        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M20        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M21        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M22        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M23        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M25        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M27        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M28        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M30        ,UINT16      ,100,,,,,,,,,,,,
+DATA_M31        ,UINT16      ,100,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+Connections,,,,,,,,,,,,,,
+Port ,Baud ,Data_Bits ,Stop_Bits ,Parity ,Protocol    ,Poll_delay , LstarID ,timeout,,,,,,
+R2   ,9600,8,1,None   ,lstarA      ,0.1s       ,77,0.8s,,,,,,
+,,,,,,,,,,,,,,
+Adapters,,,,,,,,,,,,,,
+Adapter ,Protocol  ,,,,,,,,,,,,,
+N1      ,BACnet_IP ,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+Nodes,,,,,,,,,,,,,,
+Node_Name  ,Node_ID ,Protocol ,Port ,Recovery_interval ,Retry_interval ,Timeout,,,,,,,,
+M00         ,0,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M01         ,1,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M02         ,2,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M04         ,4,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M05         ,5,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M07         ,7,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M08         ,8,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M09         ,9,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M10         ,10,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M11         ,11,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M12         ,12,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M14         ,14,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M15         ,15,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M16         ,16,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M19         ,19,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M20         ,20,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M21         ,21,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M22         ,22,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M23         ,23,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M25         ,25,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M27         ,27,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M28         ,28,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M30         ,30,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+M31         ,31,lstarA     ,R2  ,30.0s   ,10.0s    ,0.8s,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+Nodes,,,,,,,,,,,,,,
+Node_Name    ,Node_ID ,Protocol   ,,,,,,,,,,,,
+vLstarTrunk  ,770201,BACnet_IP  ,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+Map_Descriptors,,,,,,,,,,,,,,
+Map_Descriptor_Name ,Scan_Interval ,Data_Array_Name      ,Data_Array_Offset ,Function ,Node_Name  ,Lstar_Point_Type , Address ,Length,,,,,,
+readM00 Ai0       ,0.0s          ,DATA_M00          ,0,Rdbc     ,M00     ,Ai     ,0,1,,,,,,
+readM00 Ao0       ,0.0s          ,DATA_M00          ,4,Rdbc     ,M00     ,Ao     ,0,1,,,,,,
+readM00 Co0       ,0.0s          ,DATA_M00          ,8,Rdbc     ,M00     ,Co     ,0,1,,,,,,
+readM00 Bi0       ,0.0s          ,DATA_M00          ,12,Rdbc     ,M00     ,Bi     ,0,1,,,,,,
+readM00 Bo0       ,0.0s          ,DATA_M00          ,16,Rdbc     ,M00     ,Bo     ,0,1,,,,,,
+readM00 Ai1       ,0.0s          ,DATA_M00          ,1,Rdbc     ,M00     ,Ai     ,1,1,,,,,,
+readM00 Ao1       ,0.0s          ,DATA_M00          ,5,Rdbc     ,M00     ,Ao     ,1,1,,,,,,
+readM00 Co1       ,0.0s          ,DATA_M00          ,9,Rdbc     ,M00     ,Co     ,1,1,,,,,,
+readM00 Bi1       ,0.0s          ,DATA_M00          ,13,Rdbc     ,M00     ,Bi     ,1,1,,,,,,
+readM00 Bo1       ,0.0s          ,DATA_M00          ,17,Rdbc     ,M00     ,Bo     ,1,1,,,,,,
+readM00 Ai2       ,0.0s          ,DATA_M00          ,2,Rdbc     ,M00     ,Ai     ,2,1,,,,,,
+readM00 Ao2       ,0.0s          ,DATA_M00          ,6,Rdbc     ,M00     ,Ao     ,2,1,,,,,,
+readM00 Co2       ,0.0s          ,DATA_M00          ,10,Rdbc     ,M00     ,Co     ,2,1,,,,,,
+readM00 Bi2       ,0.0s          ,DATA_M00          ,14,Rdbc     ,M00     ,Bi     ,2,1,,,,,,
+readM00 Bo2       ,0.0s          ,DATA_M00          ,18,Rdbc     ,M00     ,Bo     ,2,1,,,,,,
+readM00 Ai3       ,0.0s          ,DATA_M00          ,3,Rdbc     ,M00     ,Ai     ,3,1,,,,,,
+readM00 Ao3       ,0.0s          ,DATA_M00          ,7,Rdbc     ,M00     ,Ao     ,3,1,,,,,,
+readM00 Co3       ,0.0s          ,DATA_M00          ,11,Rdbc     ,M00     ,Co     ,3,1,,,,,,
+readM00 Bi3       ,0.0s          ,DATA_M00          ,15,Rdbc     ,M00     ,Bi     ,3,1,,,,,,
+readM00 Bo3       ,0.0s          ,DATA_M00          ,19,Rdbc     ,M00     ,Bo     ,3,1,,,,,,
+readM01 Ai0       ,0.0s          ,DATA_M01          ,0,Rdbc     ,M01     ,Ai     ,0,1,,,,,,
+readM01 Ao0       ,0.0s          ,DATA_M01          ,4,Rdbc     ,M01     ,Ao     ,0,1,,,,,,
+readM01 Co0       ,0.0s          ,DATA_M01          ,8,Rdbc     ,M01     ,Co     ,0,1,,,,,,
+readM01 Bi0       ,0.0s          ,DATA_M01          ,12,Rdbc     ,M01     ,Bi     ,0,1,,,,,,
+readM01 Bo0       ,0.0s          ,DATA_M01          ,16,Rdbc     ,M01     ,Bo     ,0,1,,,,,,
+readM01 Ai1       ,0.0s          ,DATA_M01          ,1,Rdbc     ,M01     ,Ai     ,1,1,,,,,,
+readM01 Ao1       ,0.0s          ,DATA_M01          ,5,Rdbc     ,M01     ,Ao     ,1,1,,,,,,
+readM01 Co1       ,0.0s          ,DATA_M01          ,9,Rdbc     ,M01     ,Co     ,1,1,,,,,,
+readM01 Bi1       ,0.0s          ,DATA_M01          ,13,Rdbc     ,M01     ,Bi     ,1,1,,,,,,
+readM01 Bo1       ,0.0s          ,DATA_M01          ,17,Rdbc     ,M01     ,Bo     ,1,1,,,,,,
+readM01 Ai2       ,0.0s          ,DATA_M01          ,2,Rdbc     ,M01     ,Ai     ,2,1,,,,,,
+readM01 Ao2       ,0.0s          ,DATA_M01          ,6,Rdbc     ,M01     ,Ao     ,2,1,,,,,,
+readM01 Co2       ,0.0s          ,DATA_M01          ,10,Rdbc     ,M01     ,Co     ,2,1,,,,,,
+readM01 Bi2       ,0.0s          ,DATA_M01          ,14,Rdbc     ,M01     ,Bi     ,2,1,,,,,,
+readM01 Bo2       ,0.0s          ,DATA_M01          ,18,Rdbc     ,M01     ,Bo     ,2,1,,,,,,
+readM01 Ai3       ,0.0s          ,DATA_M01          ,3,Rdbc     ,M01     ,Ai     ,3,1,,,,,,
+readM01 Ao3       ,0.0s          ,DATA_M01          ,7,Rdbc     ,M01     ,Ao     ,3,1,,,,,,
+readM01 Co3       ,0.0s          ,DATA_M01          ,11,Rdbc     ,M01     ,Co     ,3,1,,,,,,
+readM01 Bi3       ,0.0s          ,DATA_M01          ,15,Rdbc     ,M01     ,Bi     ,3,1,,,,,,
+readM01 Bo3       ,0.0s          ,DATA_M01          ,19,Rdbc     ,M01     ,Bo     ,3,1,,,,,,
+readM02 Ai0       ,0.0s          ,DATA_M02          ,0,Rdbc     ,M02     ,Ai     ,0,1,,,,,,
+readM02 Ao0       ,0.0s          ,DATA_M02          ,4,Rdbc     ,M02     ,Ao     ,0,1,,,,,,
+readM02 Co0       ,0.0s          ,DATA_M02          ,8,Rdbc     ,M02     ,Co     ,0,1,,,,,,
+readM02 Bi0       ,0.0s          ,DATA_M02          ,12,Rdbc     ,M02     ,Bi     ,0,1,,,,,,
+readM02 Bo0       ,0.0s          ,DATA_M02          ,16,Rdbc     ,M02     ,Bo     ,0,1,,,,,,
+readM02 Ai1       ,0.0s          ,DATA_M02          ,1,Rdbc     ,M02     ,Ai     ,1,1,,,,,,
+readM02 Ao1       ,0.0s          ,DATA_M02          ,5,Rdbc     ,M02     ,Ao     ,1,1,,,,,,
+readM02 Co1       ,0.0s          ,DATA_M02          ,9,Rdbc     ,M02     ,Co     ,1,1,,,,,,
+readM02 Bi1       ,0.0s          ,DATA_M02          ,13,Rdbc     ,M02     ,Bi     ,1,1,,,,,,
+readM02 Bo1       ,0.0s          ,DATA_M02          ,17,Rdbc     ,M02     ,Bo     ,1,1,,,,,,
+readM02 Ai2       ,0.0s          ,DATA_M02          ,2,Rdbc     ,M02     ,Ai     ,2,1,,,,,,
+readM02 Ao2       ,0.0s          ,DATA_M02          ,6,Rdbc     ,M02     ,Ao     ,2,1,,,,,,
+readM02 Co2       ,0.0s          ,DATA_M02          ,10,Rdbc     ,M02     ,Co     ,2,1,,,,,,
+readM02 Bi2       ,0.0s          ,DATA_M02          ,14,Rdbc     ,M02     ,Bi     ,2,1,,,,,,
+readM02 Bo2       ,0.0s          ,DATA_M02          ,18,Rdbc     ,M02     ,Bo     ,2,1,,,,,,
+readM02 Ai3       ,0.0s          ,DATA_M02          ,3,Rdbc     ,M02     ,Ai     ,3,1,,,,,,
+readM02 Ao3       ,0.0s          ,DATA_M02          ,7,Rdbc     ,M02     ,Ao     ,3,1,,,,,,
+readM02 Co3       ,0.0s          ,DATA_M02          ,11,Rdbc     ,M02     ,Co     ,3,1,,,,,,
+readM02 Bi3       ,0.0s          ,DATA_M02          ,15,Rdbc     ,M02     ,Bi     ,3,1,,,,,,
+readM02 Bo3       ,0.0s          ,DATA_M02          ,19,Rdbc     ,M02     ,Bo     ,3,1,,,,,,
+readM04 Ai0       ,0.0s          ,DATA_M04          ,0,Rdbc     ,M04     ,Ai     ,0,1,,,,,,
+readM04 Ao0       ,0.0s          ,DATA_M04          ,4,Rdbc     ,M04     ,Ao     ,0,1,,,,,,
+readM04 Co0       ,0.0s          ,DATA_M04          ,8,Rdbc     ,M04     ,Co     ,0,1,,,,,,
+readM04 Bi0       ,0.0s          ,DATA_M04          ,12,Rdbc     ,M04     ,Bi     ,0,1,,,,,,
+readM04 Bo0       ,0.0s          ,DATA_M04          ,16,Rdbc     ,M04     ,Bo     ,0,1,,,,,,
+readM04 Ai1       ,0.0s          ,DATA_M04          ,1,Rdbc     ,M04     ,Ai     ,1,1,,,,,,
+readM04 Ao1       ,0.0s          ,DATA_M04          ,5,Rdbc     ,M04     ,Ao     ,1,1,,,,,,
+readM04 Co1       ,0.0s          ,DATA_M04          ,9,Rdbc     ,M04     ,Co     ,1,1,,,,,,
+readM04 Bi1       ,0.0s          ,DATA_M04          ,13,Rdbc     ,M04     ,Bi     ,1,1,,,,,,
+readM04 Bo1       ,0.0s          ,DATA_M04          ,17,Rdbc     ,M04     ,Bo     ,1,1,,,,,,
+readM04 Ai2       ,0.0s          ,DATA_M04          ,2,Rdbc     ,M04     ,Ai     ,2,1,,,,,,
+readM04 Ao2       ,0.0s          ,DATA_M04          ,6,Rdbc     ,M04     ,Ao     ,2,1,,,,,,
+readM04 Co2       ,0.0s          ,DATA_M04          ,10,Rdbc     ,M04     ,Co     ,2,1,,,,,,
+readM04 Bi2       ,0.0s          ,DATA_M04          ,14,Rdbc     ,M04     ,Bi     ,2,1,,,,,,
+readM04 Bo2       ,0.0s          ,DATA_M04          ,18,Rdbc     ,M04     ,Bo     ,2,1,,,,,,
+readM04 Ai3       ,0.0s          ,DATA_M04          ,3,Rdbc     ,M04     ,Ai     ,3,1,,,,,,
+readM04 Ao3       ,0.0s          ,DATA_M04          ,7,Rdbc     ,M04     ,Ao     ,3,1,,,,,,
+readM04 Co3       ,0.0s          ,DATA_M04          ,11,Rdbc     ,M04     ,Co     ,3,1,,,,,,
+readM04 Bi3       ,0.0s          ,DATA_M04          ,15,Rdbc     ,M04     ,Bi     ,3,1,,,,,,
+readM04 Bo3       ,0.0s          ,DATA_M04          ,19,Rdbc     ,M04     ,Bo     ,3,1,,,,,,
+readM05 Ai0       ,0.0s          ,DATA_M05          ,0,Rdbc     ,M05     ,Ai     ,0,1,,,,,,
+readM05 Ao0       ,0.0s          ,DATA_M05          ,4,Rdbc     ,M05     ,Ao     ,0,1,,,,,,
+readM05 Co0       ,0.0s          ,DATA_M05          ,8,Rdbc     ,M05     ,Co     ,0,1,,,,,,
+readM05 Bi0       ,0.0s          ,DATA_M05          ,12,Rdbc     ,M05     ,Bi     ,0,1,,,,,,
+readM05 Bo0       ,0.0s          ,DATA_M05          ,16,Rdbc     ,M05     ,Bo     ,0,1,,,,,,
+readM05 Ai1       ,0.0s          ,DATA_M05          ,1,Rdbc     ,M05     ,Ai     ,1,1,,,,,,
+readM05 Ao1       ,0.0s          ,DATA_M05          ,5,Rdbc     ,M05     ,Ao     ,1,1,,,,,,
+readM05 Co1       ,0.0s          ,DATA_M05          ,9,Rdbc     ,M05     ,Co     ,1,1,,,,,,
+readM05 Bi1       ,0.0s          ,DATA_M05          ,13,Rdbc     ,M05     ,Bi     ,1,1,,,,,,
+readM05 Bo1       ,0.0s          ,DATA_M05          ,17,Rdbc     ,M05     ,Bo     ,1,1,,,,,,
+readM05 Ai2       ,0.0s          ,DATA_M05          ,2,Rdbc     ,M05     ,Ai     ,2,1,,,,,,
+readM05 Ao2       ,0.0s          ,DATA_M05          ,6,Rdbc     ,M05     ,Ao     ,2,1,,,,,,
+readM05 Co2       ,0.0s          ,DATA_M05          ,10,Rdbc     ,M05     ,Co     ,2,1,,,,,,
+readM05 Bi2       ,0.0s          ,DATA_M05          ,14,Rdbc     ,M05     ,Bi     ,2,1,,,,,,
+readM05 Bo2       ,0.0s          ,DATA_M05          ,18,Rdbc     ,M05     ,Bo     ,2,1,,,,,,
+readM05 Ai3       ,0.0s          ,DATA_M05          ,3,Rdbc     ,M05     ,Ai     ,3,1,,,,,,
+readM05 Ao3       ,0.0s          ,DATA_M05          ,7,Rdbc     ,M05     ,Ao     ,3,1,,,,,,
+readM05 Co3       ,0.0s          ,DATA_M05          ,11,Rdbc     ,M05     ,Co     ,3,1,,,,,,
+readM05 Bi3       ,0.0s          ,DATA_M05          ,15,Rdbc     ,M05     ,Bi     ,3,1,,,,,,
+readM05 Bo3       ,0.0s          ,DATA_M05          ,19,Rdbc     ,M05     ,Bo     ,3,1,,,,,,
+readM07 Ai0       ,0.0s          ,DATA_M07          ,0,Rdbc     ,M07     ,Ai     ,0,1,,,,,,
+readM07 Ao0       ,0.0s          ,DATA_M07          ,4,Rdbc     ,M07     ,Ao     ,0,1,,,,,,
+readM07 Co0       ,0.0s          ,DATA_M07          ,8,Rdbc     ,M07     ,Co     ,0,1,,,,,,
+readM07 Bi0       ,0.0s          ,DATA_M07          ,12,Rdbc     ,M07     ,Bi     ,0,1,,,,,,
+readM07 Bo0       ,0.0s          ,DATA_M07          ,16,Rdbc     ,M07     ,Bo     ,0,1,,,,,,
+readM07 Ai1       ,0.0s          ,DATA_M07          ,1,Rdbc     ,M07     ,Ai     ,1,1,,,,,,
+readM07 Ao1       ,0.0s          ,DATA_M07          ,5,Rdbc     ,M07     ,Ao     ,1,1,,,,,,
+readM07 Co1       ,0.0s          ,DATA_M07          ,9,Rdbc     ,M07     ,Co     ,1,1,,,,,,
+readM07 Bi1       ,0.0s          ,DATA_M07          ,13,Rdbc     ,M07     ,Bi     ,1,1,,,,,,
+readM07 Bo1       ,0.0s          ,DATA_M07          ,17,Rdbc     ,M07     ,Bo     ,1,1,,,,,,
+readM07 Ai2       ,0.0s          ,DATA_M07          ,2,Rdbc     ,M07     ,Ai     ,2,1,,,,,,
+readM07 Ao2       ,0.0s          ,DATA_M07          ,6,Rdbc     ,M07     ,Ao     ,2,1,,,,,,
+readM07 Co2       ,0.0s          ,DATA_M07          ,10,Rdbc     ,M07     ,Co     ,2,1,,,,,,
+readM07 Bi2       ,0.0s          ,DATA_M07          ,14,Rdbc     ,M07     ,Bi     ,2,1,,,,,,
+readM07 Bo2       ,0.0s          ,DATA_M07          ,18,Rdbc     ,M07     ,Bo     ,2,1,,,,,,
+readM07 Ai3       ,0.0s          ,DATA_M07          ,3,Rdbc     ,M07     ,Ai     ,3,1,,,,,,
+readM07 Ao3       ,0.0s          ,DATA_M07          ,7,Rdbc     ,M07     ,Ao     ,3,1,,,,,,
+readM07 Co3       ,0.0s          ,DATA_M07          ,11,Rdbc     ,M07     ,Co     ,3,1,,,,,,
+readM07 Bi3       ,0.0s          ,DATA_M07          ,15,Rdbc     ,M07     ,Bi     ,3,1,,,,,,
+readM07 Bo3       ,0.0s          ,DATA_M07          ,19,Rdbc     ,M07     ,Bo     ,3,1,,,,,,
+readM08 Ai0       ,0.0s          ,DATA_M08          ,0,Rdbc     ,M08     ,Ai     ,0,1,,,,,,
+readM08 Ao0       ,0.0s          ,DATA_M08          ,4,Rdbc     ,M08     ,Ao     ,0,1,,,,,,
+readM08 Co0       ,0.0s          ,DATA_M08          ,8,Rdbc     ,M08     ,Co     ,0,1,,,,,,
+readM08 Bi0       ,0.0s          ,DATA_M08          ,12,Rdbc     ,M08     ,Bi     ,0,1,,,,,,
+readM08 Bo0       ,0.0s          ,DATA_M08          ,16,Rdbc     ,M08     ,Bo     ,0,1,,,,,,
+readM08 Ai1       ,0.0s          ,DATA_M08          ,1,Rdbc     ,M08     ,Ai     ,1,1,,,,,,
+readM08 Ao1       ,0.0s          ,DATA_M08          ,5,Rdbc     ,M08     ,Ao     ,1,1,,,,,,
+readM08 Co1       ,0.0s          ,DATA_M08          ,9,Rdbc     ,M08     ,Co     ,1,1,,,,,,
+readM08 Bi1       ,0.0s          ,DATA_M08          ,13,Rdbc     ,M08     ,Bi     ,1,1,,,,,,
+readM08 Bo1       ,0.0s          ,DATA_M08          ,17,Rdbc     ,M08     ,Bo     ,1,1,,,,,,
+readM08 Ai2       ,0.0s          ,DATA_M08          ,2,Rdbc     ,M08     ,Ai     ,2,1,,,,,,
+readM08 Ao2       ,0.0s          ,DATA_M08          ,6,Rdbc     ,M08     ,Ao     ,2,1,,,,,,
+readM08 Co2       ,0.0s          ,DATA_M08          ,10,Rdbc     ,M08     ,Co     ,2,1,,,,,,
+readM08 Bi2       ,0.0s          ,DATA_M08          ,14,Rdbc     ,M08     ,Bi     ,2,1,,,,,,
+readM08 Bo2       ,0.0s          ,DATA_M08          ,18,Rdbc     ,M08     ,Bo     ,2,1,,,,,,
+readM08 Ai3       ,0.0s          ,DATA_M08          ,3,Rdbc     ,M08     ,Ai     ,3,1,,,,,,
+readM08 Ao3       ,0.0s          ,DATA_M08          ,7,Rdbc     ,M08     ,Ao     ,3,1,,,,,,
+readM08 Co3       ,0.0s          ,DATA_M08          ,11,Rdbc     ,M08     ,Co     ,3,1,,,,,,
+readM08 Bi3       ,0.0s          ,DATA_M08          ,15,Rdbc     ,M08     ,Bi     ,3,1,,,,,,
+readM08 Bo3       ,0.0s          ,DATA_M08          ,19,Rdbc     ,M08     ,Bo     ,3,1,,,,,,
+readM09 Ai0       ,0.0s          ,DATA_M09          ,0,Rdbc     ,M09     ,Ai     ,0,1,,,,,,
+readM09 Ao0       ,0.0s          ,DATA_M09          ,4,Rdbc     ,M09     ,Ao     ,0,1,,,,,,
+readM09 Co0       ,0.0s          ,DATA_M09          ,8,Rdbc     ,M09     ,Co     ,0,1,,,,,,
+readM09 Bi0       ,0.0s          ,DATA_M09          ,12,Rdbc     ,M09     ,Bi     ,0,1,,,,,,
+readM09 Bo0       ,0.0s          ,DATA_M09          ,16,Rdbc     ,M09     ,Bo     ,0,1,,,,,,
+readM09 Ai1       ,0.0s          ,DATA_M09          ,1,Rdbc     ,M09     ,Ai     ,1,1,,,,,,
+readM09 Ao1       ,0.0s          ,DATA_M09          ,5,Rdbc     ,M09     ,Ao     ,1,1,,,,,,
+readM09 Co1       ,0.0s          ,DATA_M09          ,9,Rdbc     ,M09     ,Co     ,1,1,,,,,,
+readM09 Bi1       ,0.0s          ,DATA_M09          ,13,Rdbc     ,M09     ,Bi     ,1,1,,,,,,
+readM09 Bo1       ,0.0s          ,DATA_M09          ,17,Rdbc     ,M09     ,Bo     ,1,1,,,,,,
+readM09 Ai2       ,0.0s          ,DATA_M09          ,2,Rdbc     ,M09     ,Ai     ,2,1,,,,,,
+readM09 Ao2       ,0.0s          ,DATA_M09          ,6,Rdbc     ,M09     ,Ao     ,2,1,,,,,,
+readM09 Co2       ,0.0s          ,DATA_M09          ,10,Rdbc     ,M09     ,Co     ,2,1,,,,,,
+readM09 Bi2       ,0.0s          ,DATA_M09          ,14,Rdbc     ,M09     ,Bi     ,2,1,,,,,,
+readM09 Bo2       ,0.0s          ,DATA_M09          ,18,Rdbc     ,M09     ,Bo     ,2,1,,,,,,
+readM09 Ai3       ,0.0s          ,DATA_M09          ,3,Rdbc     ,M09     ,Ai     ,3,1,,,,,,
+readM09 Ao3       ,0.0s          ,DATA_M09          ,7,Rdbc     ,M09     ,Ao     ,3,1,,,,,,
+readM09 Co3       ,0.0s          ,DATA_M09          ,11,Rdbc     ,M09     ,Co     ,3,1,,,,,,
+readM09 Bi3       ,0.0s          ,DATA_M09          ,15,Rdbc     ,M09     ,Bi     ,3,1,,,,,,
+readM09 Bo3       ,0.0s          ,DATA_M09          ,19,Rdbc     ,M09     ,Bo     ,3,1,,,,,,
+readM10 Ai0       ,0.0s          ,DATA_M10          ,0,Rdbc     ,M10     ,Ai     ,0,1,,,,,,
+readM10 Ao0       ,0.0s          ,DATA_M10          ,4,Rdbc     ,M10     ,Ao     ,0,1,,,,,,
+readM10 Co0       ,0.0s          ,DATA_M10          ,8,Rdbc     ,M10     ,Co     ,0,1,,,,,,
+readM10 Bi0       ,0.0s          ,DATA_M10          ,12,Rdbc     ,M10     ,Bi     ,0,1,,,,,,
+readM10 Bo0       ,0.0s          ,DATA_M10          ,16,Rdbc     ,M10     ,Bo     ,0,1,,,,,,
+readM10 Ai1       ,0.0s          ,DATA_M10          ,1,Rdbc     ,M10     ,Ai     ,1,1,,,,,,
+readM10 Ao1       ,0.0s          ,DATA_M10          ,5,Rdbc     ,M10     ,Ao     ,1,1,,,,,,
+readM10 Co1       ,0.0s          ,DATA_M10          ,9,Rdbc     ,M10     ,Co     ,1,1,,,,,,
+readM10 Bi1       ,0.0s          ,DATA_M10          ,13,Rdbc     ,M10     ,Bi     ,1,1,,,,,,
+readM10 Bo1       ,0.0s          ,DATA_M10          ,17,Rdbc     ,M10     ,Bo     ,1,1,,,,,,
+readM10 Ai2       ,0.0s          ,DATA_M10          ,2,Rdbc     ,M10     ,Ai     ,2,1,,,,,,
+readM10 Ao2       ,0.0s          ,DATA_M10          ,6,Rdbc     ,M10     ,Ao     ,2,1,,,,,,
+readM10 Co2       ,0.0s          ,DATA_M10          ,10,Rdbc     ,M10     ,Co     ,2,1,,,,,,
+readM10 Bi2       ,0.0s          ,DATA_M10          ,14,Rdbc     ,M10     ,Bi     ,2,1,,,,,,
+readM10 Bo2       ,0.0s          ,DATA_M10          ,18,Rdbc     ,M10     ,Bo     ,2,1,,,,,,
+readM10 Ai3       ,0.0s          ,DATA_M10          ,3,Rdbc     ,M10     ,Ai     ,3,1,,,,,,
+readM10 Ao3       ,0.0s          ,DATA_M10          ,7,Rdbc     ,M10     ,Ao     ,3,1,,,,,,
+readM10 Co3       ,0.0s          ,DATA_M10          ,11,Rdbc     ,M10     ,Co     ,3,1,,,,,,
+readM10 Bi3       ,0.0s          ,DATA_M10          ,15,Rdbc     ,M10     ,Bi     ,3,1,,,,,,
+readM10 Bo3       ,0.0s          ,DATA_M10          ,19,Rdbc     ,M10     ,Bo     ,3,1,,,,,,
+readM11 Ai0       ,0.0s          ,DATA_M11          ,0,Rdbc     ,M11     ,Ai     ,0,1,,,,,,
+readM11 Ao0       ,0.0s          ,DATA_M11          ,4,Rdbc     ,M11     ,Ao     ,0,1,,,,,,
+readM11 Co0       ,0.0s          ,DATA_M11          ,8,Rdbc     ,M11     ,Co     ,0,1,,,,,,
+readM11 Bi0       ,0.0s          ,DATA_M11          ,12,Rdbc     ,M11     ,Bi     ,0,1,,,,,,
+readM11 Bo0       ,0.0s          ,DATA_M11          ,16,Rdbc     ,M11     ,Bo     ,0,1,,,,,,
+readM11 Ai1       ,0.0s          ,DATA_M11          ,1,Rdbc     ,M11     ,Ai     ,1,1,,,,,,
+readM11 Ao1       ,0.0s          ,DATA_M11          ,5,Rdbc     ,M11     ,Ao     ,1,1,,,,,,
+readM11 Co1       ,0.0s          ,DATA_M11          ,9,Rdbc     ,M11     ,Co     ,1,1,,,,,,
+readM11 Bi1       ,0.0s          ,DATA_M11          ,13,Rdbc     ,M11     ,Bi     ,1,1,,,,,,
+readM11 Bo1       ,0.0s          ,DATA_M11          ,17,Rdbc     ,M11     ,Bo     ,1,1,,,,,,
+readM11 Ai2       ,0.0s          ,DATA_M11          ,2,Rdbc     ,M11     ,Ai     ,2,1,,,,,,
+readM11 Ao2       ,0.0s          ,DATA_M11          ,6,Rdbc     ,M11     ,Ao     ,2,1,,,,,,
+readM11 Co2       ,0.0s          ,DATA_M11          ,10,Rdbc     ,M11     ,Co     ,2,1,,,,,,
+readM11 Bi2       ,0.0s          ,DATA_M11          ,14,Rdbc     ,M11     ,Bi     ,2,1,,,,,,
+readM11 Bo2       ,0.0s          ,DATA_M11          ,18,Rdbc     ,M11     ,Bo     ,2,1,,,,,,
+readM11 Ai3       ,0.0s          ,DATA_M11          ,3,Rdbc     ,M11     ,Ai     ,3,1,,,,,,
+readM11 Ao3       ,0.0s          ,DATA_M11          ,7,Rdbc     ,M11     ,Ao     ,3,1,,,,,,
+readM11 Co3       ,0.0s          ,DATA_M11          ,11,Rdbc     ,M11     ,Co     ,3,1,,,,,,
+readM11 Bi3       ,0.0s          ,DATA_M11          ,15,Rdbc     ,M11     ,Bi     ,3,1,,,,,,
+readM11 Bo3       ,0.0s          ,DATA_M11          ,19,Rdbc     ,M11     ,Bo     ,3,1,,,,,,
+readM12 Ai0       ,0.0s          ,DATA_M12          ,0,Rdbc     ,M12     ,Ai     ,0,1,,,,,,
+readM12 Ao0       ,0.0s          ,DATA_M12          ,4,Rdbc     ,M12     ,Ao     ,0,1,,,,,,
+readM12 Co0       ,0.0s          ,DATA_M12          ,8,Rdbc     ,M12     ,Co     ,0,1,,,,,,
+readM12 Bi0       ,0.0s          ,DATA_M12          ,12,Rdbc     ,M12     ,Bi     ,0,1,,,,,,
+readM12 Bo0       ,0.0s          ,DATA_M12          ,16,Rdbc     ,M12     ,Bo     ,0,1,,,,,,
+readM12 Ai1       ,0.0s          ,DATA_M12          ,1,Rdbc     ,M12     ,Ai     ,1,1,,,,,,
+readM12 Ao1       ,0.0s          ,DATA_M12          ,5,Rdbc     ,M12     ,Ao     ,1,1,,,,,,
+readM12 Co1       ,0.0s          ,DATA_M12          ,9,Rdbc     ,M12     ,Co     ,1,1,,,,,,
+readM12 Bi1       ,0.0s          ,DATA_M12          ,13,Rdbc     ,M12     ,Bi     ,1,1,,,,,,
+readM12 Bo1       ,0.0s          ,DATA_M12          ,17,Rdbc     ,M12     ,Bo     ,1,1,,,,,,
+readM12 Ai2       ,0.0s          ,DATA_M12          ,2,Rdbc     ,M12     ,Ai     ,2,1,,,,,,
+readM12 Ao2       ,0.0s          ,DATA_M12          ,6,Rdbc     ,M12     ,Ao     ,2,1,,,,,,
+readM12 Co2       ,0.0s          ,DATA_M12          ,10,Rdbc     ,M12     ,Co     ,2,1,,,,,,
+readM12 Bi2       ,0.0s          ,DATA_M12          ,14,Rdbc     ,M12     ,Bi     ,2,1,,,,,,
+readM12 Bo2       ,0.0s          ,DATA_M12          ,18,Rdbc     ,M12     ,Bo     ,2,1,,,,,,
+readM12 Ai3       ,0.0s          ,DATA_M12          ,3,Rdbc     ,M12     ,Ai     ,3,1,,,,,,
+readM12 Ao3       ,0.0s          ,DATA_M12          ,7,Rdbc     ,M12     ,Ao     ,3,1,,,,,,
+readM12 Co3       ,0.0s          ,DATA_M12          ,11,Rdbc     ,M12     ,Co     ,3,1,,,,,,
+readM12 Bi3       ,0.0s          ,DATA_M12          ,15,Rdbc     ,M12     ,Bi     ,3,1,,,,,,
+readM12 Bo3       ,0.0s          ,DATA_M12          ,19,Rdbc     ,M12     ,Bo     ,3,1,,,,,,
+readM14 Ai0       ,0.0s          ,DATA_M14          ,0,Rdbc     ,M14     ,Ai     ,0,1,,,,,,
+readM14 Ao0       ,0.0s          ,DATA_M14          ,4,Rdbc     ,M14     ,Ao     ,0,1,,,,,,
+readM14 Co0       ,0.0s          ,DATA_M14          ,8,Rdbc     ,M14     ,Co     ,0,1,,,,,,
+readM14 Bi0       ,0.0s          ,DATA_M14          ,12,Rdbc     ,M14     ,Bi     ,0,1,,,,,,
+readM14 Bo0       ,0.0s          ,DATA_M14          ,16,Rdbc     ,M14     ,Bo     ,0,1,,,,,,
+readM14 Ai1       ,0.0s          ,DATA_M14          ,1,Rdbc     ,M14     ,Ai     ,1,1,,,,,,
+readM14 Ao1       ,0.0s          ,DATA_M14          ,5,Rdbc     ,M14     ,Ao     ,1,1,,,,,,
+readM14 Co1       ,0.0s          ,DATA_M14          ,9,Rdbc     ,M14     ,Co     ,1,1,,,,,,
+readM14 Bi1       ,0.0s          ,DATA_M14          ,13,Rdbc     ,M14     ,Bi     ,1,1,,,,,,
+readM14 Bo1       ,0.0s          ,DATA_M14          ,17,Rdbc     ,M14     ,Bo     ,1,1,,,,,,
+readM14 Ai2       ,0.0s          ,DATA_M14          ,2,Rdbc     ,M14     ,Ai     ,2,1,,,,,,
+readM14 Ao2       ,0.0s          ,DATA_M14          ,6,Rdbc     ,M14     ,Ao     ,2,1,,,,,,
+readM14 Co2       ,0.0s          ,DATA_M14          ,10,Rdbc     ,M14     ,Co     ,2,1,,,,,,
+readM14 Bi2       ,0.0s          ,DATA_M14          ,14,Rdbc     ,M14     ,Bi     ,2,1,,,,,,
+readM14 Bo2       ,0.0s          ,DATA_M14          ,18,Rdbc     ,M14     ,Bo     ,2,1,,,,,,
+readM14 Ai3       ,0.0s          ,DATA_M14          ,3,Rdbc     ,M14     ,Ai     ,3,1,,,,,,
+readM14 Ao3       ,0.0s          ,DATA_M14          ,7,Rdbc     ,M14     ,Ao     ,3,1,,,,,,
+readM14 Co3       ,0.0s          ,DATA_M14          ,11,Rdbc     ,M14     ,Co     ,3,1,,,,,,
+readM14 Bi3       ,0.0s          ,DATA_M14          ,15,Rdbc     ,M14     ,Bi     ,3,1,,,,,,
+readM14 Bo3       ,0.0s          ,DATA_M14          ,19,Rdbc     ,M14     ,Bo     ,3,1,,,,,,
+readM15 Ai0       ,0.0s          ,DATA_M15          ,0,Rdbc     ,M15     ,Ai     ,0,1,,,,,,
+readM15 Ao0       ,0.0s          ,DATA_M15          ,4,Rdbc     ,M15     ,Ao     ,0,1,,,,,,
+readM15 Co0       ,0.0s          ,DATA_M15          ,8,Rdbc     ,M15     ,Co     ,0,1,,,,,,
+readM15 Bi0       ,0.0s          ,DATA_M15          ,12,Rdbc     ,M15     ,Bi     ,0,1,,,,,,
+readM15 Bo0       ,0.0s          ,DATA_M15          ,16,Rdbc     ,M15     ,Bo     ,0,1,,,,,,
+readM15 Ai1       ,0.0s          ,DATA_M15          ,1,Rdbc     ,M15     ,Ai     ,1,1,,,,,,
+readM15 Ao1       ,0.0s          ,DATA_M15          ,5,Rdbc     ,M15     ,Ao     ,1,1,,,,,,
+readM15 Co1       ,0.0s          ,DATA_M15          ,9,Rdbc     ,M15     ,Co     ,1,1,,,,,,
+readM15 Bi1       ,0.0s          ,DATA_M15          ,13,Rdbc     ,M15     ,Bi     ,1,1,,,,,,
+readM15 Bo1       ,0.0s          ,DATA_M15          ,17,Rdbc     ,M15     ,Bo     ,1,1,,,,,,
+readM15 Ai2       ,0.0s          ,DATA_M15          ,2,Rdbc     ,M15     ,Ai     ,2,1,,,,,,
+readM15 Ao2       ,0.0s          ,DATA_M15          ,6,Rdbc     ,M15     ,Ao     ,2,1,,,,,,
+readM15 Co2       ,0.0s          ,DATA_M15          ,10,Rdbc     ,M15     ,Co     ,2,1,,,,,,
+readM15 Bi2       ,0.0s          ,DATA_M15          ,14,Rdbc     ,M15     ,Bi     ,2,1,,,,,,
+readM15 Bo2       ,0.0s          ,DATA_M15          ,18,Rdbc     ,M15     ,Bo     ,2,1,,,,,,
+readM15 Ai3       ,0.0s          ,DATA_M15          ,3,Rdbc     ,M15     ,Ai     ,3,1,,,,,,
+readM15 Ao3       ,0.0s          ,DATA_M15          ,7,Rdbc     ,M15     ,Ao     ,3,1,,,,,,
+readM15 Co3       ,0.0s          ,DATA_M15          ,11,Rdbc     ,M15     ,Co     ,3,1,,,,,,
+readM15 Bi3       ,0.0s          ,DATA_M15          ,15,Rdbc     ,M15     ,Bi     ,3,1,,,,,,
+readM15 Bo3       ,0.0s          ,DATA_M15          ,19,Rdbc     ,M15     ,Bo     ,3,1,,,,,,
+readM16 Ai0       ,0.0s          ,DATA_M16          ,0,Rdbc     ,M16     ,Ai     ,0,1,,,,,,
+readM16 Ao0       ,0.0s          ,DATA_M16          ,4,Rdbc     ,M16     ,Ao     ,0,1,,,,,,
+readM16 Co0       ,0.0s          ,DATA_M16          ,8,Rdbc     ,M16     ,Co     ,0,1,,,,,,
+readM16 Bi0       ,0.0s          ,DATA_M16          ,12,Rdbc     ,M16     ,Bi     ,0,1,,,,,,
+readM16 Bo0       ,0.0s          ,DATA_M16          ,16,Rdbc     ,M16     ,Bo     ,0,1,,,,,,
+readM16 Ai1       ,0.0s          ,DATA_M16          ,1,Rdbc     ,M16     ,Ai     ,1,1,,,,,,
+readM16 Ao1       ,0.0s          ,DATA_M16          ,5,Rdbc     ,M16     ,Ao     ,1,1,,,,,,
+readM16 Co1       ,0.0s          ,DATA_M16          ,9,Rdbc     ,M16     ,Co     ,1,1,,,,,,
+readM16 Bi1       ,0.0s          ,DATA_M16          ,13,Rdbc     ,M16     ,Bi     ,1,1,,,,,,
+readM16 Bo1       ,0.0s          ,DATA_M16          ,17,Rdbc     ,M16     ,Bo     ,1,1,,,,,,
+readM16 Ai2       ,0.0s          ,DATA_M16          ,2,Rdbc     ,M16     ,Ai     ,2,1,,,,,,
+readM16 Ao2       ,0.0s          ,DATA_M16          ,6,Rdbc     ,M16     ,Ao     ,2,1,,,,,,
+readM16 Co2       ,0.0s          ,DATA_M16          ,10,Rdbc     ,M16     ,Co     ,2,1,,,,,,
+readM16 Bi2       ,0.0s          ,DATA_M16          ,14,Rdbc     ,M16     ,Bi     ,2,1,,,,,,
+readM16 Bo2       ,0.0s          ,DATA_M16          ,18,Rdbc     ,M16     ,Bo     ,2,1,,,,,,
+readM16 Ai3       ,0.0s          ,DATA_M16          ,3,Rdbc     ,M16     ,Ai     ,3,1,,,,,,
+readM16 Ao3       ,0.0s          ,DATA_M16          ,7,Rdbc     ,M16     ,Ao     ,3,1,,,,,,
+readM16 Co3       ,0.0s          ,DATA_M16          ,11,Rdbc     ,M16     ,Co     ,3,1,,,,,,
+readM16 Bi3       ,0.0s          ,DATA_M16          ,15,Rdbc     ,M16     ,Bi     ,3,1,,,,,,
+readM16 Bo3       ,0.0s          ,DATA_M16          ,19,Rdbc     ,M16     ,Bo     ,3,1,,,,,,
+readM19 Ai0       ,0.0s          ,DATA_M19          ,0,Rdbc     ,M19     ,Ai     ,0,1,,,,,,
+readM19 Ao0       ,0.0s          ,DATA_M19          ,4,Rdbc     ,M19     ,Ao     ,0,1,,,,,,
+readM19 Co0       ,0.0s          ,DATA_M19          ,8,Rdbc     ,M19     ,Co     ,0,1,,,,,,
+readM19 Bi0       ,0.0s          ,DATA_M19          ,12,Rdbc     ,M19     ,Bi     ,0,1,,,,,,
+readM19 Bo0       ,0.0s          ,DATA_M19          ,16,Rdbc     ,M19     ,Bo     ,0,1,,,,,,
+readM19 Ai1       ,0.0s          ,DATA_M19          ,1,Rdbc     ,M19     ,Ai     ,1,1,,,,,,
+readM19 Ao1       ,0.0s          ,DATA_M19          ,5,Rdbc     ,M19     ,Ao     ,1,1,,,,,,
+readM19 Co1       ,0.0s          ,DATA_M19          ,9,Rdbc     ,M19     ,Co     ,1,1,,,,,,
+readM19 Bi1       ,0.0s          ,DATA_M19          ,13,Rdbc     ,M19     ,Bi     ,1,1,,,,,,
+readM19 Bo1       ,0.0s          ,DATA_M19          ,17,Rdbc     ,M19     ,Bo     ,1,1,,,,,,
+readM19 Ai2       ,0.0s          ,DATA_M19          ,2,Rdbc     ,M19     ,Ai     ,2,1,,,,,,
+readM19 Ao2       ,0.0s          ,DATA_M19          ,6,Rdbc     ,M19     ,Ao     ,2,1,,,,,,
+readM19 Co2       ,0.0s          ,DATA_M19          ,10,Rdbc     ,M19     ,Co     ,2,1,,,,,,
+readM19 Bi2       ,0.0s          ,DATA_M19          ,14,Rdbc     ,M19     ,Bi     ,2,1,,,,,,
+readM19 Bo2       ,0.0s          ,DATA_M19          ,18,Rdbc     ,M19     ,Bo     ,2,1,,,,,,
+readM19 Ai3       ,0.0s          ,DATA_M19          ,3,Rdbc     ,M19     ,Ai     ,3,1,,,,,,
+readM19 Ao3       ,0.0s          ,DATA_M19          ,7,Rdbc     ,M19     ,Ao     ,3,1,,,,,,
+readM19 Co3       ,0.0s          ,DATA_M19          ,11,Rdbc     ,M19     ,Co     ,3,1,,,,,,
+readM19 Bi3       ,0.0s          ,DATA_M19          ,15,Rdbc     ,M19     ,Bi     ,3,1,,,,,,
+readM19 Bo3       ,0.0s          ,DATA_M19          ,19,Rdbc     ,M19     ,Bo     ,3,1,,,,,,
+readM20 Ai0       ,0.0s          ,DATA_M20          ,0,Rdbc     ,M20     ,Ai     ,0,1,,,,,,
+readM20 Ao0       ,0.0s          ,DATA_M20          ,4,Rdbc     ,M20     ,Ao     ,0,1,,,,,,
+readM20 Co0       ,0.0s          ,DATA_M20          ,8,Rdbc     ,M20     ,Co     ,0,1,,,,,,
+readM20 Bi0       ,0.0s          ,DATA_M20          ,12,Rdbc     ,M20     ,Bi     ,0,1,,,,,,
+readM20 Bo0       ,0.0s          ,DATA_M20          ,16,Rdbc     ,M20     ,Bo     ,0,1,,,,,,
+readM20 Ai1       ,0.0s          ,DATA_M20          ,1,Rdbc     ,M20     ,Ai     ,1,1,,,,,,
+readM20 Ao1       ,0.0s          ,DATA_M20          ,5,Rdbc     ,M20     ,Ao     ,1,1,,,,,,
+readM20 Co1       ,0.0s          ,DATA_M20          ,9,Rdbc     ,M20     ,Co     ,1,1,,,,,,
+readM20 Bi1       ,0.0s          ,DATA_M20          ,13,Rdbc     ,M20     ,Bi     ,1,1,,,,,,
+readM20 Bo1       ,0.0s          ,DATA_M20          ,17,Rdbc     ,M20     ,Bo     ,1,1,,,,,,
+readM20 Ai2       ,0.0s          ,DATA_M20          ,2,Rdbc     ,M20     ,Ai     ,2,1,,,,,,
+readM20 Ao2       ,0.0s          ,DATA_M20          ,6,Rdbc     ,M20     ,Ao     ,2,1,,,,,,
+readM20 Co2       ,0.0s          ,DATA_M20          ,10,Rdbc     ,M20     ,Co     ,2,1,,,,,,
+readM20 Bi2       ,0.0s          ,DATA_M20          ,14,Rdbc     ,M20     ,Bi     ,2,1,,,,,,
+readM20 Bo2       ,0.0s          ,DATA_M20          ,18,Rdbc     ,M20     ,Bo     ,2,1,,,,,,
+readM20 Ai3       ,0.0s          ,DATA_M20          ,3,Rdbc     ,M20     ,Ai     ,3,1,,,,,,
+readM20 Ao3       ,0.0s          ,DATA_M20          ,7,Rdbc     ,M20     ,Ao     ,3,1,,,,,,
+readM20 Co3       ,0.0s          ,DATA_M20          ,11,Rdbc     ,M20     ,Co     ,3,1,,,,,,
+readM20 Bi3       ,0.0s          ,DATA_M20          ,15,Rdbc     ,M20     ,Bi     ,3,1,,,,,,
+readM20 Bo3       ,0.0s          ,DATA_M20          ,19,Rdbc     ,M20     ,Bo     ,3,1,,,,,,
+readM21 Ai0       ,0.0s          ,DATA_M21          ,0,Rdbc     ,M21     ,Ai     ,0,1,,,,,,
+readM21 Ao0       ,0.0s          ,DATA_M21          ,4,Rdbc     ,M21     ,Ao     ,0,1,,,,,,
+readM21 Co0       ,0.0s          ,DATA_M21          ,8,Rdbc     ,M21     ,Co     ,0,1,,,,,,
+readM21 Bi0       ,0.0s          ,DATA_M21          ,12,Rdbc     ,M21     ,Bi     ,0,1,,,,,,
+readM21 Bo0       ,0.0s          ,DATA_M21          ,16,Rdbc     ,M21     ,Bo     ,0,1,,,,,,
+readM21 Ai1       ,0.0s          ,DATA_M21          ,1,Rdbc     ,M21     ,Ai     ,1,1,,,,,,
+readM21 Ao1       ,0.0s          ,DATA_M21          ,5,Rdbc     ,M21     ,Ao     ,1,1,,,,,,
+readM21 Co1       ,0.0s          ,DATA_M21          ,9,Rdbc     ,M21     ,Co     ,1,1,,,,,,
+readM21 Bi1       ,0.0s          ,DATA_M21          ,13,Rdbc     ,M21     ,Bi     ,1,1,,,,,,
+readM21 Bo1       ,0.0s          ,DATA_M21          ,17,Rdbc     ,M21     ,Bo     ,1,1,,,,,,
+readM21 Ai2       ,0.0s          ,DATA_M21          ,2,Rdbc     ,M21     ,Ai     ,2,1,,,,,,
+readM21 Ao2       ,0.0s          ,DATA_M21          ,6,Rdbc     ,M21     ,Ao     ,2,1,,,,,,
+readM21 Co2       ,0.0s          ,DATA_M21          ,10,Rdbc     ,M21     ,Co     ,2,1,,,,,,
+readM21 Bi2       ,0.0s          ,DATA_M21          ,14,Rdbc     ,M21     ,Bi     ,2,1,,,,,,
+readM21 Bo2       ,0.0s          ,DATA_M21          ,18,Rdbc     ,M21     ,Bo     ,2,1,,,,,,
+readM21 Ai3       ,0.0s          ,DATA_M21          ,3,Rdbc     ,M21     ,Ai     ,3,1,,,,,,
+readM21 Ao3       ,0.0s          ,DATA_M21          ,7,Rdbc     ,M21     ,Ao     ,3,1,,,,,,
+readM21 Co3       ,0.0s          ,DATA_M21          ,11,Rdbc     ,M21     ,Co     ,3,1,,,,,,
+readM21 Bi3       ,0.0s          ,DATA_M21          ,15,Rdbc     ,M21     ,Bi     ,3,1,,,,,,
+readM21 Bo3       ,0.0s          ,DATA_M21          ,19,Rdbc     ,M21     ,Bo     ,3,1,,,,,,
+readM22 Ai0       ,0.0s          ,DATA_M22          ,0,Rdbc     ,M22     ,Ai     ,0,1,,,,,,
+readM22 Ao0       ,0.0s          ,DATA_M22          ,4,Rdbc     ,M22     ,Ao     ,0,1,,,,,,
+readM22 Co0       ,0.0s          ,DATA_M22          ,8,Rdbc     ,M22     ,Co     ,0,1,,,,,,
+readM22 Bi0       ,0.0s          ,DATA_M22          ,12,Rdbc     ,M22     ,Bi     ,0,1,,,,,,
+readM22 Bo0       ,0.0s          ,DATA_M22          ,16,Rdbc     ,M22     ,Bo     ,0,1,,,,,,
+readM22 Ai1       ,0.0s          ,DATA_M22          ,1,Rdbc     ,M22     ,Ai     ,1,1,,,,,,
+readM22 Ao1       ,0.0s          ,DATA_M22          ,5,Rdbc     ,M22     ,Ao     ,1,1,,,,,,
+readM22 Co1       ,0.0s          ,DATA_M22          ,9,Rdbc     ,M22     ,Co     ,1,1,,,,,,
+readM22 Bi1       ,0.0s          ,DATA_M22          ,13,Rdbc     ,M22     ,Bi     ,1,1,,,,,,
+readM22 Bo1       ,0.0s          ,DATA_M22          ,17,Rdbc     ,M22     ,Bo     ,1,1,,,,,,
+readM22 Ai2       ,0.0s          ,DATA_M22          ,2,Rdbc     ,M22     ,Ai     ,2,1,,,,,,
+readM22 Ao2       ,0.0s          ,DATA_M22          ,6,Rdbc     ,M22     ,Ao     ,2,1,,,,,,
+readM22 Co2       ,0.0s          ,DATA_M22          ,10,Rdbc     ,M22     ,Co     ,2,1,,,,,,
+readM22 Bi2       ,0.0s          ,DATA_M22          ,14,Rdbc     ,M22     ,Bi     ,2,1,,,,,,
+readM22 Bo2       ,0.0s          ,DATA_M22          ,18,Rdbc     ,M22     ,Bo     ,2,1,,,,,,
+readM22 Ai3       ,0.0s          ,DATA_M22          ,3,Rdbc     ,M22     ,Ai     ,3,1,,,,,,
+readM22 Ao3       ,0.0s          ,DATA_M22          ,7,Rdbc     ,M22     ,Ao     ,3,1,,,,,,
+readM22 Co3       ,0.0s          ,DATA_M22          ,11,Rdbc     ,M22     ,Co     ,3,1,,,,,,
+readM22 Bi3       ,0.0s          ,DATA_M22          ,15,Rdbc     ,M22     ,Bi     ,3,1,,,,,,
+readM22 Bo3       ,0.0s          ,DATA_M22          ,19,Rdbc     ,M22     ,Bo     ,3,1,,,,,,
+readM23 Ai0       ,0.0s          ,DATA_M23          ,0,Rdbc     ,M23     ,Ai     ,0,1,,,,,,
+readM23 Ao0       ,0.0s          ,DATA_M23          ,4,Rdbc     ,M23     ,Ao     ,0,1,,,,,,
+readM23 Co0       ,0.0s          ,DATA_M23          ,8,Rdbc     ,M23     ,Co     ,0,1,,,,,,
+readM23 Bi0       ,0.0s          ,DATA_M23          ,12,Rdbc     ,M23     ,Bi     ,0,1,,,,,,
+readM23 Bo0       ,0.0s          ,DATA_M23          ,16,Rdbc     ,M23     ,Bo     ,0,1,,,,,,
+readM23 Ai1       ,0.0s          ,DATA_M23          ,1,Rdbc     ,M23     ,Ai     ,1,1,,,,,,
+readM23 Ao1       ,0.0s          ,DATA_M23          ,5,Rdbc     ,M23     ,Ao     ,1,1,,,,,,
+readM23 Co1       ,0.0s          ,DATA_M23          ,9,Rdbc     ,M23     ,Co     ,1,1,,,,,,
+readM23 Bi1       ,0.0s          ,DATA_M23          ,13,Rdbc     ,M23     ,Bi     ,1,1,,,,,,
+readM23 Bo1       ,0.0s          ,DATA_M23          ,17,Rdbc     ,M23     ,Bo     ,1,1,,,,,,
+readM23 Ai2       ,0.0s          ,DATA_M23          ,2,Rdbc     ,M23     ,Ai     ,2,1,,,,,,
+readM23 Ao2       ,0.0s          ,DATA_M23          ,6,Rdbc     ,M23     ,Ao     ,2,1,,,,,,
+readM23 Co2       ,0.0s          ,DATA_M23          ,10,Rdbc     ,M23     ,Co     ,2,1,,,,,,
+readM23 Bi2       ,0.0s          ,DATA_M23          ,14,Rdbc     ,M23     ,Bi     ,2,1,,,,,,
+readM23 Bo2       ,0.0s          ,DATA_M23          ,18,Rdbc     ,M23     ,Bo     ,2,1,,,,,,
+readM23 Ai3       ,0.0s          ,DATA_M23          ,3,Rdbc     ,M23     ,Ai     ,3,1,,,,,,
+readM23 Ao3       ,0.0s          ,DATA_M23          ,7,Rdbc     ,M23     ,Ao     ,3,1,,,,,,
+readM23 Co3       ,0.0s          ,DATA_M23          ,11,Rdbc     ,M23     ,Co     ,3,1,,,,,,
+readM23 Bi3       ,0.0s          ,DATA_M23          ,15,Rdbc     ,M23     ,Bi     ,3,1,,,,,,
+readM23 Bo3       ,0.0s          ,DATA_M23          ,19,Rdbc     ,M23     ,Bo     ,3,1,,,,,,
+readM25 Ai0       ,0.0s          ,DATA_M25          ,0,Rdbc     ,M25     ,Ai     ,0,1,,,,,,
+readM25 Ao0       ,0.0s          ,DATA_M25          ,4,Rdbc     ,M25     ,Ao     ,0,1,,,,,,
+readM25 Co0       ,0.0s          ,DATA_M25          ,8,Rdbc     ,M25     ,Co     ,0,1,,,,,,
+readM25 Bi0       ,0.0s          ,DATA_M25          ,12,Rdbc     ,M25     ,Bi     ,0,1,,,,,,
+readM25 Bo0       ,0.0s          ,DATA_M25          ,16,Rdbc     ,M25     ,Bo     ,0,1,,,,,,
+readM25 Ai1       ,0.0s          ,DATA_M25          ,1,Rdbc     ,M25     ,Ai     ,1,1,,,,,,
+readM25 Ao1       ,0.0s          ,DATA_M25          ,5,Rdbc     ,M25     ,Ao     ,1,1,,,,,,
+readM25 Co1       ,0.0s          ,DATA_M25          ,9,Rdbc     ,M25     ,Co     ,1,1,,,,,,
+readM25 Bi1       ,0.0s          ,DATA_M25          ,13,Rdbc     ,M25     ,Bi     ,1,1,,,,,,
+readM25 Bo1       ,0.0s          ,DATA_M25          ,17,Rdbc     ,M25     ,Bo     ,1,1,,,,,,
+readM25 Ai2       ,0.0s          ,DATA_M25          ,2,Rdbc     ,M25     ,Ai     ,2,1,,,,,,
+readM25 Ao2       ,0.0s          ,DATA_M25          ,6,Rdbc     ,M25     ,Ao     ,2,1,,,,,,
+readM25 Co2       ,0.0s          ,DATA_M25          ,10,Rdbc     ,M25     ,Co     ,2,1,,,,,,
+readM25 Bi2       ,0.0s          ,DATA_M25          ,14,Rdbc     ,M25     ,Bi     ,2,1,,,,,,
+readM25 Bo2       ,0.0s          ,DATA_M25          ,18,Rdbc     ,M25     ,Bo     ,2,1,,,,,,
+readM25 Ai3       ,0.0s          ,DATA_M25          ,3,Rdbc     ,M25     ,Ai     ,3,1,,,,,,
+readM25 Ao3       ,0.0s          ,DATA_M25          ,7,Rdbc     ,M25     ,Ao     ,3,1,,,,,,
+readM25 Co3       ,0.0s          ,DATA_M25          ,11,Rdbc     ,M25     ,Co     ,3,1,,,,,,
+readM25 Bi3       ,0.0s          ,DATA_M25          ,15,Rdbc     ,M25     ,Bi     ,3,1,,,,,,
+readM25 Bo3       ,0.0s          ,DATA_M25          ,19,Rdbc     ,M25     ,Bo     ,3,1,,,,,,
+readM27 Ai0       ,0.0s          ,DATA_M27          ,0,Rdbc     ,M27     ,Ai     ,0,1,,,,,,
+readM27 Ao0       ,0.0s          ,DATA_M27          ,4,Rdbc     ,M27     ,Ao     ,0,1,,,,,,
+readM27 Co0       ,0.0s          ,DATA_M27          ,8,Rdbc     ,M27     ,Co     ,0,1,,,,,,
+readM27 Bi0       ,0.0s          ,DATA_M27          ,12,Rdbc     ,M27     ,Bi     ,0,1,,,,,,
+readM27 Bo0       ,0.0s          ,DATA_M27          ,16,Rdbc     ,M27     ,Bo     ,0,1,,,,,,
+readM27 Ai1       ,0.0s          ,DATA_M27          ,1,Rdbc     ,M27     ,Ai     ,1,1,,,,,,
+readM27 Ao1       ,0.0s          ,DATA_M27          ,5,Rdbc     ,M27     ,Ao     ,1,1,,,,,,
+readM27 Co1       ,0.0s          ,DATA_M27          ,9,Rdbc     ,M27     ,Co     ,1,1,,,,,,
+readM27 Bi1       ,0.0s          ,DATA_M27          ,13,Rdbc     ,M27     ,Bi     ,1,1,,,,,,
+readM27 Bo1       ,0.0s          ,DATA_M27          ,17,Rdbc     ,M27     ,Bo     ,1,1,,,,,,
+readM27 Ai2       ,0.0s          ,DATA_M27          ,2,Rdbc     ,M27     ,Ai     ,2,1,,,,,,
+readM27 Ao2       ,0.0s          ,DATA_M27          ,6,Rdbc     ,M27     ,Ao     ,2,1,,,,,,
+readM27 Co2       ,0.0s          ,DATA_M27          ,10,Rdbc     ,M27     ,Co     ,2,1,,,,,,
+readM27 Bi2       ,0.0s          ,DATA_M27          ,14,Rdbc     ,M27     ,Bi     ,2,1,,,,,,
+readM27 Bo2       ,0.0s          ,DATA_M27          ,18,Rdbc     ,M27     ,Bo     ,2,1,,,,,,
+readM27 Ai3       ,0.0s          ,DATA_M27          ,3,Rdbc     ,M27     ,Ai     ,3,1,,,,,,
+readM27 Ao3       ,0.0s          ,DATA_M27          ,7,Rdbc     ,M27     ,Ao     ,3,1,,,,,,
+readM27 Co3       ,0.0s          ,DATA_M27          ,11,Rdbc     ,M27     ,Co     ,3,1,,,,,,
+readM27 Bi3       ,0.0s          ,DATA_M27          ,15,Rdbc     ,M27     ,Bi     ,3,1,,,,,,
+readM27 Bo3       ,0.0s          ,DATA_M27          ,19,Rdbc     ,M27     ,Bo     ,3,1,,,,,,
+readM28 Ai0       ,0.0s          ,DATA_M28          ,0,Rdbc     ,M28     ,Ai     ,0,1,,,,,,
+readM28 Ao0       ,0.0s          ,DATA_M28          ,4,Rdbc     ,M28     ,Ao     ,0,1,,,,,,
+readM28 Co0       ,0.0s          ,DATA_M28          ,8,Rdbc     ,M28     ,Co     ,0,1,,,,,,
+readM28 Bi0       ,0.0s          ,DATA_M28          ,12,Rdbc     ,M28     ,Bi     ,0,1,,,,,,
+readM28 Bo0       ,0.0s          ,DATA_M28          ,16,Rdbc     ,M28     ,Bo     ,0,1,,,,,,
+readM28 Ai1       ,0.0s          ,DATA_M28          ,1,Rdbc     ,M28     ,Ai     ,1,1,,,,,,
+readM28 Ao1       ,0.0s          ,DATA_M28          ,5,Rdbc     ,M28     ,Ao     ,1,1,,,,,,
+readM28 Co1       ,0.0s          ,DATA_M28          ,9,Rdbc     ,M28     ,Co     ,1,1,,,,,,
+readM28 Bi1       ,0.0s          ,DATA_M28          ,13,Rdbc     ,M28     ,Bi     ,1,1,,,,,,
+readM28 Bo1       ,0.0s          ,DATA_M28          ,17,Rdbc     ,M28     ,Bo     ,1,1,,,,,,
+readM28 Ai2       ,0.0s          ,DATA_M28          ,2,Rdbc     ,M28     ,Ai     ,2,1,,,,,,
+readM28 Ao2       ,0.0s          ,DATA_M28          ,6,Rdbc     ,M28     ,Ao     ,2,1,,,,,,
+readM28 Co2       ,0.0s          ,DATA_M28          ,10,Rdbc     ,M28     ,Co     ,2,1,,,,,,
+readM28 Bi2       ,0.0s          ,DATA_M28          ,14,Rdbc     ,M28     ,Bi     ,2,1,,,,,,
+readM28 Bo2       ,0.0s          ,DATA_M28          ,18,Rdbc     ,M28     ,Bo     ,2,1,,,,,,
+readM28 Ai3       ,0.0s          ,DATA_M28          ,3,Rdbc     ,M28     ,Ai     ,3,1,,,,,,
+readM28 Ao3       ,0.0s          ,DATA_M28          ,7,Rdbc     ,M28     ,Ao     ,3,1,,,,,,
+readM28 Co3       ,0.0s          ,DATA_M28          ,11,Rdbc     ,M28     ,Co     ,3,1,,,,,,
+readM28 Bi3       ,0.0s          ,DATA_M28          ,15,Rdbc     ,M28     ,Bi     ,3,1,,,,,,
+readM28 Bo3       ,0.0s          ,DATA_M28          ,19,Rdbc     ,M28     ,Bo     ,3,1,,,,,,
+readM30 Ai0       ,0.0s          ,DATA_M30          ,0,Rdbc     ,M30     ,Ai     ,0,1,,,,,,
+readM30 Ao0       ,0.0s          ,DATA_M30          ,4,Rdbc     ,M30     ,Ao     ,0,1,,,,,,
+readM30 Co0       ,0.0s          ,DATA_M30          ,8,Rdbc     ,M30     ,Co     ,0,1,,,,,,
+readM30 Bi0       ,0.0s          ,DATA_M30          ,12,Rdbc     ,M30     ,Bi     ,0,1,,,,,,
+readM30 Bo0       ,0.0s          ,DATA_M30          ,16,Rdbc     ,M30     ,Bo     ,0,1,,,,,,
+readM30 Ai1       ,0.0s          ,DATA_M30          ,1,Rdbc     ,M30     ,Ai     ,1,1,,,,,,
+readM30 Ao1       ,0.0s          ,DATA_M30          ,5,Rdbc     ,M30     ,Ao     ,1,1,,,,,,
+readM30 Co1       ,0.0s          ,DATA_M30          ,9,Rdbc     ,M30     ,Co     ,1,1,,,,,,
+readM30 Bi1       ,0.0s          ,DATA_M30          ,13,Rdbc     ,M30     ,Bi     ,1,1,,,,,,
+readM30 Bo1       ,0.0s          ,DATA_M30          ,17,Rdbc     ,M30     ,Bo     ,1,1,,,,,,
+readM30 Ai2       ,0.0s          ,DATA_M30          ,2,Rdbc     ,M30     ,Ai     ,2,1,,,,,,
+readM30 Ao2       ,0.0s          ,DATA_M30          ,6,Rdbc     ,M30     ,Ao     ,2,1,,,,,,
+readM30 Co2       ,0.0s          ,DATA_M30          ,10,Rdbc     ,M30     ,Co     ,2,1,,,,,,
+readM30 Bi2       ,0.0s          ,DATA_M30          ,14,Rdbc     ,M30     ,Bi     ,2,1,,,,,,
+readM30 Bo2       ,0.0s          ,DATA_M30          ,18,Rdbc     ,M30     ,Bo     ,2,1,,,,,,
+readM30 Ai3       ,0.0s          ,DATA_M30          ,3,Rdbc     ,M30     ,Ai     ,3,1,,,,,,
+readM30 Ao3       ,0.0s          ,DATA_M30          ,7,Rdbc     ,M30     ,Ao     ,3,1,,,,,,
+readM30 Co3       ,0.0s          ,DATA_M30          ,11,Rdbc     ,M30     ,Co     ,3,1,,,,,,
+readM30 Bi3       ,0.0s          ,DATA_M30          ,15,Rdbc     ,M30     ,Bi     ,3,1,,,,,,
+readM30 Bo3       ,0.0s          ,DATA_M30          ,19,Rdbc     ,M30     ,Bo     ,3,1,,,,,,
+readM31 Ai0       ,0.0s          ,DATA_M31          ,0,Rdbc     ,M31     ,Ai     ,0,1,,,,,,
+readM31 Ao0       ,0.0s          ,DATA_M31          ,4,Rdbc     ,M31     ,Ao     ,0,1,,,,,,
+readM31 Co0       ,0.0s          ,DATA_M31          ,8,Rdbc     ,M31     ,Co     ,0,1,,,,,,
+readM31 Bi0       ,0.0s          ,DATA_M31          ,12,Rdbc     ,M31     ,Bi     ,0,1,,,,,,
+readM31 Bo0       ,0.0s          ,DATA_M31          ,16,Rdbc     ,M31     ,Bo     ,0,1,,,,,,
+readM31 Ai1       ,0.0s          ,DATA_M31          ,1,Rdbc     ,M31     ,Ai     ,1,1,,,,,,
+readM31 Ao1       ,0.0s          ,DATA_M31          ,5,Rdbc     ,M31     ,Ao     ,1,1,,,,,,
+readM31 Co1       ,0.0s          ,DATA_M31          ,9,Rdbc     ,M31     ,Co     ,1,1,,,,,,
+readM31 Bi1       ,0.0s          ,DATA_M31          ,13,Rdbc     ,M31     ,Bi     ,1,1,,,,,,
+readM31 Bo1       ,0.0s          ,DATA_M31          ,17,Rdbc     ,M31     ,Bo     ,1,1,,,,,,
+readM31 Ai2       ,0.0s          ,DATA_M31          ,2,Rdbc     ,M31     ,Ai     ,2,1,,,,,,
+readM31 Ao2       ,0.0s          ,DATA_M31          ,6,Rdbc     ,M31     ,Ao     ,2,1,,,,,,
+readM31 Co2       ,0.0s          ,DATA_M31          ,10,Rdbc     ,M31     ,Co     ,2,1,,,,,,
+readM31 Bi2       ,0.0s          ,DATA_M31          ,14,Rdbc     ,M31     ,Bi     ,2,1,,,,,,
+readM31 Bo2       ,0.0s          ,DATA_M31          ,18,Rdbc     ,M31     ,Bo     ,2,1,,,,,,
+readM31 Ai3       ,0.0s          ,DATA_M31          ,3,Rdbc     ,M31     ,Ai     ,3,1,,,,,,
+readM31 Ao3       ,0.0s          ,DATA_M31          ,7,Rdbc     ,M31     ,Ao     ,3,1,,,,,,
+readM31 Co3       ,0.0s          ,DATA_M31          ,11,Rdbc     ,M31     ,Co     ,3,1,,,,,,
+readM31 Bi3       ,0.0s          ,DATA_M31          ,15,Rdbc     ,M31     ,Bi     ,3,1,,,,,,
+readM31 Bo3       ,0.0s          ,DATA_M31          ,19,Rdbc     ,M31     ,Bo     ,3,1,,,,,,
+,,,,,,,,,,,,,,
+Map_Descriptors,,,,,,,,,,,,,,
+Map_Descriptor_Name,Data_type,Object_Id,Data_Array_Name,Data_Array_Offset,Function,Node_Name,Relinquish_Default,Length,Description,Data_Array_Low_Scale,Data_Array_High_Scale,Node_Low_Scale,Node_High_Scale,Units
+77 R142 STS,Bi,0,DATA_M00,0,Server,vLstarTrunk,-,1,B77 R142 AHU-20 RUN STATUS,77 R14,S/S,OFF,ON,Status
+77 AHU21 STS,Bi,1,DATA_M00,1,Server,vLstarTrunk,-,1,B77 AHU-21 STATUS,,,OFF,ON,Status
+77 R142 S/S,Bo,2,DATA_M00,0,Server,vLstarTrunk,0,1,B77 RM142 START/STOP [AHU-20],77 R14,STS,STOP,RUN,Command
+77 AHU21 S/S,Bo,3,DATA_M00,1,Server,vLstarTrunk,0,1,B77 AHU-21 START/STOP [RM244+],,,STOP,RUN,Command
+77 VOAT,Av,4,DATA_M00,0,Server,vLstarTrunk,-,1,B77 VIRTUAL OUTSIDE AIR TEMP.,32,212,0,409.5,Deg F
+77 BR1 TEMP,Ai,5,DATA_M01,0,Server,vLstarTrunk,-,1,B77 BR-1 TEMP,32,430,20,429,Deg F
+77 BR2 TEMP,Ai,6,DATA_M01,1,Server,vLstarTrunk,-,1,B77 BR-2 TEMP,19,430,20,429,Deg F
+77 CT3 TWRT,Ai,7,DATA_M01,2,Server,vLstarTrunk,-,1,CT-3-77 TOWER WATER RETURN TEMP.,-1,410,0,409.5,Deg F
+77 CT3 TWST,Ai,8,DATA_M01,3,Server,vLstarTrunk,-,1,CT-3-77 TOWER WATER SUPPLY TEMP.,-1,410,0,409.5,Deg F
+77 BR1 FRC,Ao,9,DATA_M01,0,Server,vLstarTrunk,0,1,B77 BR-1 FIRING RATE CONTROL,-1,101,0,100,% LOAD
+77 BR2 FRC,Ao,10,DATA_M01,1,Server,vLstarTrunk,0,1,B77 BR-2 FIRING RATE CONTROL,-1,101,0,100,% LOAD
+77 BR1 STS,Bi,11,DATA_M01,0,Server,vLstarTrunk,-,1,B77 BR-1 STATUS,,,OFF,ON,Status
+77 BR2 STS,Bi,12,DATA_M01,1,Server,vLstarTrunk,-,1,B77 BR-2 STATUS,,,OFF,ON,Status
+77 AHU23 STAT,Bi,13,DATA_M01,3,Server,vLstarTrunk,-,1,AHU-23-77 RUN STATUS (RM.141NE),,,OFF,ON,Status
+77 BR1 S/S,Bo,14,DATA_M01,0,Server,vLstarTrunk,0,1,B77 BR-1 START/STOP,,,ENABLE,OFF,Command
+77 BR2 S/S,Bo,15,DATA_M01,1,Server,vLstarTrunk,0,1,B77 BR-2 START/STOP,,,ENABLE,OFF,Command
+77 AHU23 S/S,Bo,16,DATA_M01,3,Server,vLstarTrunk,0,1,AHU-23-77 S/S FOR ROOM 141NE,,,STOP,RUN,Command
+77 ARU1 AMPS,Ai,17,DATA_M02,0,Server,vLstarTrunk,-,1,B77 ARU1 RUNNING AMPERES,-15,60,-12.5,58.594,AMPERES
+77 GP3 SPEED,Ai,18,DATA_M02,2,Server,vLstarTrunk,-,1,B77 GP-3 CHWP VFD SPEED FEEDBACK,-1,61,0,60,HZ
+77 GP4 SPEED,Ai,19,DATA_M02,3,Server,vLstarTrunk,-,1,B77 GP-4 CHWP VFD SPEED FEEDBACK,-1,61,0,60,Hertz
+77 R158 H/C #,Ao,20,DATA_M02,0,Server,vLstarTrunk,0,1,XFER FROM L/S 78 FOR USE W/ARUs,-1,16,0,15,PSIG
+77 GP3 CONTROL,Ao,21,DATA_M02,1,Server,vLstarTrunk,0,1,B77 GP-3 CHWP VFD SPEED CONTROL,-1,61,0,60,Hertz
+77 GP29 CONTRL,Ao,22,DATA_M02,2,Server,vLstarTrunk,0,1,B77 GP-29 TW VFD SPEED CONTROL,-1,61,0,60,Hertz
+77 GP4 CONTROL,Ao,23,DATA_M02,3,Server,vLstarTrunk,0,1,B77 GP-4 CHWP VFD SPEED CONTROL,-1,61,0,60,Hertz
+77 GP29 FAULT,Bi,24,DATA_M02,3,Server,vLstarTrunk,-,1,B77 GP-29 TW VFD FAULT STATUS,,,NORMAL,FAULT,Status
+77 ARU1 FLOWCV,Bo,25,DATA_M02,0,Server,vLstarTrunk,0,1,B77 ARU1 CHWR FLOW CONTROL VLV,,,FLOW,NO FLOW,Command
+77 ARU1 S/S,Bo,26,DATA_M02,1,Server,vLstarTrunk,0,1,SMALL CARRIER CHILLER S/S,,,STOP,ENABLE,Command
+77 ARU1 STAGE1,Bo,27,DATA_M02,2,Server,vLstarTrunk,0,1,B77 ARU1 STAGE 1,,,UNLOADED,LOADED,Command
+77 ARU1 STAGE2,Bo,28,DATA_M02,3,Server,vLstarTrunk,0,1,B77 ARU1 STAGE 2,,,UNLOADED,LOADED,Command
+77 BL10 STS,Bi,29,DATA_M04,0,Server,vLstarTrunk,-,1,B77 BLOWER 10 STATUS,,,OFF,ON,Status
+77 BL19 STS,Bi,30,DATA_M04,1,Server,vLstarTrunk,-,1,B77 BLOWER 19 STATUS,,,OFF,ON,Status
+77 BL20 STS,Bi,31,DATA_M04,2,Server,vLstarTrunk,-,1,B77 BLOWER 20 STATUS,77 BL2,S/S,OFF,ON,Status
+77 ARU1 CALL,Bi,32,DATA_M04,3,Server,vLstarTrunk,-,1,USED TO START & RUN ARU-1,,,RUN,STOP,Status
+77 BL10 S/S,Bo,33,DATA_M04,0,Server,vLstarTrunk,0,1,B77 SHEET METAL (GRINDING) EXH.,,,STOP,RUN,Command
+77 BL19 S/S,Bo,34,DATA_M04,1,Server,vLstarTrunk,0,1,B77 BLOWER 19 START/STOP,,,STOP,RUN,Command
+77 BL20 S/S,Bo,35,DATA_M04,2,Server,vLstarTrunk,0,1,B77 BATHROOM EXHAUST FAN S/S,77 BL2,STS,STOP,RUN,Command
+77 BL22 STS,Bi,36,DATA_M05,0,Server,vLstarTrunk,-,1,B77 BLOWER 22 STATUS,,,OFF,ON,Status
+77 BL23 STS,Bi,37,DATA_M05,1,Server,vLstarTrunk,-,1,B77 BLOWER 23 STATUS,,,OFF,ON,Status
+77 BL25 STATUS,Bi,38,DATA_M05,2,Server,vLstarTrunk,-,1,B77 BLOWER 25 STATUS,77 BL2,S/S,OFF,ON,Status
+77 BL22 S/S,Bo,39,DATA_M05,0,Server,vLstarTrunk,0,1,B77 WELDING EXHAUST FROM R141,,,STOP,ENABLE,Command
+77 BL23 S/S,Bo,40,DATA_M05,1,Server,vLstarTrunk,0,1,B77 BLOWER 23 START/STOP,,,STOP,RUN,Command
+77 BL25 S/S,Bo,41,DATA_M05,2,Server,vLstarTrunk,0,1,MEN'S EAST LOCKER ROOM SUPPLY,77 BL2,STATU,STOP,RUN,Command
+77 BL16 STS,Bi,42,DATA_M07,0,Server,vLstarTrunk,-,1,B77 BLOWER 16 STATUS,,,OFF,ON,Status
+77 BL17 STATUS,Bi,43,DATA_M07,1,Server,vLstarTrunk,-,1,BL-17-77 STATUS (ROOM 160),,,OFF,RUN,Status
+77 R141A STS,Bi,44,DATA_M07,3,Server,vLstarTrunk,-,1,B77 RM141A STATUS [AHU22],77 R14,A S/S,OFF,ON,Status
+77 BL16 S/S,Bo,45,DATA_M07,0,Server,vLstarTrunk,0,1,B77 R161 MACH.REPAIR GEN'L EXH.,,,STOP,RUN,Command
+77 BL17 S/S,Bo,46,DATA_M07,1,Server,vLstarTrunk,0,1,ROOM 160 GEN. & EUTECTIC EXHAUST,,,STOP,RUN,Command
+77 R141A S/S,Bo,47,DATA_M07,2,Server,vLstarTrunk,0,1,B77 RM141A START/STOP [AHU22],77 R14,A STS,STOP,RUN,Command
+77 GP5 HHW DP,Ai,48,DATA_M08,0,Server,vLstarTrunk,-,1,HHW SYSTEM DIFF. PRESSURE,-16,71,-15,70.313,PSID
+77 GP6 HHW DP,Ai,49,DATA_M08,0,Server,vLstarTrunk,-,1,HHW SYSTEM DIFF. PRESSURE,-16,71,-15,70.313,PSID
+77 HHW DP,Ai,50,DATA_M08,0,Server,vLstarTrunk,-,1,B77 HEATING HOT H2O DIFF. PRESS.,-16,71,-15,70.313,PSID
+77 GP5 SPEED,Ai,51,DATA_M08,1,Server,vLstarTrunk,-,1,B77 GP-5 HWS VFD SPEED FEEDBACK,-1,61,0,60,Hertz
+77 GP6 SPEED,Ai,52,DATA_M08,2,Server,vLstarTrunk,-,1,B77 GP-6 HWS VFD SPEED FEEDBACK,-1,61,0,60,Hertz
+77 GP5 CONTROL,Ao,53,DATA_M08,0,Server,vLstarTrunk,0,1,B77 GP-5 HWS VFD SPEED CONTROL,-1,61,0,60,Hertz
+77 GP6 CONTROL,Ao,54,DATA_M08,1,Server,vLstarTrunk,0,1,B77 GP-6 HWS VFD SPEED CONTROL,-1,61,0,60,Hertz
+77 GP5 FAULT,Bi,55,DATA_M08,0,Server,vLstarTrunk,-,1,B77 GP-5 HWS VFD FAULT,,,Normal,FAULT,Status
+77 GP6 FAULT,Bi,56,DATA_M08,1,Server,vLstarTrunk,-,1,B77 GP-6 HWS VFD FAULT STATUS,,,Normal,FAULT,Status
+77 GP10 S/S,Bo,57,DATA_M08,0,Server,vLstarTrunk,0,1,B77 GP-10 IND HOT H2O CIRC S/S,,,STOP,RUN,Command
+77 GP11 S/S,Bo,58,DATA_M08,1,Server,vLstarTrunk,0,1,B77 GP-11 IND HOT H2O CIRC S/S,,,STOP,RUN,Command
+77 GP12 S/S,Bo,59,DATA_M08,2,Server,vLstarTrunk,0,1,B77 GP-12 DOM HOT H2O CIRC S/S,,,STOP,RUN,Command
+77 HHW DP SP,Av,60,DATA_M08,0,Server,vLstarTrunk,-,1,B77 HEATING HOT H2O DP S/POINT,0,100,-15,70.313,PSID
+77 BL18 STS,Bi,61,DATA_M09,0,Server,vLstarTrunk,-,1,B77 BLOWER 18 STATUS,,,OFF,ON,Status
+77 BL11 STS,Bi,62,DATA_M09,1,Server,vLstarTrunk,-,1,B77 BLOWER 11 STATUS,,,OFF,ON,Status
+77 BL24 STS,Bi,63,DATA_M09,2,Server,vLstarTrunk,-,1,B77 BLOWER 24 STATUS RM 239,,,OFF,ON,Status
+77 BL9 STS,Bi,64,DATA_M09,3,Server,vLstarTrunk,-,1,B77 BLOWER 9 STATUS,,,OFF,ON,Status
+77 BL18 S/S,Bo,65,DATA_M09,0,Server,vLstarTrunk,0,1,B77 BLOWER 18 START/STOP,,,STOP,ENABLE,Command
+77 BL11 S/S,Bo,66,DATA_M09,1,Server,vLstarTrunk,0,1,B77 SOLDER HOOD EXHAUST FAN,,,STOP,ENABLE,Command
+77 BL24 S/S,Bo,67,DATA_M09,2,Server,vLstarTrunk,0,1,B77 R239 SUPPLY FAN BLOWER,,,STOP,ENABLE,Command
+77 BL9 S/S,Bo,68,DATA_M09,3,Server,vLstarTrunk,0,1,B77 BLOWER 9 START/STOP,,,STOP,ENABLE,Command
+77 R239 ZSP,Av,69,DATA_M09,0,Server,vLstarTrunk,-,1,B77 RM239 ZONE SET POINT,32,212,0,409.5,Deg F
+77 R220 STS,Bi,70,DATA_M10,0,Server,vLstarTrunk,-,1,B77 RM220 STATUS [AHU16],77 R22,S/S,OFF,ON,Status
+77 TRANE CALL,Bi,71,DATA_M10,1,Server,vLstarTrunk,-,1,TRANE CALL FROM JCI,,,NO CALL,CALL ON,Status
+77 R141 W STS,Bi,72,DATA_M10,2,Server,vLstarTrunk,-,1,B77 R141 WEST RUN STATUS [AHU18],,,OFF,ON,Status
+77 R141 E STS,Bi,73,DATA_M10,3,Server,vLstarTrunk,-,1,B77 R141 EAST RUN STATUS [AHU19],77 R14,E S/S,OFF,ON,Status
+77 R220 S/S,Bo,74,DATA_M10,0,Server,vLstarTrunk,0,1,B77 RM220 START/STOP [AHU16],77 R22,STS,STOP,RUN,Command
+77 R156 LK OUT,Bo,75,DATA_M10,1,Server,vLstarTrunk,0,1,WATER DETECTION ALARM,,,ALARM,NORMAL,Command
+77 R141 W S/S,Bo,76,DATA_M10,2,Server,vLstarTrunk,0,1,B77 R141 WEST START/STOP [AHU18],,,STOP,RUN,Command
+77 R141 E S/S,Bo,77,DATA_M10,3,Server,vLstarTrunk,0,1,B77 R141 EAST START/STOP [AHU19],,,STOP,RUN,Command
+77 R108 W STS,Bi,78,DATA_M11,0,Server,vLstarTrunk,-,1,B77 RM108 WEST RUN STATUS [AHU1],,,OFF,ON,Status
+77 R108 E STS,Bi,79,DATA_M11,1,Server,vLstarTrunk,-,1,B77 RM108 EAST RUN STATUS [AHU2],,,OFF,ON,Status
+77 R107 W STS,Bi,80,DATA_M11,2,Server,vLstarTrunk,-,1,B77 RM107 WEST RUN STATUS [AHU3],,,OFF,ON,Status
+77 R107 E STS,Bi,81,DATA_M11,3,Server,vLstarTrunk,-,1,B77 RM107 EAST RUN STATUS [AHU4],,,OFF,ON,Status
+77 R108 W S/S,Bo,82,DATA_M11,0,Server,vLstarTrunk,0,1,B77 RM108 WEST START/STOP [AHU1],,,STOP,RUN,Command
+77 R108 E S/S,Bo,83,DATA_M11,1,Server,vLstarTrunk,0,1,B77 RM108 EAST START/STOP [AHU2],,,STOP,RUN,Command
+77 R107 W S/S,Bo,84,DATA_M11,2,Server,vLstarTrunk,0,1,B77 RM107 WEST START/STOP [AHU3],,,STOP,RUN,Command
+77 R107 E S/S,Bo,85,DATA_M11,3,Server,vLstarTrunk,0,1,B77 RM107 EAST START/STOP [AHU4],,,STOP,RUN,Command
+77 GP29 SPEED,Ai,86,DATA_M12,0,Server,vLstarTrunk,-,1,B77 GP-29 TW VFD SPEED FEEDBACK,-1,61,0,60,Hertz
+77 GP2 SPEED,Ai,87,DATA_M12,1,Server,vLstarTrunk,-,1,B77 GP-2 TW SPEED FEEDBACK,-1,61,0,60,Hertz
+77 ARU1 HDPRES,Ai,88,DATA_M12,2,Server,vLstarTrunk,-,1,B77 ARU1 CONDENSER HEAD PRESSURE,-126,586,-125,585.938,PSIG
+77 GP3 S/S,Bo,89,DATA_M12,0,Server,vLstarTrunk,0,1,ARU-1 CHILLED WATER PUMP,,,OFF,ENABLE,Command
+77 GP29 S/S,Bo,90,DATA_M12,1,Server,vLstarTrunk,0,1,TW PUMP FOR CARRIER CHILLER,,,STOP,ENABLE,Command
+77 GP2 S/S,Bo,91,DATA_M12,2,Server,vLstarTrunk,0,1,TW PUMP FOR CARRIER CHILLER,,,STOP,ENABLE,Command
+77 GP4 S/S,Bo,92,DATA_M12,3,Server,vLstarTrunk,0,1,ARU-1 CHILLED WATER PUMP,,,OFF,ENABLE,Command
+77 BL28 STS,Bi,93,DATA_M14,0,Server,vLstarTrunk,-,1,B77 BLOWER 28 STATUS,,,OFF,ON,Status
+77 BL30 STATUS,Bi,94,DATA_M14,1,Server,vLstarTrunk,-,1,B77 BLOWER 30 STATUS,77 BL3,S/S,OFF,ON,Status
+77 BL31 STS,Bi,95,DATA_M14,2,Server,vLstarTrunk,-,1,B77 RM165 BL-31 STATUS,,,OFF,ON,Status
+77 BL32 STS,Bi,96,DATA_M14,3,Server,vLstarTrunk,-,1,B77 RM165 BL-32 STATUS,,,OFF,ON,Status
+77 BL28 S/S,Bo,97,DATA_M14,0,Server,vLstarTrunk,0,1,B77 UHVCF EXHAUST BLOWER 28 S/S,,,STOP,RUN,Command
+77 BL30 S/S,Bo,98,DATA_M14,1,Server,vLstarTrunk,0,1,MEN'S EAST LOCKER ROOM EXHAUST,77 BL3,STATU,STOP,RUN,Command
+77 BL31 S/S,Bo,99,DATA_M14,2,Server,vLstarTrunk,0,1,B77 RM165 START/STOP [BL-31],,,STOP,ENABLE,Command
+77 BL32 S/S,Bo,100,DATA_M14,3,Server,vLstarTrunk,0,1,B77 RM165 START/STOP [BL-32],,,STOP,ENABLE,Command
+77 BL12 STS,Bi,101,DATA_M15,0,Server,vLstarTrunk,-,1,B77 BLOWER 12 STATUS,,,OFF,ON,Status
+77 BL13 STS,Bi,102,DATA_M15,1,Server,vLstarTrunk,-,1,B77 BLOWER 13 STATUS,,,OFF,ON,Status
+77 BL14 STS,Bi,103,DATA_M15,2,Server,vLstarTrunk,-,1,B77 BLOWER 14 STATUS,,,OFF,ON,Status
+77 BL15 STS,Bi,104,DATA_M15,3,Server,vLstarTrunk,-,1,B77 BLOWER 15 STATUS,,,OFF,ON,Status
+77 BL12 S/S,Bo,105,DATA_M15,0,Server,vLstarTrunk,0,1,B77 ROOM 107 (WELDING) EXHAUST,,,STOP,RUN,Command
+77 BL13 S/S,Bo,106,DATA_M15,1,Server,vLstarTrunk,0,1,BL-13-77 WELDING SHOP EXHAUST,,,STOP,RUN,Command
+77 BL14 S/S,Bo,107,DATA_M15,2,Server,vLstarTrunk,0,1,B77 BLOWER 14 START/STOP,,,STOP,ENABLE,Command
+77 BL15 S/S,Bo,108,DATA_M15,3,Server,vLstarTrunk,0,1,BL-15-77 R142A S/S CONTROL POINT,,,STOP,RUN,Command
+77 HHWR TEMP,Ai,109,DATA_M16,0,Server,vLstarTrunk,-,1,B77 HEATING HOT WATER RETURN,32,212,0,409.5,Deg F
+77 HHWS TEMP,Ai,110,DATA_M16,1,Server,vLstarTrunk,-,1,B77 HEATING HOT WATER SUPPLY,32,212,60,469.5,Deg F
+77 DHW TEMP,Ai,111,DATA_M16,2,Server,vLstarTrunk,-,1,B77 DOMESTIC HOT WATER TEMP,-1,410,17,426.5,Deg F
+77 IHW TEMP,Ai,112,DATA_M16,3,Server,vLstarTrunk,-,1,B77 INDUSTRIAL HOT WATER TEMP,-1,450,0,441.5,Deg F
+77 GP9 STS,Bi,113,DATA_M16,2,Server,vLstarTrunk,-,1,B77 GP-9 IHW PUMP STATUS,,,OFF,ON,Status
+77 GP8 STS,Bi,114,DATA_M16,3,Server,vLstarTrunk,-,1,B77 GP-8 DHW PUMP STATUS,,,OFF,ON,Status
+77 GP5 S/S,Bo,115,DATA_M16,0,Server,vLstarTrunk,0,1,B77 GP-5 HWS VFD START/STOP,,,OFF,ENABLE,Command
+77 GP6 S/S,Bo,116,DATA_M16,1,Server,vLstarTrunk,0,1,B77 GP-6 HWS VFD START/STOP,,,OFF,ENABLE,Command
+77 GP9 S/S,Bo,117,DATA_M16,2,Server,vLstarTrunk,0,1,B77 GP-9 IHW PUMP START/STOP,,,STOP,RUN,Command
+77 GP8 S/S,Bo,118,DATA_M16,3,Server,vLstarTrunk,0,1,B77 GP-8 DHW PUMP START/STOP,,,STOP,RUN,Command
+77 HHWS TEMPSP,Av,119,DATA_M16,1,Server,vLstarTrunk,-,1,B77 HEATING HOT WATER SETPOINT,32,212,0,409.5,Deg F
+77 DHW TEMP SP,Av,120,DATA_M16,2,Server,vLstarTrunk,-,1,B77 DOMESTIC HOT WATER TEMP. S/P,-1,410,17,426.5,Deg F
+77 IHW TEMP SP,Av,121,DATA_M16,3,Server,vLstarTrunk,-,1,B77 INDUSTRIAL HOT H2O TEMP. S/P,-1,450,32,441.5,Deg F
+77 R244 ZAT,Ai,122,DATA_M19,0,Server,vLstarTrunk,-,1,MAIN AIR ZONE AIR TEMP [AHU21],32,212,0,409.5,Deg F
+77 R244C ZAT,Ai,123,DATA_M19,1,Server,vLstarTrunk,-,1,EQUIPMENT ROOM ZONE TEMP [AHU21],32,212,0,409.5,Deg F
+77 R244D ZAT,Ai,124,DATA_M19,2,Server,vLstarTrunk,-,1,CONFERENCE AREA ZONE TEMP AHU21,32,212,0,409.5,Deg F
+77 R244E ZAT,Ai,125,DATA_M19,3,Server,vLstarTrunk,-,1,CERAMIC SHOP ZONE TEMP (AHU21],32,212,0,409.5,Deg F
+77 R244 RHV,Ao,126,DATA_M19,0,Server,vLstarTrunk,0,1,B77 RM244 REHEAT VALVE [AHU21],-1,101,100,-71.43,% OPEN
+77 R244C RHV,Ao,127,DATA_M19,1,Server,vLstarTrunk,0,1,B77 RM244C REHEAT VALVE [AHU21],-1,101,100,-71.43,% OPEN
+77 R244D RHV,Ao,128,DATA_M19,2,Server,vLstarTrunk,0,1,B77 RM244D REHEAT VALVE [AHU21],-1,101,100,-71.43,% OPEN
+77 R244E RHV,Ao,129,DATA_M19,3,Server,vLstarTrunk,0,1,R244E CERAMIC SHOP REHEAT VALVE,-1,101,100,-71.43,% OPEN
+77 R244 ZSP,Av,130,DATA_M19,0,Server,vLstarTrunk,-,1,B77 RM244 ZONE SET POINT,32,212,0,409.5,Deg F
+77 R244C ZSP,Av,131,DATA_M19,1,Server,vLstarTrunk,-,1,B77 RM244C ZONE SET POINT,32,212,0,409.5,Deg F
+77 R244 SAT SP,Av,132,DATA_M19,2,Server,vLstarTrunk,-,1,B77 RM244 SAT SET POINT,32,212,0,409.5,Deg F
+77 R244D ZSP,Av,133,DATA_M19,3,Server,vLstarTrunk,-,1,B77 RM244D ZONE TEMP. SETPOINT,32,212,0,409.5,Deg F
+77 AHU21 SAT,Ai,134,DATA_M20,0,Server,vLstarTrunk,-,1,B77 AHU-21 SUPPLY AIR TEMP.,32,212,0,409.5,Deg F
+77 AHU21 CHWDP,Ai,135,DATA_M20,1,Server,vLstarTrunk,-,1,B77 AHU-21 CHW DIFF. PRESSURE,-16,71,-15,70.313,PSID
+77 AHU21 CWV,Ao,136,DATA_M20,0,Server,vLstarTrunk,0,1,B77 AHU-21 CHILLED H2O VALVE,-1,101,0,150,% OPEN
+77 AHU21 HWV,Ao,137,DATA_M20,1,Server,vLstarTrunk,0,1,B77 AHU-21 HEATING HW VALVE,-1,101,100,-50,% OPEN
+77 AHU21 SATSP,Av,138,DATA_M20,3,Server,vLstarTrunk,-,1,B77 AHU-21 SUPPLY AIR TEMP. S/P,32,212,0,409.5,Deg F
+77 R220 ZAT,Ai,139,DATA_M21,0,Server,vLstarTrunk,-,1,B77 RM220 ZONE AIR TEMP [AHU16],32,212,0,409.5,Deg F
+77 R220 SAT,Ai,140,DATA_M21,1,Server,vLstarTrunk,-,1,B77 RM220 SUPPLY AIR TEMP[AHU16],-1,410,0,409.5,Deg F
+77 R220 HWV,Ao,141,DATA_M21,0,Server,vLstarTrunk,0,1,R220 HHW VALVE 3-8# N.O. [AHU16],-1,21,0,20,PSIG
+77 R220 WAITDI,Bi,142,DATA_M21,0,Server,vLstarTrunk,-,1,D.I. POINT USED TO PAUSE SYSTEM,,,Normal,WAIT,Status
+77 R220 H/C,Bi,143,DATA_M21,1,Server,vLstarTrunk,-,1,HEAT/COOL SELECTOR SWITCH,,,HEAT,COOL,Status
+77 R220 ZSP,Av,144,DATA_M21,0,Server,vLstarTrunk,-,1,B77 RM220 ZONE SET POINT,32,212,0,409.5,Deg F
+77 R141 W ZAT,Ai,145,DATA_M22,0,Server,vLstarTrunk,-,1,B77 RM141 WEST ZONE TMP. [AHU18],32,212,0,409.5,Deg F
+77 R141 W SAT,Ai,146,DATA_M22,1,Server,vLstarTrunk,-,1,B77 R141 W SUPP.AIR TEMP [AHU18],32,212,0,409.5,Deg F
+77 R141 E ZAT,Ai,147,DATA_M22,2,Server,vLstarTrunk,-,1,B77 RM141 EAST ZONE TEMP [AHU19],32,212,0,409.5,Deg F
+77 R141 E SAT,Ai,148,DATA_M22,3,Server,vLstarTrunk,-,1,B77 R141 E SUPP. AIR TMP [AHU19],32,212,0,409.5,Deg F
+77 R141 W HWV,Ao,149,DATA_M22,0,Server,vLstarTrunk,0,1,B77 RM141 WEST HW VALVE [AHU18],-1,101,100,-71.428,% OPEN
+77 R141 E HWV,Ao,150,DATA_M22,1,Server,vLstarTrunk,0,1,B77 RM141 EAST HW VALVE [AHU19],-1,101,100,-71.428,% OPEN
+77 R141 W ZSP,Av,151,DATA_M22,0,Server,vLstarTrunk,-,1,B77 R141 WEST ZONE TEMP. S/P,32,212,0,409.5,Deg F
+77 R141 E ZSP,Av,152,DATA_M22,1,Server,vLstarTrunk,-,1,B77 R141 EAST ZONE TEMP. S/P,32,212,0,409.5,Deg F
+77 R141A ZAT,Ai,153,DATA_M23,0,Server,vLstarTrunk,-,1,B77 RM141A ZONE AIR TEMP [AHU22],32,212,0,409.5,Deg F
+77 R141A SAT,Ai,154,DATA_M23,1,Server,vLstarTrunk,-,1,B77 RM141A SUPPLY AIR TMP[AHU22],32,212,0,409.5,Deg F
+77 R141A HV/CV,Ao,155,DATA_M23,0,Server,vLstarTrunk,0,1,B77 R141A HEAT/COOL VALVES AHU22,0,16,3,15,PSIG
+77 R141A ZSP,Av,156,DATA_M23,0,Server,vLstarTrunk,-,1,B77 RM141A ZONE SET POINT,32,212,0,409.5,Deg F
+77 R141A SATSP,Av,157,DATA_M23,2,Server,vLstarTrunk,-,1,B77 RM141A SAT SET POINT,32,212,0,409.5,Deg F
+77 R108 E MAT,Ai,158,DATA_M25,0,Server,vLstarTrunk,-,1,B77 R108 E MIXED AIR TEMP [AHU2],32,212,0,409.5,Deg F
+77 R108 E RAT,Ai,159,DATA_M25,1,Server,vLstarTrunk,-,1,B77 R108 E RET'N AIR TEMP [AHU2],32,212,0,409.5,Deg F
+77 R108 E ZAT,Ai,160,DATA_M25,2,Server,vLstarTrunk,-,1,B77 RM108 EAST ZONE TEMP [AHU2],32,212,0,409.5,Deg F
+77 R108 E SAT,Ai,161,DATA_M25,3,Server,vLstarTrunk,-,1,B77 R108 E SUPPLY AIR TMP [AHU2],32,212,0,409.5,Deg F
+77 R108 E DMPR,Ao,162,DATA_M25,0,Server,vLstarTrunk,0,1,B77 RM108 EAST DAMPER CTL [AHU2],-1,101,0,100,% O.S.A.
+77 R108 E HWV,Ao,163,DATA_M25,1,Server,vLstarTrunk,0,1,B77 RM108E HHW VALVE [AHU2] 3-8#,-70,130,125,-62.5,% OPEN
+77 R108 E ZSP,Av,164,DATA_M25,0,Server,vLstarTrunk,-,1,B77 RM108 EAST ZONE TEMP. S/P,32,212,0,409.5,Deg F
+77 R108 E STSP,Av,165,DATA_M25,2,Server,vLstarTrunk,-,1,B77 R108 E SUPPLY AIR TEMP. S/P,32,212,0,409.5,Deg F
+77 R107 E ZAT,Ai,166,DATA_M27,0,Server,vLstarTrunk,-,1,B77 RM107 EAST ZONE TEMP [AHU4],32,212,0,409.5,Deg F
+77 R107 E SAT,Ai,167,DATA_M27,1,Server,vLstarTrunk,-,1,B77 R107 E SUPPLY AIR TMP [AHU4],32,212,0,409.5,Deg F
+77 R107 E HWV,Ao,168,DATA_M27,0,Server,vLstarTrunk,0,1,B77 RM107 EAST HW VALVE [AHU4],-70,130,125,-62.5,% OPEN
+77 R107 E ZSP,Av,169,DATA_M27,0,Server,vLstarTrunk,-,1,B77 RM107 EAST ZONE TEMP. S/P,32,212,0,409.5,Deg F
+77 R107 E STSP,Av,170,DATA_M27,1,Server,vLstarTrunk,-,1,B77 R107 EAST SUPPLY AIR TEMP SP,32,212,0,409.5,Deg F
+77 R244 SAT,Ai,171,DATA_M28,0,Server,vLstarTrunk,-,1,B77 RM244 SUPPLY AIR TEMP[AHU21],32,212,0,409.5,Deg F
+77 R244C SAT,Ai,172,DATA_M28,1,Server,vLstarTrunk,-,1,B77 RM244C SUPPLY AIR TMP[AHU21],32,212,0,409.5,Deg F
+77 R244D SAT,Ai,173,DATA_M28,2,Server,vLstarTrunk,-,1,B77 RM244D S.A. TEMP. [AHU21],32,212,0,409.5,Deg F
+77 R244E SAT,Ai,174,DATA_M28,3,Server,vLstarTrunk,-,1,B77 RM244E S.A.TEMP. [AHU21],32,212,0,409.5,Deg F
+84 265/369 XF1,Bo,175,DATA_M30,2,Server,vLstarTrunk,0,1,USED TO XFER WALK-IN ALARM TO 76,,,ALARM,CLEAR,Command
+84 R165 FZRALX,Ao,176,DATA_M31,0,Server,vLstarTrunk,0,1,XFER. R161A / R165 ALARMS TO B76,-1,11,0,10,VOLTS
+84 R175 ALARMX,Ao,177,DATA_M31,1,Server,vLstarTrunk,0,1,XFERS RM.175 FRZR/N2 ALARM TO 76,-1,11,0,10,VOLTS
+64 R107 FZRALX,Ao,178,DATA_M31,2,Server,vLstarTrunk,0,1,XFERS RM. 107 FREEZER ALARM,-1,11,0,10,VOLTS
+84 R205 FZALMX,Ao,179,DATA_M31,3,Server,vLstarTrunk,0,1,XFERS B84 R205 FREEZER ALARM,-1,11,0,10,VOLTS
+76 TSW STATUS,Bi,180,DATA_M31,0,Server,vLstarTrunk,-,1,TSW-1-76 TRANSFER SWITCH STATUS,,,XFERRED,NORMAL,Status
+HOST GREEN OUT,Bo,181,DATA_M31,0,Server,vLstarTrunk,0,1,USED TO MONITOR 'GREEN HOST',,,OFF,ON,Command
+77 UHV ALARM,Bo,182,DATA_M31,1,Server,vLstarTrunk,0,1,77 ROOM 156 PLATING SHOP ALARM,77 UHV,ALARM,ALARM,NORMAL,Command
+84 R079 FZRALX,Bo,183,DATA_M31,2,Server,vLstarTrunk,0,1,XFERS RMS.079/089 FRZR.ALM TO 76,,,XFER ALM,NORMAL,Command
+84/76 CO2 ALMX,Bo,184,DATA_M31,3,Server,vLstarTrunk,0,1,TRANSFERS CO2 ALARM TO BLDG. 76,,,ALARM,CLEAR,Command
