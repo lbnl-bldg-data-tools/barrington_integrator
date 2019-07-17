@@ -1,0 +1,167 @@
+first,second
+Deg F,Degrees-Fahrenheit
+PSIG,PSI
+Counts,No-Units
+Status,No-Units
+Command,No-Units
+MINUTES,minutes
+Minutes,minutes
+FPM,feet-per-minute
+VOLTS,Volts
+' W.C,inches-of-water
+PSI X0.1,PSI
+DEG REST,
+Hertz,Hertz
+OPEN VLV,No-Units
+HOURS,hours
+VDC x 10,
+Hz,Hertz
+% OPEN,Percent 
+Hz RESET,Hertz
+% F.S.,Percent 
+' W.C.,inches-of-water
+Deg C,Degrees-Celsius
+OPEN,No-Units
+Command$,No-Units
+DEG F,Degrees-Fahrenheit
+'w.c*.01,inches-of-water
+status,No-Units
+# BLOWER,No-Units
+P.S.I.,PSI
+STEP NO.,No-Units
+% TO CT,Percent 
+Hours,hours
+mV,megavolts
+Deg F ,Degrees-Fahrenheit
+CUBIC FT,cubic-feet
+CCF,
+HRSx1000,hours
+MINUTE,minutes
+% LOAD,Percent 
+AMPERES,Amps
+HZ,Hertz
+PSID,
+% BYPASS,Percent 
+COUNTS,No-Units
+% O.S.A.,Percent 
+KW,kilowatts
+MIN,minutes
+VDC,
+% FIRE,Percent 
+PPM,pounds-mass-per-minute
+'W.C.,inches-of-water
+' D.P.,
+% RELIEF,Percent 
+uMhos,
+GAL x100,US-gallons
+FT/MIN,feet-per-minute
+Volt OUT,Volts
+MOhms/Cm,
+% BOTTLE,Percent 
+DEG C,Degrees-Celsius
+'' W.C.,inches-of-water
+O'CLOCK,No-Units
+CF/MIN,
+% Open,Percent 
+STATUS,No-Units
+W.C.,inches-of-water
+'' W.C,inches-of-water
+''W.C,inches-of-water
+''W.C*.01,inches-of-water
+*W.C*.01,inches-of-water
+DC VOLTS,Volts
+Deg F.,Degrees-Fahrenheit
+HERTZ,Hertz
+GPM,GPM
+PSI,PSI
+TONS,Tons
+'' WC,inches-of-water
+% TO CTs,Percent 
+BTUH *1K,BTUs-per-hour
+SEQ #,No-Units
+GALS x10,US-gallons
+GALS X10,US-gallons
+COMMAND,No-Units
+Cycles,No-Units
+THRS/MIN,
+DELTA T,delta-degrees-Fahrenheit
+KWH/MIN,
+KWH,KWh
+KW/TON,
+% R.H.,% RH
+% RETURN,Percent 
+WATT-HRS,watt-hours
+AMPS,Amps
+DT/AVE,
+KBTU/HR,kilo-btus-per-hour
+% COOL,
+''w.c*.01,inches-of-water
+w.c*.1,inches-of-water
+''WC*.O1,inches-of-water
+VOLTS DC,Volts
+PULSES,No-Units
+10K CF,
+''W.C.,inches-of-water
+% RH,% RH
+DEG. F,Degrees-Fahrenheit
+PISG,PSI
+psig,PSI
+% TO BLR,Percent 
+% EXCHNG,Percent 
+MCF,
+% OSA,Percent 
+HZ.,Hertz
+Hz.,Hertz
+INCHES,inches
+% 0PEN,
+SENSORS,No-Units
+DEG. F.,Degrees-Fahrenheit
+% R.A.,% RH
+DEG F.,Degrees-Fahrenheit
+uMhos-Cm,
+% FILL,Percent 
+% SPEED,Percent 
+K-Hours,hours
+GALLONS,US-gallons
+% LOSS,Percent 
+maDC,
+mOhms-Cm,
+Mohms,MEGOHMS
+uS/cm,
+MILS/YR,
+PH,
+SCF/MIN,
+1. = OK,No-Units
+Starts,No-Units
+Calls,No-Units
+1000 HRS,hours
+VOLT,Volts
+'w.c *.1,inches-of-water
+MWH,MWh
+LEAD BLR,No-Units
+129A,No-Units
+GALS,US-gallons
+'w.c.,inches-of-water
+'W.C*.01,inches-of-water
+FEET,feet
+CFM,cubic-feet-per-minute
+' Hg,inches-of-mercury
+MPS,Amps
+'w.cX.01,inches-of-water
+pH,
+%HOTDECK,Percent 
+'WC,inches-of-water
+'wc,inches-of-water
+BLR. NO.,No-Units
+INCH.H2O,inches-of-water
+INCH.H20,inches-of-water
+INCH/SEC,
+' w.c,inches-of-water
+% RECIRC,Percent 
+Volt Out,Volts
+Volts,Volts
+*.01 w.c,inches-of-water
+% R/A,
+Deg. F,Degrees-Fahrenheit
+GALx1000,US-gallons
+PTCL/FT3,
