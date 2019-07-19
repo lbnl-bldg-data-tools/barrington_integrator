@@ -161,7 +161,7 @@ INCH/SEC,
 Volt Out,Volts
 Volts,Volts
 *.01 w.c,inches-of-water
-% R/A,
+% R/A,Percent 
 Deg. F,Degrees-Fahrenheit
 GALx1000,US-gallons
 PTCL/FT3,
